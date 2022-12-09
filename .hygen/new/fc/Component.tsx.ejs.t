@@ -2,7 +2,7 @@
 to: <%= abs_path %>/<%= h.changeCase.pascal(component_name) %>.tsx
 ---
 <% if (have_props) { -%>
-export type Props = {
+type Props = {
 };
 <% } -%>
 /**
