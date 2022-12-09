@@ -1,4 +1,7 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": "./tsconfig.json" },
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:tailwindcss/recommended",
@@ -55,8 +58,15 @@
   },
   "overrides": [
     {
-      "files": ["src/app/**/{head,layout,page}.tsx"],
+      "files": [
+        "src/app/**/{head,layout,page}.tsx",
+        "src/components/**/*.stories.tsx"
+      ],
       "rules": { "import/no-default-export": "off" }
+    },
+    {
+      "files": ["src/components/**/*.stories.tsx"],
+      "rules": { "import/no-anonymous-default-export": "off" }
     }
   ]
 }
