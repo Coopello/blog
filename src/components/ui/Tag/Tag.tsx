@@ -9,10 +9,7 @@ type TagType =
   | "design"
   | "us";
 
-/**
- * @package
- */
-export type Props = {
+type Props = {
   type: TagType;
   outline?: boolean;
 };
