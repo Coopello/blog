@@ -2,7 +2,23 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { Tag } from "./";
 
-export default { title: "ui/Tag" } as ComponentMeta<typeof Tag>;
+export default {
+  title: "ui/Tag",
+  argTypes: {
+    type: {
+      options: [
+        "chip",
+        "frontend",
+        "backend",
+        "mobile",
+        "infrastructure",
+        "design",
+        "us",
+      ],
+      control: { type: "select" },
+    },
+  },
+} as ComponentMeta<typeof Tag>;
 
 export const initial: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
 initial.args = {
