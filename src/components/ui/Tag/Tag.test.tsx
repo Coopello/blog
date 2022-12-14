@@ -15,9 +15,9 @@ describe("ui/Tag", () => {
     expect(tree).toMatchSnapshot();
   });
   it("Snap Shot button Chip", () => {
-    const component = renderer.create(
-      <Tag type="chip" onClick={() => console.log()} />
-    );
+    const onClick = jest.fn();
+
+    const component = renderer.create(<Tag type="chip" onClick={onClick} />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
