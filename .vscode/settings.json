@@ -19,10 +19,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib",
   "tailwindCSS.experimental.classRegex": [
-    [
-      "classNames\\(([^)]*)\\)",
-      "\"([^\"]*)\""
-    ]
+    ["classNames\\(([^)]*)\\)", "\"([^\"]*)\""]
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
