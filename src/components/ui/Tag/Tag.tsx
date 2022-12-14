@@ -11,7 +11,8 @@ type TagType =
 
 type Props = {
   type: TagType;
-  outline?: boolean;
+  filled?: boolean;
+  onClick?: () => void;
 };
 
 const TAG_ASSET = {
@@ -48,22 +49,28 @@ const TAG_ASSET = {
 /**
  * @package
  */
-export const Tag: React.FC<Props> = ({ outline = false, type }) => {
+export const Tag: React.FC<Props> = ({ filled = false, onClick, type }) => {
   const { color, text } = TAG_ASSET[type];
   // classNameベースで動的なスタイリングができないので、仕方なくstyle
-  const styles = outline
+  const styles = filled
     ? {
-        border: `1px solid ${color}`,
-        color,
-      }
-    : {
         color: "white",
         backgroundColor: color,
+      }
+    : {
+        border: `1px solid ${color}`,
+        color,
       };
 
+  const Element = onClick ? "button" : "span";
+
   return (
-    <span className="rounded-full px-6 py-2 text-2xl" style={styles}>
+    <Element
+      className="rounded-full px-4 py-2 text-xs font-bold"
+      style={styles}
+      onClick={onClick}
+    >
       {text}
-    </span>
+    </Element>
   );
 };
