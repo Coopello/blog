@@ -1,6 +1,8 @@
 ---
 to: <%= abs_path %>/<%= h.changeCase.pascal(component_name) %>.tsx
 ---
+import { FC } from "react"
+
 <% if (have_props) { -%>
 type Props = {
 };
