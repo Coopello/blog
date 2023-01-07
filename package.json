@@ -13,8 +13,7 @@
     "fix:lint": "next lint --fix",
     "fix:prettier": "prettier --write .",
     "test": "jest",
-    "new:fc": "hygen new fc",
-    "new:page": "hygen new page"
+    "new:fc": "hygen new fc"
   },
   "dependencies": {
     "@types/node": "18.11.9",
