@@ -2,12 +2,6 @@ module.exports = {
   prompt: ({ inquirer, args }) => {
     const questions = [
       {
-        type: "select",
-        name: "dir_type",
-        message: "Which components directory?",
-        choices: ["page", "ui", "domain/user", "domain/post"],
-      },
-      {
         type: "input",
         name: "component_name",
         message: "What is the name of component?",
@@ -19,14 +13,11 @@ module.exports = {
       },
     ];
     return inquirer.prompt(questions).then((answers) => {
-      const { component_name, dir_type, have_props } = answers;
-      const file_name = `${component_name
+      const { component_name, have_props } = answers;
+      const path = `${component_name
         .charAt(0)
-        .toUpperCase()}${component_name.slice(1)}${
-        dir_type === "page" ? ".page" : ""
-      }`;
-      const path = `${dir_type}/${file_name}`;
-      const abs_path = `src/components/${path}`;
+        .toUpperCase()}${component_name.slice(1)}`;
+      const abs_path = `src/assets/${path}`;
       const type_annotate = have_props ? "FC<Props>" : "FC";
       const props = have_props ? "({})" : "()";
       const tag = args.tag ? args.tag : "div";
