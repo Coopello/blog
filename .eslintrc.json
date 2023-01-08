@@ -58,14 +58,11 @@
   },
   "overrides": [
     {
-      "files": [
-        "src/app/**/{head,layout,page}.tsx",
-        "src/components/**/*.stories.tsx"
-      ],
+      "files": ["src/app/**/{head,layout,page}.tsx", "src/**/*.stories.tsx"],
       "rules": { "import/no-default-export": "off" }
     },
     {
-      "files": ["src/components/**/*.stories.tsx"],
+      "files": ["src/**/*.stories.tsx"],
       "rules": { "import/no-anonymous-default-export": "off" }
     }
   ]
