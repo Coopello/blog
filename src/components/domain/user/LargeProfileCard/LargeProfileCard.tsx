@@ -1,6 +1,7 @@
-import { GitHub, Twitter } from "@material-ui/icons";
 import Image from "next/image";
 import type { FC } from "react";
+import { GitHub } from "src/assets/GitHub";
+import { Twitter } from "src/assets/Twitter";
 import { NavigateButton } from "src/components/ui/NavigateButton";
 
 type Props = {
