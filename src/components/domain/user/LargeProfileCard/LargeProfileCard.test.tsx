@@ -18,4 +18,16 @@ describe("domain/user/LargeProfileCard", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+  it("Snap Shot no myUrl links", () => {
+    const component = renderer.create(
+      <LargeProfileCard
+        imageUrl="https://placehold.jp/150x150.png"
+        myUrl={{}}
+        name="Akito Fukuda"
+        description="Web Dev"
+      />
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
