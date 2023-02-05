@@ -14,29 +14,28 @@ type Props = {
   };
   name: string;
 };
-
 /**
  * @package
  */
-export const ProfileCard: FC<Props> = ({
+export const LargeProfileCard: FC<Props> = ({
   description,
   imageUrl,
   myLinks,
   name,
 }) => {
   return (
-    <div className="w-60 rounded-xl border p-6">
-      <div className="flex items-center gap-4 border-b pb-2">
-        <span className="relative h-12 w-12">
-          <Image
-            alt="プロフィールアイコン"
-            className="rounded-full object-contain"
-            fill
-            src={imageUrl}
-          />
-        </span>
-        <div className="flex flex-col gap-2">
-          <p>{name}</p>
+    <div className="flex w-[790px] max-w-full items-center gap-12 rounded-xl border p-12">
+      <span className="relative h-[100px] w-[100px]">
+        <Image
+          alt="プロフィールアイコン"
+          className="rounded-full object-contain"
+          fill
+          src={imageUrl}
+        />
+      </span>
+      <div>
+        <div className="flex items-center gap-4">
+          <p className="text-xl font-bold">{name}</p>
           <div className="flex">
             {myLinks.twitter ? (
               <NavigateButton href={myLinks.twitter} isBlank>
@@ -50,8 +49,8 @@ export const ProfileCard: FC<Props> = ({
             ) : null}
           </div>
         </div>
+        <p className="text-sm">{description}</p>
       </div>
-      <p className="pt-2 text-xs">{description}</p>
     </div>
   );
 };

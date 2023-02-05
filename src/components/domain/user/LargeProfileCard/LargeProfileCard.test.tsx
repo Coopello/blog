@@ -1,11 +1,11 @@
 import renderer from "react-test-renderer";
 
-import { ProfileCard } from ".";
+import { LargeProfileCard } from "./";
 
-describe("ui/ProfileCard", () => {
+describe("domain/user/LargeProfileCard", () => {
   it("Snap Shot", () => {
     const component = renderer.create(
-      <ProfileCard
+      <LargeProfileCard
         imageUrl="https://placehold.jp/150x150.png"
         myLinks={{
           twitter: "https://twitter.com/akt_prs10",
@@ -20,7 +20,7 @@ describe("ui/ProfileCard", () => {
   });
   it("Snap Shot no myLinks links", () => {
     const component = renderer.create(
-      <ProfileCard
+      <LargeProfileCard
         imageUrl="https://placehold.jp/150x150.png"
         myLinks={{}}
         name="Akito Fukuda"
