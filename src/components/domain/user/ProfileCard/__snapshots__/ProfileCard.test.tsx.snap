@@ -130,7 +130,7 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
 </div>
 `;
 
-exports[`ui/ProfileCard Snap Shot no myUrl links 1`] = `
+exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
 <div
   className="w-60 rounded-xl border p-6"
 >

@@ -8,7 +8,7 @@ import { NavigateButton } from "src/components/ui/NavigateButton";
 type Props = {
   description: string;
   imageUrl: string;
-  myUrl: {
+  myLinks: {
     twitter?: string;
     github?: string;
   };
@@ -21,7 +21,7 @@ type Props = {
 export const ProfileCard: FC<Props> = ({
   description,
   imageUrl,
-  myUrl,
+  myLinks,
   name,
 }) => {
   return (
@@ -38,13 +38,13 @@ export const ProfileCard: FC<Props> = ({
         <div className="flex flex-col gap-2">
           <p>{name}</p>
           <div className="flex">
-            {myUrl.twitter ? (
-              <NavigateButton href={myUrl.twitter} isBlank>
+            {myLinks.twitter ? (
+              <NavigateButton href={myLinks.twitter} isBlank>
                 <TwitterIcon />
               </NavigateButton>
             ) : null}
-            {myUrl.github ? (
-              <NavigateButton href={myUrl.github} isBlank>
+            {myLinks.github ? (
+              <NavigateButton href={myLinks.github} isBlank>
                 <GitHubIcon />
               </NavigateButton>
             ) : null}

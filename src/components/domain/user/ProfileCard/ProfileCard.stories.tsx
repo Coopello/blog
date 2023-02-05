@@ -12,7 +12,7 @@ export const initial: ComponentStory<typeof ProfileCard> = (args) => (
 
 initial.args = {
   imageUrl: "https://placehold.jp/150x150.png",
-  myUrl: {
+  myLinks: {
     twitter: "https://twitter.com/akt_prs10",
     github: "https://github.com/akito-10",
   },

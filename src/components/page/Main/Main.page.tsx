@@ -19,7 +19,7 @@ export const Main: React.FC = () => {
       <Tag type="us" filled />
       <ProfileCard
         imageUrl="https://placehold.jp/150x150.png"
-        myUrl={{
+        myLinks={{
           twitter: "https://twitter.com/akt_prs10",
           github: "https://github.com/akito-10",
         }}
@@ -28,7 +28,7 @@ export const Main: React.FC = () => {
       />
       <LargeProfileCard
         imageUrl="https://placehold.jp/150x150.png"
-        myUrl={{
+        myLinks={{
           twitter: "https://twitter.com/akt_prs10",
           github: "https://github.com/akito-10",
         }}
