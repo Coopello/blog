@@ -3,8 +3,16 @@ import renderer from "react-test-renderer";
 import { ArticleCard } from "./";
 
 describe("ui/ArticleCard", () => {
-  it("Snap Shot", () => {
-    const component = renderer.create(<ArticleCard />);
+  it("Snap Shot ArticleCard", () => {
+    const component = renderer.create(
+      <ArticleCard
+        imageUrl="https://placehold.jp/150x150.png"
+        nickname="ニックネーム"
+        description="XXX Developer"
+        tagTypes={["chip", "frontend"]}
+        title="タイトル"
+      />
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
