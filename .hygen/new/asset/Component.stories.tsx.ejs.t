@@ -5,7 +5,7 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { <%= h.changeCase.pascal(component_name) %> } from "./";
 
-export default { title: "<%= path %>" } as ComponentMeta<
+export default { title: "assets/<%= path %>" } as ComponentMeta<
   typeof <%= h.changeCase.pascal(component_name) %>
 >;
 
