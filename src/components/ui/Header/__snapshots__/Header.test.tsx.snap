@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/Header Snap Shot 1`] = `
+<header
+  className="flex items-center px-8 py-2"
+>
+  <img
+    alt="こぺブログロゴ"
+    data-nimg="1"
+    decoding="async"
+    height={60}
+    loading="lazy"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=128&q=75"
+    srcSet="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=64&q=75 1x, /_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=128&q=75 2x"
+    style={
+      {
+        "color": "transparent",
+      }
+    }
+    width={60}
+  />
+  <h1
+    className="text-3xl font-bold"
+  >
+    Coope Blog
+  </h1>
+</header>
+`;
