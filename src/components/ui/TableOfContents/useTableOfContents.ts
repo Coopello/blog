@@ -5,13 +5,15 @@ const FOCUS_CLASS_NAMES = ["border-l-4", "border-custom-coopelloBlue"];
 /**
  * @package
  */
-export const useTableOfContents = () => {
+export const useTableOfContents = (contentId: string) => {
   const targetTocDataVal = "toc";
 
   useEffect(() => {
     if (!document) return;
 
-    const anchorsArray = Array.from(document.querySelectorAll("#contents h1"));
+    const anchorsArray = Array.from(
+      document.querySelectorAll(`#${contentId} h1`)
+    );
     const tocArray = Array.from(
       document.querySelectorAll(`[data-val=${targetTocDataVal}]`)
     );
@@ -50,7 +52,7 @@ export const useTableOfContents = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [contentId]);
 
   return {
     targetTocDataVal,

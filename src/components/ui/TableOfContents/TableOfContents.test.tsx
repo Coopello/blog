@@ -5,7 +5,10 @@ import { TableOfContents } from "./";
 describe("ui/TableOfContents", () => {
   it("Snap Shot", () => {
     const component = renderer.create(
-      <TableOfContents contents={["hoge", "piyo", "fuga"]} />
+      <TableOfContents
+        contents={["hoge", "piyo", "fuga"]}
+        contentId="contents"
+      />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

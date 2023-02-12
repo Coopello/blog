@@ -37,7 +37,10 @@ export const Main: React.FC = () => {
         description="Web Dev"
       />
       <div className="fixed top-0">
-        <TableOfContents contents={["hoge", "piyo", "fuga"]} />
+        <TableOfContents
+          contents={["hoge", "piyo", "fuga"]}
+          contentId="contents"
+        />
       </div>
       <div id="contents">
         <h1 className="h-[1000px] text-5xl" id="hoge">

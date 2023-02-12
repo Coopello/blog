@@ -4,14 +4,15 @@ import type { FC } from "react";
 import { useTableOfContents } from "src/components/ui/TableOfContents/useTableOfContents";
 
 type Props = {
+  contentId: string;
   contents: string[];
 };
 
 /**
  * @package
  */
-export const TableOfContents: FC<Props> = ({ contents }) => {
-  const { targetTocDataVal } = useTableOfContents();
+export const TableOfContents: FC<Props> = ({ contentId, contents }) => {
+  const { targetTocDataVal } = useTableOfContents(contentId);
 
   return (
     <nav>

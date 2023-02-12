@@ -11,5 +11,6 @@ export const Initial: ComponentStory<typeof TableOfContents> = (args) => (
 );
 
 Initial.args = {
+  contentId: "contents",
   contents: ["hoge", "piyo", "fuga"],
 };
