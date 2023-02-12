@@ -1,5 +1,6 @@
 "use client";
 
+import type { FC } from "react";
 import { LargeProfileCard } from "src/components/domain/user/LargeProfileCard";
 import { ProfileCard } from "src/components/domain/user/ProfileCard";
 import { Tag } from "src/components/ui/Tag";
@@ -7,7 +8,7 @@ import { Tag } from "src/components/ui/Tag";
 /**
  * @package
  */
-export const Main: React.FC = () => {
+export const Main: FC = () => {
   return (
     <div>
       <Tag type="chip" filled onClick={() => console.log()} />
