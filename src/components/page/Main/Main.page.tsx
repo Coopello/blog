@@ -2,6 +2,7 @@
 
 import { LargeProfileCard } from "src/components/domain/user/LargeProfileCard";
 import { ProfileCard } from "src/components/domain/user/ProfileCard";
+import { TableOfContents } from "src/components/ui/TableOfContents";
 import { Tag } from "src/components/ui/Tag";
 
 /**
@@ -35,6 +36,20 @@ export const Main: React.FC = () => {
         name="Akito Fukuda"
         description="Web Dev"
       />
+      <div className="fixed top-0">
+        <TableOfContents contents={["hoge", "piyo", "fuga"]} />
+      </div>
+      <div id="contents">
+        <h1 className="h-[1000px] text-5xl" id="hoge">
+          hoge
+        </h1>
+        <h1 className="h-[1000px]  text-5xl" id="piyo">
+          piyo
+        </h1>
+        <h1 className="h-[1000px]  text-5xl" id="fuga">
+          fuga
+        </h1>
+      </div>
     </div>
   );
 };

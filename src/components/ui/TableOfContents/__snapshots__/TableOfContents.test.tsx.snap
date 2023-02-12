@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/TableOfContents Snap Shot 1`] = `
+<nav>
+  <ul
+    className="flex flex-col gap-2"
+  >
+    <li
+      className="h-full w-full"
+    >
+      <a
+        className="box-border block h-full w-full px-4 text-xl hover:bg-black/5"
+        data-val="toc"
+        href="#hoge"
+      >
+        hoge
+      </a>
+    </li>
+    <li
+      className="h-full w-full"
+    >
+      <a
+        className="box-border block h-full w-full px-4 text-xl hover:bg-black/5"
+        data-val="toc"
+        href="#piyo"
+      >
+        piyo
+      </a>
+    </li>
+    <li
+      className="h-full w-full"
+    >
+      <a
+        className="box-border block h-full w-full px-4 text-xl hover:bg-black/5"
+        data-val="toc"
+        href="#fuga"
+      >
+        fuga
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
