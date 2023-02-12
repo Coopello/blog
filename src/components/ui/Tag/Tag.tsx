@@ -1,5 +1,7 @@
 "use client";
 
+import type { FC } from "react";
+
 type TagType =
   | "chip"
   | "frontend"
@@ -49,7 +51,7 @@ const TAG_ASSET = {
 /**
  * @package
  */
-export const Tag: React.FC<Props> = ({ filled = false, onClick, type }) => {
+export const Tag: FC<Props> = ({ filled = false, onClick, type }) => {
   const { color, text } = TAG_ASSET[type];
   // classNameベースで動的なスタイリングができないので、仕方なくstyle
   const styles = filled
