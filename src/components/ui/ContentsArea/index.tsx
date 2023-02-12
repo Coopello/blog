@@ -1,0 +1,1 @@
+export { ContentsArea } from "./ContentsArea";
