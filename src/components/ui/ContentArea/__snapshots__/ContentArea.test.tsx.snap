@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui/ContentArea Snap Shot 1`] = `
+<article
+  id="test"
+>
+  <h1>
+    test
+  </h1>
+</article>
+`;
