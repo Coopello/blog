@@ -18,6 +18,7 @@ export const TableOfContents: FC<Props> = ({ contentId, contents }) => {
     <ul className="flex flex-col gap-2">
       {contents.map((content, i) => {
         return (
+          // 一度レンダリングされたら li の追加・削除をしないので、 key に index を使用している
           <li key={i} className="h-full w-full">
             <a
               data-val={targetTocDataVal}
