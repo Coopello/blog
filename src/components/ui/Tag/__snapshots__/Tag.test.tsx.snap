@@ -2,43 +2,53 @@
 
 exports[`ui/Tag Snap Shot Chip 1`] = `
 <span
-  className="rounded-full px-4 py-2 text-xs font-bold"
+  className="rounded-sm px-3 py-1 text-sm"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   style={
     {
-      "backgroundColor": "#222222",
+      "backgroundColor": "#000",
       "color": "white",
+      "opacity": 1,
     }
   }
 >
-  Chip
+  #
+  chip
 </span>
 `;
 
 exports[`ui/Tag Snap Shot button Chip 1`] = `
 <button
-  className="rounded-full px-4 py-2 text-xs font-bold"
+  className="rounded-sm px-3 py-1 text-sm"
   onClick={[MockFunction]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   style={
     {
-      "border": "1px solid #222222",
-      "color": "#222222",
+      "backgroundColor": "white",
+      "color": "#000",
     }
   }
 >
-  Chip
+  #
+  chip
 </button>
 `;
 
 exports[`ui/Tag Snap Shot outline Chip 1`] = `
 <span
-  className="rounded-full px-4 py-2 text-xs font-bold"
+  className="rounded-sm px-3 py-1 text-sm"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   style={
     {
-      "border": "1px solid #222222",
-      "color": "#222222",
+      "backgroundColor": "white",
+      "color": "#000",
     }
   }
 >
-  Chip
+  #
+  chip
 </span>
 `;
