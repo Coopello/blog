@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { Tag } from "src/components/ui/Tag";
+import { ArticleTag } from "src/components/domain/article/ArticleTag";
 import type { Article } from "src/models/article";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
   nickname: string;
   description: string;
   imageUrl: string;
-  tagTypes: Article["articleTags"];
+  tagsInfo: { type: Article["articleTags"][0]; text: string }[];
 };
 
 /**
@@ -18,7 +18,7 @@ export const ArticleCard: FC<Props> = ({
   description,
   imageUrl,
   nickname,
-  tagTypes,
+  tagsInfo,
   title,
 }) => {
   return (
@@ -38,10 +38,10 @@ export const ArticleCard: FC<Props> = ({
         </div>
       </div>
       <ul className="flex gap-2">
-        {tagTypes.map((tagType) => {
+        {tagsInfo.map(({ text, type }) => {
           return (
-            <li key={tagType}>
-              <Tag type={tagType} filled />
+            <li key={text}>
+              <ArticleTag type={type} text={text} />
             </li>
           );
         })}

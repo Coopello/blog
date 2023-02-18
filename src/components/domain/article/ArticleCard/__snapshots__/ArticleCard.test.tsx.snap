@@ -48,28 +48,34 @@ exports[`ui/ArticleCard Snap Shot ArticleCard 1`] = `
   >
     <li>
       <span
-        className="rounded-full px-4 py-2 text-xs font-bold"
+        className="rounded-sm px-3 py-1 text-sm"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
         style={
           {
-            "backgroundColor": "#222222",
-            "color": "white",
+            "backgroundColor": "white",
+            "color": "#222222",
           }
         }
       >
-        Chip
+        #
+        chip
       </span>
     </li>
     <li>
       <span
-        className="rounded-full px-4 py-2 text-xs font-bold"
+        className="rounded-sm px-3 py-1 text-sm"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
         style={
           {
-            "backgroundColor": "#FF7971",
-            "color": "white",
+            "backgroundColor": "white",
+            "color": "#FF7971",
           }
         }
       >
-        Frontend
+        #
+        frontend
       </span>
     </li>
   </ul>

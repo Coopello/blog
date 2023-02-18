@@ -14,6 +14,9 @@ Initial.args = {
   imageUrl: "https://placehold.jp/150x150.png",
   nickname: "ニックネーム",
   description: "XXX Developer",
-  tagTypes: ["chip", "frontend"],
+  tagsInfo: [
+    { type: "chip", text: "chip" },
+    { type: "frontend", text: "frontend" },
+  ],
   title: "タイトル",
 };
