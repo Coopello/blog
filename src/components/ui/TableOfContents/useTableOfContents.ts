@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const FOCUS_CLASS_NAMES = ["border-l-4", "border-custom-coopelloBlue"];
+const FOCUS_CLASS_NAMES = ["border-l-4", "border-custom-sky"];
 
 /**
  * @package
