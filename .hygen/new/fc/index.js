@@ -5,7 +5,7 @@ module.exports = {
         type: "select",
         name: "dir_type",
         message: "Which components directory?",
-        choices: ["page", "ui", "domain/user", "domain/post"],
+        choices: ["page", "ui", "domain/user", "domain/article"],
       },
       {
         type: "input",
