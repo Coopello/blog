@@ -2,24 +2,24 @@
 
 exports[`ui/Header Snap Shot 1`] = `
 <header
-  className="flex items-center p-4"
+  className="flex items-center gap-4 p-4"
 >
   <img
     alt="こぺブログロゴ"
     data-nimg="1"
     decoding="async"
-    height={60}
+    height={80}
     loading="lazy"
     onError={[Function]}
     onLoad={[Function]}
-    src="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=128&q=75"
-    srcSet="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=64&q=75 1x, /_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=128&q=75 2x"
+    src="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=256&q=75"
+    srcSet="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=96&q=75 1x, /_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=256&q=75 2x"
     style={
       {
         "color": "transparent",
       }
     }
-    width={60}
+    width={80}
   />
   <h1
     className="text-4xl"
