@@ -1,5 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
+<div
+  className="flex w-[380px] max-w-full flex-col gap-4 rounded-xl border p-6"
+>
+  <h2
+    className="border-b pb-2 text-2xl"
+  >
+    タイトル
+  </h2>
+  <div
+    className="flex gap-4"
+  >
+    <img
+      alt="プロフィール画像"
+      className="rounded-full object-contain"
+      data-nimg="1"
+      decoding="async"
+      height={48}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=96&q=75"
+      srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=96&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={48}
+    />
+    <div>
+      <h3
+        className="text-base"
+      >
+        ニックネーム
+      </h3>
+      <p
+        className="text-base text-custom-gray"
+      >
+        XXX Developer
+      </p>
+    </div>
+  </div>
+  <ul
+    className="flex gap-2"
+  >
+    <li>
+      <span
+        className="rounded-sm px-3 py-1 text-sm"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          {
+            "backgroundColor": "white",
+            "color": "#222222",
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        #
+        chip
+      </span>
+    </li>
+    <li>
+      <span
+        className="rounded-sm px-3 py-1 text-sm"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          {
+            "backgroundColor": "white",
+            "color": "#FF7971",
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          }
+        }
+      >
+        #
+        frontend
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`ui/ArticleCard Snap Shot ArticleCard 1`] = `
 <div
   className="flex w-[380px] max-w-full flex-col gap-4 rounded-xl border p-6"

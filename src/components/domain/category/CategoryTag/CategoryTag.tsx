@@ -1,14 +1,14 @@
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
-import type { Article } from "src/models/article";
+import type { Category } from "src/models/category";
 
 type Props = {
-  type: Article["articleTags"][0];
+  type: Category;
   text: string;
   filled?: boolean;
 };
 
-const ARTICLE_TAG: { [key in Article["articleTags"][0]]: `#${string}` } = {
+const CATEGORY_TAG: { [key in Category]: `#${string}` } = {
   chip: "#222222",
   frontend: "#FF7971",
   backend: "#717FFF",
@@ -21,8 +21,8 @@ const ARTICLE_TAG: { [key in Article["articleTags"][0]]: `#${string}` } = {
 /**
  * @package
  */
-export const ArticleTag: FC<Props> = ({ filled = false, text, type }) => {
-  const color = ARTICLE_TAG[type];
+export const CategoryTag: FC<Props> = ({ filled = false, text, type }) => {
+  const color = CATEGORY_TAG[type];
 
   return <Tag tagInfo={{ color, text }} filled={filled} />;
 };

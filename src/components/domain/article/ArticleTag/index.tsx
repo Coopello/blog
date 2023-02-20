@@ -1,1 +1,0 @@
-export { ArticleTag } from "./ArticleTag";
