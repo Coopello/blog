@@ -8,13 +8,13 @@ exports[`domain/category/ArticleTag Snap Shot 1`] = `
   style={
     {
       "backgroundColor": "white",
-      "color": "#222222",
+      "color": "#E10718",
       "paddingLeft": 8,
       "paddingRight": 8,
     }
   }
 >
   #
-  chip
+  frontend
 </span>
 `;

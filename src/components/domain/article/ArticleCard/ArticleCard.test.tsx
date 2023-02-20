@@ -10,9 +10,8 @@ describe("domain/article/ArticleCard", () => {
         nickname="ニックネーム"
         description="XXX Developer"
         tagInfoList={[
-          { type: "chip", text: "chip" },
           { type: "frontend", text: "frontend" },
-          { type: "frontend", text: "frontend" },
+          { type: "android", text: "android" },
         ]}
         title="タイトル"
       />

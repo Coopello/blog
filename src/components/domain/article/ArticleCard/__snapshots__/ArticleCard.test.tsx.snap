@@ -54,25 +54,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
         style={
           {
             "backgroundColor": "white",
-            "color": "#222222",
-            "paddingLeft": 8,
-            "paddingRight": 8,
-          }
-        }
-      >
-        #
-        chip
-      </span>
-    </li>
-    <li>
-      <span
-        className="rounded-sm text-sm"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          {
-            "backgroundColor": "white",
-            "color": "#FF7971",
+            "color": "#E10718",
             "paddingLeft": 8,
             "paddingRight": 8,
           }
@@ -90,14 +72,14 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
         style={
           {
             "backgroundColor": "white",
-            "color": "#FF7971",
+            "color": "#43DC49",
             "paddingLeft": 8,
             "paddingRight": 8,
           }
         }
       >
         #
-        frontend
+        android
       </span>
     </li>
   </ul>
