@@ -2,10 +2,11 @@
  * @package
  */
 export type Category =
-  | "chip"
   | "frontend"
   | "backend"
-  | "mobile"
+  | "android"
+  | "ios"
   | "infrastructure"
   | "design"
-  | "us";
+  | "us"
+  | "pr";

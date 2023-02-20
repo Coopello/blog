@@ -8,21 +8,22 @@ type Props = {
   filled?: boolean;
 };
 
-const CATEGORY_TAG: { [key in Category]: `#${string}` } = {
-  chip: "#222222",
-  frontend: "#FF7971",
-  backend: "#717FFF",
-  mobile: "#43DC49",
-  infrastructure: "#FFBA69",
-  design: "#A055FF",
-  us: "#5AC8D8",
+const CATEGORY_TAG_COLORS: { [key in Category]: `#${string}` } = {
+  frontend: "#E10718",
+  backend: "#1362F9",
+  android: "#43DC49",
+  ios: "#FF6E27",
+  infrastructure: "#6806E4",
+  design: "#FFD63D",
+  us: "#00B8D2",
+  pr: "#C9C9C9",
 };
 
 /**
  * @package
  */
 export const CategoryTag: FC<Props> = ({ filled = false, text, type }) => {
-  const color = CATEGORY_TAG[type];
+  const color = CATEGORY_TAG_COLORS[type];
 
   return <Tag tagInfo={{ color, text }} filled={filled} />;
 };
