@@ -10,6 +10,8 @@ exports[`ui/Tag Snap Shot Chip 1`] = `
       "backgroundColor": "#000",
       "color": "white",
       "opacity": 1,
+      "paddingLeft": 12,
+      "paddingRight": 12,
     }
   }
 >
@@ -28,6 +30,8 @@ exports[`ui/Tag Snap Shot button Chip 1`] = `
     {
       "backgroundColor": "white",
       "color": "#000",
+      "paddingLeft": 8,
+      "paddingRight": 8,
     }
   }
 >
@@ -45,6 +49,8 @@ exports[`ui/Tag Snap Shot outline Chip 1`] = `
     {
       "backgroundColor": "white",
       "color": "#000",
+      "paddingLeft": 8,
+      "paddingRight": 8,
     }
   }
 >

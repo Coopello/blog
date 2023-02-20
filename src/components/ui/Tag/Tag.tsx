@@ -27,15 +27,19 @@ export const Tag: FC<Props> = ({ filled = false, onClick, tagInfo }) => {
         color: "white",
         backgroundColor: color,
         opacity: isHover ? 0.7 : 1.0,
+        paddingLeft: 12,
+        paddingRight: 12,
       }
     : {
         color,
         backgroundColor: isHover ? "rgba(0, 0, 0, 0.1)" : "white",
+        paddingLeft: 8,
+        paddingRight: 8,
       };
 
   return (
     <Element
-      className={"rounded-sm px-3 py-1 text-sm"}
+      className={"rounded-sm text-sm"}
       style={tagStyle}
       onClick={onClick}
       onMouseEnter={() => setIsHover(true)}
