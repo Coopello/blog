@@ -15,8 +15,8 @@ Initial.args = {
   nickname: "ニックネーム",
   description: "XXX Developer",
   tagInfoList: [
-    { type: "chip", text: "chip" },
-    { type: "frontend", text: "frontend" },
+    { type: "front-end", text: "front-end" },
+    { type: "android", text: "android" },
   ],
   title: "タイトル",
 };

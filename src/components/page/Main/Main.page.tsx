@@ -14,7 +14,7 @@ export const Main: FC = () => {
     <div>
       <Tag
         color="#E10718"
-        text="frontend"
+        text="front-end"
         filled
         onClick={() => console.log()}
       />
