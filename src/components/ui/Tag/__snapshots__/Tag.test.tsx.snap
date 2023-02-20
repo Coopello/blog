@@ -7,7 +7,7 @@ exports[`ui/Tag Snap Shot Chip 1`] = `
   onMouseLeave={[Function]}
   style={
     {
-      "backgroundColor": "#000",
+      "backgroundColor": "#E10718",
       "color": "white",
       "opacity": 1,
       "paddingLeft": 12,
@@ -16,7 +16,7 @@ exports[`ui/Tag Snap Shot Chip 1`] = `
   }
 >
   #
-  chip
+  frontend
 </span>
 `;
 
@@ -29,14 +29,14 @@ exports[`ui/Tag Snap Shot button Chip 1`] = `
   style={
     {
       "backgroundColor": "white",
-      "color": "#000",
+      "color": "#E10718",
       "paddingLeft": 8,
       "paddingRight": 8,
     }
   }
 >
   #
-  chip
+  frontend
 </button>
 `;
 
@@ -48,13 +48,13 @@ exports[`ui/Tag Snap Shot outline Chip 1`] = `
   style={
     {
       "backgroundColor": "white",
-      "color": "#000",
+      "color": "#E10718",
       "paddingLeft": 8,
       "paddingRight": 8,
     }
   }
 >
   #
-  chip
+  frontend
 </span>
 `;

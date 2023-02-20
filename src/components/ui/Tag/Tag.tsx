@@ -4,10 +4,8 @@ import type { CSSProperties, FC } from "react";
 import { useState } from "react";
 
 type Props = {
-  tagInfo: {
-    color: `#${string}`;
-    text: string;
-  };
+  color: `#${string}`;
+  text: string;
   filled?: boolean;
   onClick?: () => void;
 };
@@ -15,14 +13,13 @@ type Props = {
 /**
  * @package
  */
-export const Tag: FC<Props> = ({ filled = false, onClick, tagInfo }) => {
+export const Tag: FC<Props> = ({ color, filled = false, onClick, text }) => {
   // inline-styleで対応しているため、stateを使用してhoverを制御。
   const [isHover, setIsHover] = useState(false);
-  const { color, text } = tagInfo;
   const Element = onClick ? "button" : "span";
 
   // レンダリングの都合上、classNameを動的に設定できないため、inline-styleで対応。
-  const tagStyle: CSSProperties = filled
+  const style: CSSProperties = filled
     ? {
         color: "white",
         backgroundColor: color,
@@ -40,7 +37,7 @@ export const Tag: FC<Props> = ({ filled = false, onClick, tagInfo }) => {
   return (
     <Element
       className={"rounded-sm text-sm"}
-      style={tagStyle}
+      style={style}
       onClick={onClick}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}

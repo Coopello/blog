@@ -6,26 +6,13 @@ import { Tag } from "./";
 describe("ui/Tag", () => {
   it("Snap Shot Chip", () => {
     const component = renderer.create(
-      <Tag
-        tagInfo={{
-          text: "chip",
-          color: "#000",
-        }}
-        filled
-      />
+      <Tag color="#E10718" text="frontend" filled />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
   it("Snap Shot outline Chip", () => {
-    const component = renderer.create(
-      <Tag
-        tagInfo={{
-          text: "chip",
-          color: "#000",
-        }}
-      />
-    );
+    const component = renderer.create(<Tag color="#E10718" text="frontend" />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -33,13 +20,7 @@ describe("ui/Tag", () => {
     const onClick = jest.fn();
 
     const component = renderer.create(
-      <Tag
-        tagInfo={{
-          text: "chip",
-          color: "#000",
-        }}
-        onClick={onClick}
-      />
+      <Tag color="#E10718" text="frontend" onClick={onClick} />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

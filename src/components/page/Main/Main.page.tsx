@@ -13,7 +13,8 @@ export const Main: FC = () => {
   return (
     <div>
       <Tag
-        tagInfo={{ color: "#000", text: "chip" }}
+        color="#E10718"
+        text="frontend"
         filled
         onClick={() => console.log()}
       />

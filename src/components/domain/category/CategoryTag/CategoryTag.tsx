@@ -25,5 +25,5 @@ const CATEGORY_TAG_COLORS: { [key in Category]: `#${string}` } = {
 export const CategoryTag: FC<Props> = ({ filled = false, text, type }) => {
   const color = CATEGORY_TAG_COLORS[type];
 
-  return <Tag tagInfo={{ color, text }} filled={filled} />;
+  return <Tag color={color} text={text} filled={filled} />;
 };
