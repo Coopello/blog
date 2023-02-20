@@ -48,7 +48,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
   >
     <li>
       <span
-        className="rounded-sm px-3 py-1 text-sm"
+        className="rounded-sm text-sm"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         style={
@@ -66,7 +66,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
     </li>
     <li>
       <span
-        className="rounded-sm px-3 py-1 text-sm"
+        className="rounded-sm text-sm"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         style={
@@ -84,7 +84,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
     </li>
     <li>
       <span
-        className="rounded-sm px-3 py-1 text-sm"
+        className="rounded-sm text-sm"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         style={
