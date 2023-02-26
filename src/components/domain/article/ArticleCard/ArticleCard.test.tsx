@@ -6,13 +6,11 @@ describe("domain/article/ArticleCard", () => {
   it("Snap Shot ArticleCard", () => {
     const component = renderer.create(
       <ArticleCard
-        imageUrl="https://placehold.jp/150x150.png"
-        nickname="ニックネーム"
+        imageUrl="https://placehold.jp/120x120.png"
+        name="名前"
         description="XXX Developer"
-        tagInfoList={[
-          { type: "front-end", text: "front-end" },
-          { type: "android", text: "android" },
-        ]}
+        category="front-end"
+        tags={["Front-end", "React"]}
         title="タイトル"
       />
     );
