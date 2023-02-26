@@ -2,7 +2,7 @@
 
 exports[`domain/category/ArticleTag Snap Shot 1`] = `
 <span
-  className="rounded-sm text-sm"
+  className="rounded-sm py-1 text-sm"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
