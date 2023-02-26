@@ -4,5 +4,9 @@ import type { Category } from "src/models/category";
  * @package
  */
 export type Article = {
-  articleTags: Category[];
+  title: string;
+  category: Category;
+  tags: string[];
+  name: string;
+  description: string;
 };

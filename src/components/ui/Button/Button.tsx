@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 type Props = JSX.IntrinsicElements["button"] & {
-  color: "white";
+  color?: "white";
 };
 
 const BUTTON_COLORS = {
@@ -11,7 +11,11 @@ const BUTTON_COLORS = {
 /**
  * @package
  */
-export const Button: FC<Props> = ({ className, color, ...buttonProps }) => {
+export const Button: FC<Props> = ({
+  className,
+  color = "white",
+  ...buttonProps
+}) => {
   const colorClassName = BUTTON_COLORS[color];
 
   return (

@@ -21,10 +21,11 @@ export const ArticleLargeCard: FC<Props> = ({
   tags,
 }) => {
   return (
-    <div className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded p-6">
-      <div className="relative h-[250px] w-[416px]">
+    // TODO: サムネイルを常に左右中央揃えにする
+    <div className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6">
+      <div className="relative h-[250px] w-full max-w-[416px]">
         <Image
-          className="object-cover"
+          className="object-contain"
           src={imageUrl}
           fill
           alt="記事のサムネイル画像"
