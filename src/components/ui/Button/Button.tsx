@@ -1,13 +1,23 @@
-import { FC } from "react"
+import type { FC } from "react";
 
-type Props = {
+type Props = JSX.IntrinsicElements["button"] & {
+  color: "white";
 };
+
+const BUTTON_COLORS = {
+  white: "bg-custom-white",
+};
+
 /**
  * @package
  */
-export const Button: FC<Props> = ({}) => {
+export const Button: FC<Props> = ({ className, color, ...buttonProps }) => {
+  const colorClassName = BUTTON_COLORS[color];
+
   return (
-    <div>
-    </div>
+    <button
+      className={`hover:opacity-60 ${colorClassName} ${className}`}
+      {...buttonProps}
+    />
   );
-}
+};
