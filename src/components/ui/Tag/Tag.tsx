@@ -36,7 +36,7 @@ export const Tag: FC<Props> = ({ color, filled = false, onClick, text }) => {
 
   return (
     <Element
-      className={"rounded-sm text-sm"}
+      className={"rounded-sm py-1 text-sm"}
       style={style}
       onClick={onClick}
       onMouseEnter={() => setIsHover(true)}
