@@ -24,10 +24,10 @@ export const ArticleCard: FC<Props> = ({
   title,
 }) => {
   return (
-    <div className="flex max-w-full flex-1 gap-4 rounded border p-4">
+    <div className="flex max-w-full flex-1 gap-4 rounded bg-custom-white p-4">
       {imageUrl ? (
         <Image
-          className="rounded object-contain"
+          className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
           src={imageUrl}
           width={120}
           height={120}
