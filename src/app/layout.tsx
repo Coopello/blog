@@ -7,7 +7,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head />
-      <body>
+      <body className="min-h-screen bg-custom-lightGray pb-12">
         <Header />
         {children}
       </body>
