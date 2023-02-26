@@ -2,7 +2,7 @@
 
 exports[`ui/Tag Snap Shot Chip 1`] = `
 <span
-  className="rounded-sm text-sm"
+  className="rounded-sm py-1 text-sm"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
@@ -22,7 +22,7 @@ exports[`ui/Tag Snap Shot Chip 1`] = `
 
 exports[`ui/Tag Snap Shot button Chip 1`] = `
 <button
-  className="rounded-sm text-sm"
+  className="rounded-sm py-1 text-sm"
   onClick={[MockFunction]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -42,7 +42,7 @@ exports[`ui/Tag Snap Shot button Chip 1`] = `
 
 exports[`ui/Tag Snap Shot outline Chip 1`] = `
 <span
-  className="rounded-sm text-sm"
+  className="rounded-sm py-1 text-sm"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
