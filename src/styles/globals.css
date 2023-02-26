@@ -12,7 +12,6 @@ html {
     scrollbar-width: none; /* Firefox 対応 */
   }
   .hidden-scrollbar::-webkit-scrollbar {
-    /* Chrome, Safari 対応 */
-    display: none;
+    display: none; /* Chrome, Safari 対応 */
   }
 }
