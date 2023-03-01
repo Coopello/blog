@@ -12,5 +12,9 @@ type Props = {
  * @package
  */
 export const ContentArea: FC<Props> = ({ content, id }) => {
-  return <article id={id}>{parse(content)}</article>;
+  return (
+    <article id={id} className="prose lg:prose-xl">
+      {parse(content)}
+    </article>
+  );
 };
