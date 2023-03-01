@@ -2,11 +2,11 @@
 
 exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
 <div
-  className="flex max-w-full flex-1 gap-4 rounded border p-4"
+  className="flex max-w-full flex-1 gap-4 rounded bg-custom-white p-4"
 >
   <img
     alt="記事のイメージ画像"
-    className="rounded object-contain"
+    className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
     data-nimg="1"
     decoding="async"
     height={120}
@@ -44,7 +44,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
             {
               "backgroundColor": "white",
               "color": "#E10718",
-              "paddingLeft": 8,
+              "paddingLeft": 0,
               "paddingRight": 8,
             }
           }
@@ -64,7 +64,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
             {
               "backgroundColor": "white",
               "color": "#E10718",
-              "paddingLeft": 8,
+              "paddingLeft": 0,
               "paddingRight": 8,
             }
           }

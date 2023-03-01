@@ -49,7 +49,7 @@ exports[`ui/Tag Snap Shot outline Chip 1`] = `
     {
       "backgroundColor": "white",
       "color": "#E10718",
-      "paddingLeft": 8,
+      "paddingLeft": 0,
       "paddingRight": 8,
     }
   }

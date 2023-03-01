@@ -2,29 +2,41 @@
 
 exports[`ui/Header Snap Shot 1`] = `
 <header
-  className="flex items-center gap-4 p-4"
+  className="flex items-center bg-custom-white px-4 sm:gap-4 sm:p-4"
 >
-  <img
-    alt="こぺブログロゴ"
-    data-nimg="1"
-    decoding="async"
-    height={80}
-    loading="lazy"
-    onError={[Function]}
-    onLoad={[Function]}
-    src="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=256&q=75"
-    srcSet="/_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=96&q=75 1x, /_next/image?url=%2Fstatic%2Fcoopeblog_logo.png&w=256&q=75 2x"
-    style={
-      {
-        "color": "transparent",
-      }
-    }
-    width={80}
-  />
-  <h1
-    className="text-4xl"
+  <div
+    className="relative h-[60px] w-[60px] sm:h-20 sm:w-20"
   >
-    Coope Blog
+    <img
+      alt="こぺろロゴ"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=3840&q=75"
+      srcSet="/_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=640&q=75 640w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=750&q=75 750w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=828&q=75 828w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=1080&q=75 1080w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=1200&q=75 1200w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=1920&q=75 1920w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=2048&q=75 2048w, /_next/image?url=%2Fstatic%2Fcoopello_logo.png&w=3840&q=75 3840w"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <h1
+    className="text-3xl sm:text-4xl"
+  >
+    Coopello Blog
   </h1>
 </header>
 `;

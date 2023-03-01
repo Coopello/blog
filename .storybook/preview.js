@@ -1,4 +1,5 @@
 import "../src/styles/globals.css";
+import "highlight.js/styles/hybrid.css";
 import Image from "next/image";
 
 Image.propTypes = {
