@@ -1,3 +1,4 @@
+import "highlight.js/styles/github-dark.css";
 import "src/styles/globals.css";
 
 import type { ReactNode } from "react";
