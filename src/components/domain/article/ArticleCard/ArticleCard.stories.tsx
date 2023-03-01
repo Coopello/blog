@@ -10,10 +10,24 @@ export const Initial: ComponentStory<typeof ArticleCard> = (args) => (
   <ArticleCard {...args} />
 );
 
+export const ImageNotDisplayed: ComponentStory<typeof ArticleCard> = (args) => (
+  <ArticleCard {...args} />
+);
+
 Initial.args = {
-  imageUrl: "https://placehold.jp/150x150.png",
-  nickname: "ニックネーム",
+  imageUrl: "https://placehold.jp/120x120.png",
+  name: "ニックネーム",
   description: "XXX Developer",
-  tagTypes: ["chip", "frontend"],
+  category: "front-end",
+  tags: ["Front-end", "React"],
+  title: "タイトル",
+};
+
+ImageNotDisplayed.args = {
+  imageUrl: undefined,
+  name: "ニックネーム",
+  description: "XXX Developer",
+  category: "front-end",
+  tags: ["Front-end", "React"],
   title: "タイトル",
 };

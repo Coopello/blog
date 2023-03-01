@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`domain/category/ArticleTag Snap Shot 1`] = `
+<span
+  className="rounded-sm py-1 text-sm"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    {
+      "backgroundColor": "white",
+      "color": "#E10718",
+      "paddingLeft": 8,
+      "paddingRight": 8,
+    }
+  }
+>
+  #
+  front-end
+</span>
+`;

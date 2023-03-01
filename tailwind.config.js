@@ -5,15 +5,18 @@ module.exports = {
     extend: {
       colors: {
         custom: {
-          black: "#222222",
-          red: "#FF7971",
-          blue: "#717FFF",
-          green: "#43DC49",
-          orange: "#FFBA69",
-          purple: "#A055FF",
+          white: "#FFFFFF",
+          lightGray: "#F5F5F6",
           gray: "#C9C9C9",
-          defaultGray: "#F5F5F5",
-          coopelloBlue: "#5AC8D8",
+          black: "#222222",
+          red: "#E10718",
+          orange: "#FF6E27",
+          yellow: "#FFD63D",
+          green: "#00C85D",
+          sky: "#00B8D2",
+          blue: "#1362F9",
+          purple: "#6806E4",
+          coopelloBlue: "#5AC8D8", // TODO: どう使用するか議論する
         },
       },
     },

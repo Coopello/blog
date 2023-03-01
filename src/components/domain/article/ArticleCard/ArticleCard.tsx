@@ -1,51 +1,53 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { Tag } from "src/components/ui/Tag";
-import type { Article } from "src/models/article";
+import { CategoryTag } from "src/components/domain/category/CategoryTag";
+import type { Category } from "src/models/category";
 
 type Props = {
   title: string;
-  nickname: string;
+  name: string;
   description: string;
-  imageUrl: string;
-  tagTypes: Article["articleTags"];
+  imageUrl?: string;
+  category: Category;
+  tags: string[];
 };
 
 /**
  * @package
  */
 export const ArticleCard: FC<Props> = ({
+  category,
   description,
   imageUrl,
-  nickname,
-  tagTypes,
+  name,
+  tags,
   title,
 }) => {
   return (
-    <div className="flex w-[380px] max-w-full flex-col gap-4 rounded-xl border p-6">
-      <h2 className="border-b pb-2 text-2xl">{title}</h2>
-      <div className="flex gap-4">
+    <div className="flex max-w-full flex-1 gap-4 rounded bg-custom-white p-4">
+      {imageUrl ? (
         <Image
-          className="rounded-full object-contain"
+          className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
           src={imageUrl}
-          width={48}
-          height={48}
-          alt="プロフィール画像"
+          width={120}
+          height={120}
+          alt="記事のイメージ画像"
         />
-        <div>
-          <h3 className="text-base">{nickname}</h3>
-          <p className="text-base text-custom-gray">{description}</p>
-        </div>
+      ) : null}
+      <div className="flex flex-1 flex-col gap-1 overflow-x-hidden">
+        <h2 className="border-b pb-1 text-xl">{title}</h2>
+        <ul className="hidden-scrollbar flex w-full overflow-y-clip overflow-x-scroll">
+          {tags.map((tag) => {
+            return (
+              <li key={tag} className="whitespace-nowrap">
+                <CategoryTag type={category} text={tag} />
+              </li>
+            );
+          })}
+        </ul>
+        <p className="text-base">{name}</p>
+        <p className="text-sm text-custom-gray">{description}</p>
       </div>
-      <ul className="flex gap-2">
-        {tagTypes.map((tagType) => {
-          return (
-            <li key={tagType}>
-              <Tag type={tagType} filled />
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 };

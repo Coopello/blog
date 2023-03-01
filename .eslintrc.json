@@ -60,6 +60,10 @@
     {
       "files": ["src/**/*.stories.tsx"],
       "rules": { "import/no-anonymous-default-export": "off" }
+    },
+    {
+      "files": ["src/components/domain/**/constant.ts"],
+      "rules": { "@typescript-eslint/naming-convention": "off" }
     }
   ]
 }
