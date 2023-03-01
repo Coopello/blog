@@ -2,6 +2,6 @@
 
 exports[`ui/Button Snap Shot 1`] = `
 <button
-  className="hover:opacity-60 undefined undefined"
+  className="hover:opacity-60 bg-custom-white undefined"
 />
 `;

@@ -2,6 +2,7 @@
 
 exports[`ui/ContentArea Snap Shot 1`] = `
 <article
+  className="prose lg:prose-xl"
   id="test"
 >
   <h1>

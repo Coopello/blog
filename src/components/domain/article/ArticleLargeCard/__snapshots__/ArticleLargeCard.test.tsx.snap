@@ -2,14 +2,14 @@
 
 exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
 <div
-  className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded p-6"
+  className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6"
 >
   <div
-    className="relative h-[250px] w-[416px]"
+    className="relative h-[250px] w-full max-w-[416px]"
   >
     <img
       alt="記事のサムネイル画像"
-      className="object-cover"
+      className="object-contain"
       data-nimg="fill"
       decoding="async"
       loading="lazy"
