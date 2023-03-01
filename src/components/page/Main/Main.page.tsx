@@ -1,3 +1,4 @@
+// TODO: ArticlePage 作成後に削除する
 "use client";
 
 import dynamic from "next/dynamic";
