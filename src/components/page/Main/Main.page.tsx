@@ -18,12 +18,10 @@ export const Main: FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch("/api/articles/vw432_a1jkx");
+      const res = await fetch("/api/articles/ecu87etyx1e1");
       setData(await res.json());
     })();
   }, []);
-
-  console.log(data);
 
   return (
     <div>
