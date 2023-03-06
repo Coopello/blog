@@ -62,7 +62,10 @@
       "rules": { "import/no-anonymous-default-export": "off" }
     },
     {
-      "files": ["src/components/domain/**/constant.ts"],
+      "files": [
+        "src/components/domain/**/constant.ts",
+        "src/libs/apiClient/**/*.ts"
+      ],
       "rules": { "@typescript-eslint/naming-convention": "off" }
     }
   ]
