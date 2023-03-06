@@ -18,7 +18,7 @@ export const Main: FC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`/api/articles/ecu87etyx1e1`);
+      const res = await fetch("/api/articles/ecu87etyx1e1");
       setData(await res.json());
     })();
   }, []);
