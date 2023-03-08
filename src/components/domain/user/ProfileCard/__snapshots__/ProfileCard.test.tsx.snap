@@ -2,7 +2,7 @@
 
 exports[`ui/ProfileCard Snap Shot 1`] = `
 <div
-  className="flex w-full items-center gap-6 rounded-xl border p-8"
+  className="flex w-full items-center gap-6 rounded-xl p-8"
 >
   <div
     className="relative h-[100px] w-[100px]"
@@ -163,7 +163,7 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
 
 exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
 <div
-  className="flex w-full items-center gap-6 rounded-xl border p-8"
+  className="flex w-full items-center gap-6 rounded-xl p-8"
 >
   <div
     className="relative h-[100px] w-[100px]"
