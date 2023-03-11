@@ -27,4 +27,5 @@ export const Initial: ComponentStory<typeof Icon> = (args) => (
 Initial.args = {
   icon: "twitter",
   size: "md",
+  color: "black",
 };

@@ -4,6 +4,7 @@
 import dynamic from "next/dynamic";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
+import { Icon } from "src/assets";
 
 const ContentArea = dynamic(
   async () => (await import("src/components/ui/ContentArea")).ContentArea
@@ -25,6 +26,7 @@ export const Main: FC = () => {
 
   return (
     <div>
+      <Icon icon="twitter" color="black" />
       {data ? <ContentArea content={data.content} id="content" /> : null}
     </div>
   );
