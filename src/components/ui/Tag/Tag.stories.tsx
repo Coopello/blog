@@ -8,9 +8,7 @@ export default {
 
 export const initial: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
 initial.args = {
-  tagInfo: {
-    text: "chip",
-    color: "#000",
-  },
+  color: "#000",
+  text: "front-end",
   filled: false,
 };
