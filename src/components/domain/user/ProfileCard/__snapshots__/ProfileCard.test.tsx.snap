@@ -2,47 +2,56 @@
 
 exports[`ui/ProfileCard Snap Shot 1`] = `
 <div
-  className="w-60 rounded-xl border p-6"
+  className="flex w-full items-center gap-6 rounded-xl p-8"
 >
   <div
-    className="flex items-center gap-4 border-b pb-2"
+    className="relative h-[100px] w-[100px]"
   >
-    <span
-      className="relative h-12 w-12"
-    >
-      <img
-        alt="プロフィールアイコン"
-        className="rounded-full object-contain"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        sizes="100vw"
-        src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75"
-        srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75 3840w"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
+    <img
+      alt="プロフィールアイコン"
+      className="rounded-full object-contain"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75"
+      srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75 3840w"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
         }
-      />
-    </span>
+      }
+    />
+  </div>
+  <div
+    className="flex flex-1 flex-col gap-4"
+  >
     <div
-      className="flex flex-col gap-2"
+      className="flex justify-between gap-2"
     >
-      <p>
-        Akito Fukuda
-      </p>
+      <div>
+        <p
+          className="text-2xl"
+        >
+          Akito Fukuda
+        </p>
+        <p
+          className="text-custom-gray"
+        >
+          Web Dev
+        </p>
+      </div>
       <div
         className="flex"
       >
@@ -141,67 +150,80 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
         </a>
       </div>
     </div>
+    <p
+      className=""
+    >
+      大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
+最近のマイブームはメンズメイク。
+綺麗になりたいお年頃。ちなみに今年は年男。
+    </p>
   </div>
-  <p
-    className="pt-2 text-xs"
-  >
-    Web Dev
-  </p>
 </div>
 `;
 
 exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
 <div
-  className="w-60 rounded-xl border p-6"
+  className="flex w-full items-center gap-6 rounded-xl p-8"
 >
   <div
-    className="flex items-center gap-4 border-b pb-2"
+    className="relative h-[100px] w-[100px]"
   >
-    <span
-      className="relative h-12 w-12"
-    >
-      <img
-        alt="プロフィールアイコン"
-        className="rounded-full object-contain"
-        data-nimg="fill"
-        decoding="async"
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        sizes="100vw"
-        src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75"
-        srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75 3840w"
-        style={
-          {
-            "bottom": 0,
-            "color": "transparent",
-            "height": "100%",
-            "left": 0,
-            "objectFit": undefined,
-            "objectPosition": undefined,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
+    <img
+      alt="プロフィールアイコン"
+      className="rounded-full object-contain"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="100vw"
+      src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75"
+      srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F150x150.png&w=3840&q=75 3840w"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
         }
-      />
-    </span>
+      }
+    />
+  </div>
+  <div
+    className="flex flex-1 flex-col gap-4"
+  >
     <div
-      className="flex flex-col gap-2"
+      className="flex justify-between gap-2"
     >
-      <p>
-        Akito Fukuda
-      </p>
+      <div>
+        <p
+          className="text-2xl"
+        >
+          Akito Fukuda
+        </p>
+        <p
+          className="text-custom-gray"
+        >
+          Web Dev
+        </p>
+      </div>
       <div
         className="flex"
       />
     </div>
+    <p
+      className=""
+    >
+      大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
+最近のマイブームはメンズメイク。
+綺麗になりたいお年頃。ちなみに今年は年男。
+    </p>
   </div>
-  <p
-    className="pt-2 text-xs"
-  >
-    Web Dev
-  </p>
 </div>
 `;
