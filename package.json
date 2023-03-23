@@ -13,6 +13,7 @@
     "fix:lint": "next lint --fix",
     "fix:prettier": "prettier --write .",
     "test": "jest",
+    "test:coverage": "npm run test -- -u --coverage --silent --testLocationInResults --ci --json --outputFile=\"report.json\"",
     "new:fc": "hygen new fc",
     "new:asset": "hygen new asset"
   },

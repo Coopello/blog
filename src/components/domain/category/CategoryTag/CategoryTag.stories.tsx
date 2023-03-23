@@ -11,6 +11,6 @@ export const Initial: ComponentStory<typeof CategoryTag> = (args) => (
 );
 
 Initial.args = {
-  type: "chip",
-  text: "chip",
+  type: "front-end",
+  text: "front-end",
 };

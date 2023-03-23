@@ -1,4 +1,5 @@
 import "../src/styles/globals.css";
+import "../src/styles/theme.css";
 import "highlight.js/styles/hybrid.css";
 import Image from "next/image";
 
