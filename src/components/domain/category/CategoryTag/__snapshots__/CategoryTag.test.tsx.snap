@@ -8,7 +8,7 @@ exports[`domain/category/ArticleTag Snap Shot 1`] = `
   style={
     {
       "backgroundColor": "white",
-      "color": undefined,
+      "color": "#00b8d2",
       "paddingLeft": 0,
       "paddingRight": 8,
     }
