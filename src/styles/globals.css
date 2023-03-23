@@ -6,6 +6,15 @@ html {
   @apply text-custom-black;
 }
 
+p {
+  @apply break-words;
+}
+
+article.prose a {
+  @apply text-custom-coopelloBlue;
+  @apply decoration-custom-coopelloBlue;
+}
+
 @layer utilities {
   .hidden-scrollbar {
     -ms-overflow-style: none; /* IE, Edge 対応 */
