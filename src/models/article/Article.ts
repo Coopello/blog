@@ -1,9 +1,15 @@
 /**
  * @package
  */
-// TODO: 型定義する
+
+import type { Category } from "src/models/category";
+import type { Tag } from "src/models/tag";
+import type { Thumbnail } from "src/models/thumbnail";
+
 export type Article = {
   title: string;
   content: string;
-  tags: string[];
+  thumbnail: Thumbnail;
+  category: Category;
+  tags: Tag[];
 };
