@@ -13,7 +13,7 @@ type Props = {
  */
 export const ContentArea: FC<Props> = ({ content, id }) => {
   return (
-    <article id={id} className="prose lg:prose-xl">
+    <article id={id} className="prose lg:prose-sm">
       {parse(content)}
     </article>
   );
