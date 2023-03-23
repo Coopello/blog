@@ -18,7 +18,7 @@ Initial.args = {
   imageUrl: "https://placehold.jp/120x120.png",
   name: "ニックネーム",
   description: "XXX Developer",
-  category: "front-end",
+  color: "#00b8d2",
   tags: ["Front-end", "React"],
   title: "タイトル",
 };
@@ -27,7 +27,7 @@ ImageNotDisplayed.args = {
   imageUrl: undefined,
   name: "ニックネーム",
   description: "XXX Developer",
-  category: "front-end",
+  color: "#00b8d2",
   tags: ["Front-end", "React"],
   title: "タイトル",
 };
