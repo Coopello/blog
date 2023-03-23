@@ -1,12 +1,9 @@
-import type { Category } from "src/models/category";
-
 /**
  * @package
  */
+// TODO: 型定義する
 export type Article = {
   title: string;
-  category: Category;
+  content: string;
   tags: string[];
-  name: string;
-  description: string;
 };
