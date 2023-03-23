@@ -46,7 +46,7 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
         onMouseLeave={[Function]}
         style={
           {
-            "backgroundColor": "#E10718",
+            "backgroundColor": "#00b8d2",
             "color": "white",
             "opacity": 1,
             "paddingLeft": 12,
@@ -67,7 +67,7 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
         onMouseLeave={[Function]}
         style={
           {
-            "backgroundColor": "#E10718",
+            "backgroundColor": "#00b8d2",
             "color": "white",
             "opacity": 1,
             "paddingLeft": 12,

@@ -9,7 +9,7 @@ describe("domain/article/ArticleLargeCard", () => {
         imageUrl={"https://placehold.jp/512x512.png"}
         name={"ニックネーム"}
         description={"XXX Developer"}
-        category={"front-end"}
+        color={"#00b8d2"}
         tags={["Front-end", "React"]}
       />
     );

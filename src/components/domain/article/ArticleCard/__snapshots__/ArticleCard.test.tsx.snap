@@ -43,7 +43,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
           style={
             {
               "backgroundColor": "white",
-              "color": "#E10718",
+              "color": "#00b8d2",
               "paddingLeft": 0,
               "paddingRight": 8,
             }
@@ -63,7 +63,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
           style={
             {
               "backgroundColor": "white",
-              "color": "#E10718",
+              "color": "#00b8d2",
               "paddingLeft": 0,
               "paddingRight": 8,
             }

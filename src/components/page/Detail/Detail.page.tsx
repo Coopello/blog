@@ -16,8 +16,6 @@ type Props = {
  * @package
  */
 export const Detail: FC<Props> = ({ article }) => {
-  console.log(article);
-
   return (
     <div>
       {article ? <ContentArea content={article.content} id="content" /> : null}

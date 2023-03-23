@@ -9,7 +9,7 @@ import { LabelSection } from "src/components/ui/LabelSection";
 const dummyLargeArticle = {
   title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
   imageUrl: "/static/dummy_thumbnail.png",
-  category: "about-us" as const,
+  color: "#00b8d2" as const,
   tags: ["Front-end", "React"],
   name: "akito-10",
   description: "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男",
@@ -18,7 +18,7 @@ const dummyLargeArticle = {
 const dummyArticle = {
   title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
   imageUrl: "/static/dummy_icon.png",
-  category: "about-us" as const,
+  color: "#00b8d2" as const,
   tags: ["Front-end", "React"],
   name: "akito-10",
   description: "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男",
