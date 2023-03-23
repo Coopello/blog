@@ -1,5 +1,6 @@
 import "highlight.js/styles/github-dark.css";
 import "src/styles/globals.css";
+import "src/styles/theme.css";
 
 import type { ReactNode } from "react";
 import { Header } from "src/components/ui/Header";
