@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react";
-import { LargeProfileCard } from "src/components/domain/user/LargeProfileCard";
+import { ProfileCard } from "src/components/domain/user/ProfileCard";
 
 import { LabelSection } from "./";
 
@@ -14,7 +14,7 @@ export const Initial: ComponentStory<typeof LabelSection> = (args) => (
 Initial.args = {
   label: "記事を書いた人",
   children: (
-    <LargeProfileCard
+    <ProfileCard
       imageUrl="https://placehold.jp/150x150.png"
       myLinks={{
         twitter: "https://twitter.com/akt_prs10",
@@ -22,6 +22,7 @@ Initial.args = {
       }}
       name="Akito Fukuda"
       description="Web Dev"
+      job="Web Dev"
     />
   ),
 };

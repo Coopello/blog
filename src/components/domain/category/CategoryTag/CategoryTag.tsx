@@ -1,10 +1,9 @@
 import type { FC } from "react";
-import { CATEGORY_TAG_COLORS } from "src/components/domain/category/CategoryTag/constant";
 import { Tag } from "src/components/ui/Tag";
 import type { Category } from "src/models/category";
 
 type Props = {
-  type: Category;
+  color: Category["color"];
   text: string;
   filled?: boolean;
 };
@@ -12,8 +11,6 @@ type Props = {
 /**
  * @package
  */
-export const CategoryTag: FC<Props> = ({ filled = false, text, type }) => {
-  const color = CATEGORY_TAG_COLORS[type];
-
+export const CategoryTag: FC<Props> = ({ color, filled = false, text }) => {
   return <Tag color={color} text={text} filled={filled} />;
 };

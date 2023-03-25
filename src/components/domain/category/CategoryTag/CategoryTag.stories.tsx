@@ -11,6 +11,6 @@ export const Initial: ComponentStory<typeof CategoryTag> = (args) => (
 );
 
 Initial.args = {
-  type: "front-end",
+  color: "#00b8d2",
   text: "front-end",
 };

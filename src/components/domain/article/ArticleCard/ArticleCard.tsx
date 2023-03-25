@@ -3,12 +3,14 @@ import type { FC } from "react";
 import { CategoryTag } from "src/components/domain/category/CategoryTag";
 import type { Category } from "src/models/category";
 
+import styles from "./ArticleCard.module.css";
+
 type Props = {
   title: string;
   name: string;
   description: string;
   imageUrl?: string;
-  category: Category;
+  color: Category["color"];
   tags: string[];
 };
 
@@ -16,7 +18,7 @@ type Props = {
  * @package
  */
 export const ArticleCard: FC<Props> = ({
-  category,
+  color,
   description,
   imageUrl,
   name,
@@ -40,13 +42,15 @@ export const ArticleCard: FC<Props> = ({
           {tags.map((tag) => {
             return (
               <li key={tag} className="whitespace-nowrap">
-                <CategoryTag type={category} text={tag} />
+                <CategoryTag color={color} text={tag} />
               </li>
             );
           })}
         </ul>
         <p className="text-base">{name}</p>
-        <p className="text-sm text-custom-gray">{description}</p>
+        <p className={`w-full ${styles.description} text-sm text-custom-gray`}>
+          {description}
+        </p>
       </div>
     </div>
   );

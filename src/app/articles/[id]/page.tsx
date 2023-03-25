@@ -1,6 +1,25 @@
-// TODO: ArticlePage 作成後に削除する
-import { Main } from "src/components/page/Main";
+/* eslint-disable @typescript-eslint/naming-convention */
+import { Detail } from "src/components/page/Detail";
+import type { Article } from "src/models/article";
 
-export default function MainPage() {
-  return <Main />;
+const getBlogData = async (blogId: string) => {
+  const res = await fetch(`${process.env.MICRO_CMS_API_URL}/blogs/${blogId}`, {
+    headers: {
+      "Content-Type": "application/json",
+      "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
+    },
+    cache: "force-cache",
+  });
+
+  return await res.json();
+};
+
+export default async function DetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const article: Article = await getBlogData(params.id);
+
+  return <Detail article={article} />;
 }

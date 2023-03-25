@@ -1,1 +1,0 @@
-export { LargeProfileCard } from "./LargeProfileCard";

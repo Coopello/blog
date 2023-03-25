@@ -7,21 +7,21 @@ type Props = {
   name: string;
   description: string;
   imageUrl: string;
-  category: Category;
+  color: Category["color"];
   tags: string[];
 };
 /**
  * @package
  */
 export const ArticleLargeCard: FC<Props> = ({
-  category,
+  color,
   description,
   imageUrl,
   name,
   tags,
 }) => {
   return (
-    // TODO: サムネイルを常に左右中央揃えにする
+    // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
     <div className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6">
       <div className="relative h-[250px] w-full max-w-[416px]">
         <Image
@@ -35,7 +35,7 @@ export const ArticleLargeCard: FC<Props> = ({
         {tags.map((tag) => {
           return (
             <li key={tag} className="whitespace-nowrap">
-              <CategoryTag type={category} text={tag} filled />
+              <CategoryTag color={color} text={tag} filled />
             </li>
           );
         })}
