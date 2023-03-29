@@ -38,7 +38,13 @@ export const Detail: FC<Props> = ({ article }) => {
     <div className="mx-auto mt-12 flex w-[90%] max-w-[1484px] gap-12">
       <div className="flex w-full flex-col items-center gap-12">
         {article ? (
-          <ContentArea content={article.content} id="content" />
+          <ContentArea
+            title={article.title}
+            tags={article.tags}
+            content={article.content}
+            categoryColor={article.category.color}
+            id="content"
+          />
         ) : null}
         <aside className="w-full">
           <LabelSection label={"この記事を書いた人"}>
