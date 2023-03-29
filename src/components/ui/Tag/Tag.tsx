@@ -30,7 +30,8 @@ export const Tag: FC<Props> = ({ color, filled = false, onClick, text }) => {
       }
     : {
         color,
-        backgroundColor: isButton && isHover ? "rgba(0, 0, 0, 0.1)" : "white",
+        backgroundColor:
+          isButton && isHover ? "rgba(0, 0, 0, 0.1)" : "transparent",
         paddingLeft: isButton ? 8 : 0,
         paddingRight: 8,
       };
