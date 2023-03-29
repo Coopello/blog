@@ -6,6 +6,9 @@
   height: 24px;
   vertical-align: middle;
   font-size: 0;
+  padding: 8px;
+  box-sizing: content-box;
+  border-radius: 100%;
 }
 
 .root svg {
@@ -17,7 +20,7 @@
   cursor: pointer;
 }
 .clickable:hover {
-  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .color--black > svg path {

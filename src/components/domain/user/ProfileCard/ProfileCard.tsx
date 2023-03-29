@@ -44,7 +44,7 @@ export const ProfileCard: FC<Props> = ({
             <p className="text-2xl">{name}</p>
             <p className="text-custom-gray">{job}</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex">
             {twitter ? <Icon icon="twitter" href={twitter} isBlank /> : null}
             {github ? <Icon icon="github" href={github} isBlank /> : null}
           </div>
