@@ -7,7 +7,7 @@ exports[`domain/category/ArticleTag Snap Shot 1`] = `
   onMouseLeave={[Function]}
   style={
     {
-      "backgroundColor": "white",
+      "backgroundColor": "transparent",
       "color": "#00b8d2",
       "paddingLeft": 0,
       "paddingRight": 8,
