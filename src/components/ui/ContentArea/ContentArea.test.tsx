@@ -10,7 +10,7 @@ describe("ui/ContentArea", () => {
         content="<h1>test</h1>"
         title="test"
         tags={[{ name: "test" }]}
-        categoryColor="#000"
+        color="#5ac8d8"
       />
     );
     const tree = component.toJSON();

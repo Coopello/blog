@@ -2,6 +2,20 @@
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
+    // TODO: next/font を使用して書き換える
+    fontFamily: {
+      blog: [
+        "Hiragino Sans",
+        "ヒラギノ角ゴシック",
+        "メイリオ",
+        "Meiryo",
+        "YuGothic",
+        "Yu Gothic",
+        "ＭＳ Ｐゴシック",
+        "MS PGothic",
+        "sans-serif",
+      ],
+    },
     extend: {
       colors: {
         custom: {
