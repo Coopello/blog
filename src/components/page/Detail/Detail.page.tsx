@@ -11,16 +11,6 @@ type Props = {
   article: Article;
 };
 
-const dummyArticle = {
-  title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
-  imageUrl: "/static/dummy_icon.png",
-  color: "#00b8d2" as const,
-  tags: ["Front-end", "React"],
-  name: "akito-10",
-  description:
-    "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男。好きな hooks は useCallback。",
-};
-
 const dummyNoImageArticle = {
   title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
   color: "#00b8d2" as const,
@@ -45,17 +35,17 @@ export const Detail: FC<Props> = ({ article }) => {
             <ProfileCard
               imageUrl={"https://placehold.jp/150x150.png"}
               myLinks={{
-                twitter: "https://twitter.com/akt_prs10",
-                github: "https://github.com/akito-10",
+                twitter: article.author.twitter,
+                github: article.author.github,
               }}
-              name={"Akito Fukuda"}
-              description={"Web Dev"}
-              job={"Web Dev"}
+              name={article.author.name}
+              description={article.author.description}
+              job={article.author.job}
             />
           </LabelSection>
         </aside>
         <aside className="block w-full lg:hidden">
-          <LabelSection label={"関連記事"}>
+          <LabelSection label={"あなたへのおすすめ"}>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {Array(3)
                 .fill(0)
@@ -66,21 +56,9 @@ export const Detail: FC<Props> = ({ article }) => {
             </div>
           </LabelSection>
         </aside>
-        <aside className="w-full">
-          <LabelSection label={"おすすめの記事"}>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {Array(10)
-                .fill(0)
-                .map(() => dummyArticle)
-                .map((article, index) => (
-                  <ArticleCard key={index} {...article} />
-                ))}
-            </div>
-          </LabelSection>
-        </aside>
       </div>
       <aside className="hidden lg:block">
-        <LabelSection label={"関連記事"}>
+        <LabelSection label={"あなたへのおすすめ"}>
           <div className="flex max-w-[400px] flex-col gap-6">
             {Array(3)
               .fill(0)
