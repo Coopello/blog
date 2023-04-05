@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
-<div
-  className="flex max-w-full flex-1 gap-4 rounded bg-custom-white p-4"
+<button
+  className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
 >
   <img
     alt="記事のイメージ画像"
@@ -42,7 +42,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
           onMouseLeave={[Function]}
           style={
             {
-              "backgroundColor": "white",
+              "backgroundColor": "transparent",
               "color": "#00b8d2",
               "paddingLeft": 0,
               "paddingRight": 8,
@@ -62,7 +62,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
           onMouseLeave={[Function]}
           style={
             {
-              "backgroundColor": "white",
+              "backgroundColor": "transparent",
               "color": "#00b8d2",
               "paddingLeft": 0,
               "paddingRight": 8,
@@ -75,15 +75,11 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
       </li>
     </ul>
     <p
-      className="text-base"
-    >
-      名前
-    </p>
-    <p
       className="w-full description text-sm text-custom-gray"
     >
-      XXX Developer
+      by 
+      名前
     </p>
   </div>
-</div>
+</button>
 `;

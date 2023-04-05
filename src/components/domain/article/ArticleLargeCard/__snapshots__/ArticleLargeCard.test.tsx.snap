@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
-<div
-  className="flex max-w-full flex-1 flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6"
+<button
+  className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
 >
   <div
     className="relative h-[250px] w-full max-w-[416px]"
@@ -84,15 +84,11 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
     className="flex flex-1 flex-col gap-1"
   >
     <p
-      className="text-base"
+      className="text-base text-custom-gray"
     >
+      by 
       ニックネーム
     </p>
-    <p
-      className="text-sm text-custom-gray"
-    >
-      XXX Developer
-    </p>
   </div>
-</div>
+</button>
 `;
