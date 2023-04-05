@@ -22,7 +22,7 @@ export const ArticleLargeCard: FC<Props> = ({
 }) => {
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
-    <button className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:bg-custom-black/5">
+    <button className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:bg-custom-black/5 [&>div>img]:hover:-z-10">
       <div className="relative h-[250px] w-full max-w-[416px]">
         <Image
           className="object-contain"
