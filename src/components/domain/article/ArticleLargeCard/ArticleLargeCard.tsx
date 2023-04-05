@@ -1,13 +1,12 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { CategoryTag } from "src/components/domain/category/CategoryTag";
-import type { Category } from "src/models/category";
+import { Tag } from "src/components/ui/Tag";
 
 type Props = {
   name: string;
   description: string;
   imageUrl: string;
-  color: Category["color"];
+  color: `#${string}`;
   tags: string[];
 };
 /**
@@ -35,7 +34,7 @@ export const ArticleLargeCard: FC<Props> = ({
         {tags.map((tag) => {
           return (
             <li key={tag} className="whitespace-nowrap">
-              <CategoryTag color={color} text={tag} filled />
+              <Tag color={color} text={tag} filled />
             </li>
           );
         })}
