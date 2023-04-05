@@ -25,10 +25,16 @@ const dummyNoImageArticle = {
  */
 export const Detail: FC<Props> = ({ article }) => {
   return (
-    <div className="mx-auto mt-12 flex w-[90%] max-w-[1484px] gap-12">
+    <div className="mx-auto mt-12 flex w-full max-w-[1484px] gap-12 sm:w-[90%]">
       <div className="flex w-full flex-col items-center gap-12">
         {article ? (
-          <ContentArea content={article.content} id="content" />
+          <ContentArea
+            title={article.title}
+            tags={article.tags}
+            content={article.content}
+            color={"#5ac8d8"}
+            id="content"
+          />
         ) : null}
         <aside className="w-full">
           <LabelSection label={"この記事を書いた人"}>

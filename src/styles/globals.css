@@ -4,6 +4,7 @@
 
 html {
   @apply text-custom-black;
+  @apply font-blog;
 }
 
 p {
@@ -13,6 +14,10 @@ p {
 article.prose a {
   @apply text-custom-coopelloBlue;
   @apply decoration-custom-coopelloBlue;
+}
+
+article.prose h1 {
+  @apply text-2xl sm:text-[28px];
 }
 
 @layer utilities {

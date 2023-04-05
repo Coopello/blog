@@ -2,21 +2,40 @@
 
 import parse from "html-react-parser";
 import type { FC } from "react";
+import { Tag } from "src/components/ui/Tag";
+import type { Article } from "src/models/article";
 
 type Props = {
-  content: string;
+  title: Article["title"];
+  color: `#${string}`;
+  tags: Article["tags"];
+  content: Article["content"];
   id: string;
 };
 
 /**
  * @package
  */
-export const ContentArea: FC<Props> = ({ content, id }) => {
+export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
+  console.log(tags);
+
   return (
     <article
       id={id}
-      className="prose box-border w-full max-w-none rounded bg-white p-8 lg:prose-base"
+      className="prose prose-sm box-border w-full max-w-none rounded bg-white p-4 lg:prose-base sm:p-8"
     >
+      <h1 className="mb-4 border-b-[3px] pb-4 text-[28px] leading-9 sm:text-[32px] sm:leading-10">
+        {title}
+      </h1>
+      <ul className="mt-0 flex list-none gap-2 p-0">
+        {tags.map((tag) => {
+          return (
+            <li key={tag.name} className="m-0 p-0">
+              <Tag color={color} text={tag.name} filled />
+            </li>
+          );
+        })}
+      </ul>
       {parse(content)}
     </article>
   );
