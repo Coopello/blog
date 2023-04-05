@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { CategoryTag } from "src/components/domain/category/CategoryTag";
-import type { Category } from "src/models/category";
+import { Tag } from "src/components/ui/Tag";
 
 import styles from "./ArticleCard.module.css";
 
@@ -10,7 +9,7 @@ type Props = {
   name: string;
   description: string;
   imageUrl?: string;
-  color: Category["color"];
+  color: `#${string}`;
   tags: string[];
 };
 
@@ -42,7 +41,7 @@ export const ArticleCard: FC<Props> = ({
           {tags.map((tag) => {
             return (
               <li key={tag} className="whitespace-nowrap">
-                <CategoryTag color={color} text={tag} />
+                <Tag color={color} text={tag} />
               </li>
             );
           })}
