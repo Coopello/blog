@@ -14,14 +14,13 @@ type Props = {
  */
 export const ArticleLargeCard: FC<Props> = ({
   color,
-  description,
   imageUrl,
   name,
   tags,
 }) => {
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
-    <button className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:bg-custom-black/5 [&>div>img]:hover:-z-10">
+    <button className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60">
       <div className="relative h-[250px] w-full max-w-[416px]">
         <Image
           className="object-contain"
@@ -40,8 +39,7 @@ export const ArticleLargeCard: FC<Props> = ({
         })}
       </ul>
       <div className="flex flex-1 flex-col gap-1">
-        <p className="text-base">{name}</p>
-        <p className="text-sm text-custom-gray">{description}</p>
+        <p className="text-base text-custom-gray">by {name}</p>
       </div>
     </button>
   );

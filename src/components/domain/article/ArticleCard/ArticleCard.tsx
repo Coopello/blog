@@ -18,14 +18,13 @@ type Props = {
  */
 export const ArticleCard: FC<Props> = ({
   color,
-  description,
   imageUrl,
   name,
   tags,
   title,
 }) => {
   return (
-    <button className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:bg-custom-black/5">
+    <button className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60">
       {imageUrl ? (
         <Image
           className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
@@ -46,9 +45,8 @@ export const ArticleCard: FC<Props> = ({
             );
           })}
         </ul>
-        <p className="text-base">{name}</p>
         <p className={`w-full ${styles.description} text-sm text-custom-gray`}>
-          {description}
+          by {name}
         </p>
       </div>
     </button>
