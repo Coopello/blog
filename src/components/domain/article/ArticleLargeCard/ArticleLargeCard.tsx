@@ -38,9 +38,7 @@ export const ArticleLargeCard: FC<Props> = ({
           );
         })}
       </ul>
-      <div className="flex flex-1 flex-col gap-1">
-        <p className="text-base text-custom-gray">by {name}</p>
-      </div>
+      <p className="text-base text-custom-gray">by {name}</p>
     </button>
   );
 };

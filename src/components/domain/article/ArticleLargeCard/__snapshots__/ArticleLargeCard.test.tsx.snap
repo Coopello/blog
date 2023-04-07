@@ -80,15 +80,11 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
       </span>
     </li>
   </ul>
-  <div
-    className="flex flex-1 flex-col gap-1"
+  <p
+    className="text-base text-custom-gray"
   >
-    <p
-      className="text-base text-custom-gray"
-    >
-      by 
-      ニックネーム
-    </p>
-  </div>
+    by 
+    ニックネーム
+  </p>
 </button>
 `;
