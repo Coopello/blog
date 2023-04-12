@@ -1,6 +1,6 @@
-import type { Author } from "src/models/author";
-import type { Tag } from "src/models/tag";
-import type { Thumbnail } from "src/models/thumbnail";
+import type { Author } from "./";
+import type { Tag } from "./";
+import type { Thumbnail } from "./";
 
 /**
  * @package
