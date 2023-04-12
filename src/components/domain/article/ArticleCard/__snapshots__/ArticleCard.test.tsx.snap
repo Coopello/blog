@@ -83,3 +83,69 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
   </div>
 </button>
 `;
+
+exports[`domain/article/ArticleCard Snap Shot ArticleCard without imageUrl 1`] = `
+<button
+  className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
+>
+  <div
+    className="flex flex-1 flex-col gap-1 overflow-x-hidden"
+  >
+    <h2
+      className="border-b pb-1 text-xl"
+    >
+      タイトル
+    </h2>
+    <ul
+      className="hidden-scrollbar flex w-full overflow-y-clip overflow-x-scroll"
+    >
+      <li
+        className="whitespace-nowrap"
+      >
+        <span
+          className="rounded-sm py-1 text-sm"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            {
+              "backgroundColor": "transparent",
+              "color": "#00b8d2",
+              "paddingLeft": 0,
+              "paddingRight": 8,
+            }
+          }
+        >
+          #
+          Front-end
+        </span>
+      </li>
+      <li
+        className="whitespace-nowrap"
+      >
+        <span
+          className="rounded-sm py-1 text-sm"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            {
+              "backgroundColor": "transparent",
+              "color": "#00b8d2",
+              "paddingLeft": 0,
+              "paddingRight": 8,
+            }
+          }
+        >
+          #
+          React
+        </span>
+      </li>
+    </ul>
+    <p
+      className="w-full description text-sm text-custom-gray"
+    >
+      by 
+      名前
+    </p>
+  </div>
+</button>
+`;
