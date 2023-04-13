@@ -50,7 +50,7 @@ export const Home: FC = () => {
             ))}
         </div>
       </LabelSection>
-      <Button className="h-9 w-[256px] px-4">もっと読む</Button>
+      <Button>もっと読む</Button>
     </div>
   );
 };
