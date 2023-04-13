@@ -54,7 +54,11 @@
   },
   "overrides": [
     {
-      "files": ["src/app/**/{head,layout,page}.tsx", "src/**/*.stories.tsx"],
+      "files": [
+        "src/app/**/{error,layout,not-found,page}.tsx",
+        "src/pages/**/404.tsx",
+        "src/**/*.stories.tsx"
+      ],
       "rules": { "import/no-default-export": "off" }
     },
     {

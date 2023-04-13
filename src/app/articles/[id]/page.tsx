@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+import { notFound } from "next/navigation";
 import { Detail } from "src/components/page/Detail";
 import type { Article } from "src/models/article";
 
@@ -10,6 +11,10 @@ const getBlogData = async (blogId: string) => {
     },
     cache: "force-cache",
   });
+
+  if (res.status === 404) {
+    notFound();
+  }
 
   return await res.json();
 };
