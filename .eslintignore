@@ -4,3 +4,4 @@
 /.eslintrc.js
 **/$path.ts
 next-env.d.ts
+jest.setup.js
