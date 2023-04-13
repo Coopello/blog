@@ -1,9 +1,6 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { forwardRef } from "react";
 import { Icon } from "src/assets";
-import { GitHub } from "src/assets/GitHub";
-import { Twitter } from "src/assets/Twitter";
 
 type Props = {
   description: string;
@@ -54,23 +51,3 @@ export const ProfileCard: FC<Props> = ({
     </div>
   );
 };
-
-const TwitterIcon = forwardRef<HTMLSpanElement>((_, ref) => {
-  return (
-    <span ref={ref}>
-      <Twitter />
-    </span>
-  );
-});
-
-TwitterIcon.displayName = "TwitterIcon";
-
-const GitHubIcon = forwardRef<HTMLInputElement>((_, ref) => {
-  return (
-    <span ref={ref}>
-      <GitHub />
-    </span>
-  );
-});
-
-GitHubIcon.displayName = "GitHubIcon";
