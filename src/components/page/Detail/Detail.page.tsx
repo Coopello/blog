@@ -25,7 +25,7 @@ const dummyNoImageArticle = {
  */
 export const Detail: FC<Props> = ({ article }) => {
   return (
-    <div className="mx-auto mt-12 flex w-full max-w-[1484px] gap-12 sm:w-[90%]">
+    <div className="mx-auto mt-12 flex w-full max-w-[1484px] gap-12 pb-12 sm:w-[90%]">
       <div className="flex w-full flex-col items-center gap-12">
         {article ? (
           <ContentArea
