@@ -55,8 +55,7 @@
   "overrides": [
     {
       "files": [
-        // TODO: 404ページの表示に成功したら不要な例外を削除する
-        "src/app/**/{404,not-found,head,layout,page}.tsx",
+        "src/app/**/{error,layout,not-found,page}.tsx",
         "src/pages/**/404.tsx",
         "src/**/*.stories.tsx"
       ],
