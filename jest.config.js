@@ -5,6 +5,8 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/models/**/*.{js,jsx,ts,tsx}",
+    "!src/assets/**/*.{js,jsx,ts,tsx}",
+    "!src/libs/apiClient/*.{js,jsx,ts,tsx}",
     "!src/app/**/*.{js,jsx,ts,tsx}",
     "!**/*.stories.{js,jsx,ts,tsx}",
     "!**/*.d.ts",

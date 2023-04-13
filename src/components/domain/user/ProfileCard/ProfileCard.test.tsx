@@ -21,6 +21,7 @@ describe("ui/ProfileCard", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   it("Snap Shot no myLinks links", () => {
     const component = renderer.create(
       <ProfileCard
