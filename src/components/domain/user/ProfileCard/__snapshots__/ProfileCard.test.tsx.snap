@@ -38,20 +38,18 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
     className="flex flex-1 flex-col gap-4"
   >
     <div
-      className="flex items-center justify-between gap-2"
+      className="flex items-center gap-4"
     >
-      <div>
-        <p
-          className="text-2xl"
-        >
-          Akito Fukuda
-        </p>
-        <p
-          className="text-custom-gray"
-        >
-          Web Dev
-        </p>
-      </div>
+      <p
+        className="text-2xl"
+      >
+        Akito Fukuda
+      </p>
+      <p
+        className="text-custom-gray"
+      >
+        Web Dev
+      </p>
       <div
         className="flex"
       >
@@ -152,9 +150,7 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
         </a>
       </div>
     </div>
-    <p
-      className=""
-    >
+    <p>
       大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
 最近のマイブームはメンズメイク。
 綺麗になりたいお年頃。ちなみに今年は年男。
@@ -201,27 +197,23 @@ exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
     className="flex flex-1 flex-col gap-4"
   >
     <div
-      className="flex items-center justify-between gap-2"
+      className="flex items-center gap-4"
     >
-      <div>
-        <p
-          className="text-2xl"
-        >
-          Akito Fukuda
-        </p>
-        <p
-          className="text-custom-gray"
-        >
-          Web Dev
-        </p>
-      </div>
+      <p
+        className="text-2xl"
+      >
+        Akito Fukuda
+      </p>
+      <p
+        className="text-custom-gray"
+      >
+        Web Dev
+      </p>
       <div
         className="flex"
       />
     </div>
-    <p
-      className=""
-    >
+    <p>
       大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
 最近のマイブームはメンズメイク。
 綺麗になりたいお年頃。ちなみに今年は年男。
