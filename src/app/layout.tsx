@@ -7,7 +7,7 @@ import { Header } from "src/components/ui/Header";
 
 export const metadata = {
   title: "Coope Blog",
-  describe:
+  description:
     "みんながよく知る企業をめざしたいエンジニア必見！有名企業エンジニアによる「未経験からでも悩まない」ノウハウがここに。",
 };
 
