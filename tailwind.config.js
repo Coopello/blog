@@ -21,7 +21,7 @@ module.exports = {
         custom: {
           white: "#FFFFFF",
           lightGray: "#F5F5F6",
-          gray: "#C9C9C9",
+          gray: "#6E6E6E",
           black: "#222222",
           red: "#E10718",
           orange: "#FF6E27",
