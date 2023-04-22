@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC } from "react";
 import { ArticleCard } from "src/components/domain/article/ArticleCard";
 import { ArticleLargeCard } from "src/components/domain/article/ArticleLargeCard";
@@ -22,27 +20,29 @@ export const Home: FC<Props> = ({ articles }) => {
     <div className="mx-auto mt-12 flex w-[90%] max-w-[952px] flex-col items-center gap-12 pb-12">
       <LabelSection label={"人気の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
-          {articles.popular.map((article, index) => (
+          {articles.popular.map((article) => (
             <ArticleLargeCard
-              key={index}
+              key={article.id}
               description={article.description}
               imageUrl={article.thumbnail.url}
               tags={article.tags.map((tag) => tag.name)}
               color={"#5AC8D8"}
+              id={article.id}
             />
           ))}
         </div>
       </LabelSection>
       <LabelSection label={"最近の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {articles.recent.map((article, index) => (
+          {articles.recent.map((article) => (
             <ArticleCard
-              key={index}
+              key={article.id}
               title={article.title}
               description={article.description}
               imageUrl={article.thumbnail.url}
               tags={article.tags.map((tag) => tag.name)}
               color={"#5AC8D8"}
+              id={article.id}
             />
           ))}
         </div>

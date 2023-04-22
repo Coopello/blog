@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
@@ -10,6 +13,7 @@ type Props = {
   imageUrl?: string;
   color: `#${string}`;
   tags: string[];
+  id: string;
 };
 
 /**
@@ -18,12 +22,21 @@ type Props = {
 export const ArticleCard: FC<Props> = ({
   color,
   description,
+  id,
   imageUrl,
   tags,
   title,
 }) => {
+  const router = useRouter();
+
   return (
-    <button className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60">
+    <button
+      className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
+      onClick={() => {
+        router.prefetch(`/articles/${id}`);
+        router.push(`/articles/${id}`);
+      }}
+    >
       {imageUrl ? (
         <Image
           className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
