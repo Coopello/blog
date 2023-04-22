@@ -8,12 +8,12 @@ type Response = {
 
 const getPopularArticles = async () => {
   const res = await fetch(`${process.env.MICRO_CMS_API_URL}/blogs?orders=-pv`, {
-    next: { revalidate: 10 },
     headers: {
       "Content-Type": "application/json",
       "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
     },
     cache: "force-cache",
+    next: { revalidate: 10 },
   });
 
   return await res.json();
