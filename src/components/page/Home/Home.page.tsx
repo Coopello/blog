@@ -35,7 +35,7 @@ export const Home: FC<Props> = ({ articles }) => {
       </LabelSection>
       <LabelSection label={"最近の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {articles.popular.map((article, index) => (
+          {articles.recent.map((article, index) => (
             <ArticleCard
               key={index}
               title={article.title}
