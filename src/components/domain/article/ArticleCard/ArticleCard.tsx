@@ -6,7 +6,6 @@ import styles from "./ArticleCard.module.css";
 
 type Props = {
   title: string;
-  name: string;
   description: string;
   imageUrl?: string;
   color: `#${string}`;
