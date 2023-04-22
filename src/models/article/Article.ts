@@ -6,6 +6,7 @@ import type { Thumbnail } from "./";
  * @package
  */
 export type Article = {
+  id: string;
   title: string;
   description: string;
   content: string;
