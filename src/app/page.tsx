@@ -4,6 +4,7 @@ import type { Article } from "src/models/article";
 
 type Response = {
   contents: Article[];
+  totalCount: number;
 };
 
 const getPopularArticles = async () => {
@@ -43,7 +44,13 @@ export default async function HomePage() {
 
   return (
     <Home
-      articles={{ popular: popularRes.contents, recent: recentRes.contents }}
+      articles={{
+        popular: popularRes.contents,
+        recent: {
+          contents: recentRes.contents,
+          totalCount: recentRes.totalCount,
+        },
+      }}
     />
   );
 }

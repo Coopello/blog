@@ -8,9 +8,14 @@ import type { Article } from "src/models/article";
 type Props = {
   articles: {
     popular: Article[];
-    recent: Article[];
+    recent: {
+      contents: Article[];
+      totalCount: number;
+    };
   };
 };
+
+const DISPLAY_RECENT_ARTICLE_CARD_MAX_COUNT = 6;
 
 /**
  * @package
@@ -34,7 +39,7 @@ export const Home: FC<Props> = ({ articles }) => {
       </LabelSection>
       <LabelSection label={"最近の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {articles.recent.map((article) => (
+          {articles.recent.contents.map((article) => (
             <ArticleCard
               key={article.id}
               title={article.title}
@@ -47,7 +52,9 @@ export const Home: FC<Props> = ({ articles }) => {
           ))}
         </div>
       </LabelSection>
-      <Button>もっと読む</Button>
+      {articles.recent.totalCount > DISPLAY_RECENT_ARTICLE_CARD_MAX_COUNT ? (
+        <Button>もっと読む</Button>
+      ) : null}
     </div>
   );
 };
