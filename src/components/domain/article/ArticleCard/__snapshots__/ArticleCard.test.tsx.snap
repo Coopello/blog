@@ -77,8 +77,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
     <p
       className="w-full description text-sm text-custom-gray"
     >
-      by 
-      名前
+      XXX Developer
     </p>
   </div>
 </button>
@@ -143,8 +142,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard without imageUrl 1`] =
     <p
       className="w-full description text-sm text-custom-gray"
     >
-      by 
-      名前
+      XXX Developer
     </p>
   </div>
 </button>

@@ -18,8 +18,8 @@ type Props = {
  */
 export const ArticleCard: FC<Props> = ({
   color,
+  description,
   imageUrl,
-  name,
   tags,
   title,
 }) => {
@@ -46,7 +46,7 @@ export const ArticleCard: FC<Props> = ({
           })}
         </ul>
         <p className={`w-full ${styles.description} text-sm text-custom-gray`}>
-          by {name}
+          {description}
         </p>
       </div>
     </button>

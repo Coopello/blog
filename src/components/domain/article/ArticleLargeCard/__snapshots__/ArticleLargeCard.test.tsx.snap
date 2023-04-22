@@ -81,10 +81,9 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
     </li>
   </ul>
   <p
-    className="text-base text-custom-gray"
+    className="text-base text-custom-gray description"
   >
-    by 
-    ニックネーム
+    XXX Developer
   </p>
 </button>
 `;
