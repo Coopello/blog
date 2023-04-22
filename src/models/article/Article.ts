@@ -7,6 +7,7 @@ import type { Thumbnail } from "./";
  */
 export type Article = {
   title: string;
+  description: string;
   content: string;
   thumbnail: Thumbnail;
   categories: string[];
