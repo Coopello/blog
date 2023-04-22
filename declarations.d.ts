@@ -4,8 +4,6 @@ declare module "*.css" {
   export default content;
 }
 
-declare global {
-  interface RequestInit {
-    next?: NextFetchRequestConfig;
-  }
+interface RequestInit {
+  next?: NextFetchRequestConfig;
 }
