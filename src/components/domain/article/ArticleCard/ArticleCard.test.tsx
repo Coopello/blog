@@ -11,6 +11,7 @@ describe("domain/article/ArticleCard", () => {
         color="#00b8d2"
         tags={["Front-end", "React"]}
         title="タイトル"
+        id={"hogehoge"}
       />
     );
     const tree = component.toJSON();
@@ -23,6 +24,7 @@ describe("domain/article/ArticleCard", () => {
         color="#00b8d2"
         tags={["Front-end", "React"]}
         title="タイトル"
+        id={"hogehoge"}
       />
     );
     const tree = component.toJSON();

@@ -12,6 +12,7 @@ describe("domain/article/ArticleLargeCard", () => {
         }
         color={"#00b8d2"}
         tags={["Front-end", "React"]}
+        id={"hogehoge"}
       />
     );
     const tree = component.toJSON();

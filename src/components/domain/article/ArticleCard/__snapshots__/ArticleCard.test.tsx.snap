@@ -3,6 +3,7 @@
 exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
 <button
   className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
+  onClick={[Function]}
 >
   <img
     alt="記事のイメージ画像"
@@ -86,6 +87,7 @@ exports[`domain/article/ArticleCard Snap Shot ArticleCard 1`] = `
 exports[`domain/article/ArticleCard Snap Shot ArticleCard without imageUrl 1`] = `
 <button
   className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
+  onClick={[Function]}
 >
   <div
     className="flex flex-1 flex-col gap-1 overflow-x-hidden"
