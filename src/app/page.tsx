@@ -14,6 +14,7 @@ const getPopularArticles = async () => {
       "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
     },
     next: { revalidate: 10 },
+    cache: "force-cache",
   });
 
   return await res.json();
