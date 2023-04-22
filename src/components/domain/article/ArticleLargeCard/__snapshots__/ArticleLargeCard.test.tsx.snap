@@ -83,7 +83,8 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
   <p
     className="text-base text-custom-gray description"
   >
-    XXX Developer
+    Firestore は〇〇です。
+ガチ完成なのでぜひ読んでくださいね！
   </p>
 </button>
 `;

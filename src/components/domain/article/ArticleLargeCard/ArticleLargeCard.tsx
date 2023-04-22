@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
-import styles from "./ArticleCard.module.css";
+import styles from "./ArticleLargeCard.module.css";
 
 type Props = {
   description: string;

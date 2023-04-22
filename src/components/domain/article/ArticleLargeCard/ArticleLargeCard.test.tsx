@@ -7,8 +7,9 @@ describe("domain/article/ArticleLargeCard", () => {
     const component = renderer.create(
       <ArticleLargeCard
         imageUrl={"https://placehold.jp/512x512.png"}
-        name={"ニックネーム"}
-        description={"XXX Developer"}
+        description={
+          "Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！"
+        }
         color={"#00b8d2"}
         tags={["Front-end", "React"]}
       />
