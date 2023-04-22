@@ -7,7 +7,7 @@ const nextConfig = {
     typedRoutes: true,
   },
   images: {
-    domains: ["placehold.jp"],
+    domains: ["placehold.jp", "images.microcms-assets.io"],
   },
 };
 
