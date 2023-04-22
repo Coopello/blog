@@ -2,6 +2,8 @@ import Image from "next/image";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
+import styles from "./ArticleCard.module.css";
+
 type Props = {
   description: string;
   imageUrl: string;
@@ -37,7 +39,9 @@ export const ArticleLargeCard: FC<Props> = ({
           );
         })}
       </ul>
-      <p className="text-base text-custom-gray">{description}</p>
+      <p className={`text-base text-custom-gray ${styles.description}`}>
+        {description}
+      </p>
     </button>
   );
 };
