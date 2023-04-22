@@ -13,7 +13,6 @@ const getPopularArticles = async () => {
       "Content-Type": "application/json",
       "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
     },
-    cache: "force-cache",
     next: { revalidate: 10 },
   });
 
