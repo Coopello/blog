@@ -38,8 +38,8 @@ const getRecentArticles = async () => {
 
 export default async function HomePage() {
   const [popularRes, recentRes]: Response[] = await Promise.all([
-    await getPopularArticles(),
-    await getRecentArticles(),
+    getPopularArticles(),
+    getRecentArticles(),
   ]);
 
   return (
