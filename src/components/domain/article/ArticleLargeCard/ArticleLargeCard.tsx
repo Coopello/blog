@@ -1,15 +1,18 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
-import styles from "./ArticleCard.module.css";
+import styles from "./ArticleLargeCard.module.css";
 
 type Props = {
-  name: string;
   description: string;
   imageUrl: string;
   color: `#${string}`;
   tags: string[];
+  id: string;
 };
 /**
  * @package
@@ -17,12 +20,21 @@ type Props = {
 export const ArticleLargeCard: FC<Props> = ({
   color,
   description,
+  id,
   imageUrl,
   tags,
 }) => {
+  const router = useRouter();
+
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
-    <button className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60">
+    <button
+      className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
+      onClick={() => {
+        router.prefetch(`/articles/${id}`);
+        router.push(`/articles/${id}`);
+      }}
+    >
       <div className="relative h-[250px] w-full max-w-[416px]">
         <Image
           className="object-contain"

@@ -16,8 +16,7 @@ export const ImageNotDisplayed: ComponentStory<typeof ArticleCard> = (args) => (
 
 Initial.args = {
   imageUrl: "https://placehold.jp/120x120.png",
-  name: "ニックネーム",
-  description: "XXX Developer",
+  description: "Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！",
   color: "#00b8d2",
   tags: ["Front-end", "React"],
   title: "タイトル",
@@ -25,8 +24,7 @@ Initial.args = {
 
 ImageNotDisplayed.args = {
   imageUrl: undefined,
-  name: "ニックネーム",
-  description: "XXX Developer",
+  description: "Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！",
   color: "#00b8d2",
   tags: ["Front-end", "React"],
   title: "タイトル",

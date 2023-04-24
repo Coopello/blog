@@ -57,7 +57,7 @@ export const Detail: FC<Props> = ({ article }) => {
                 .fill(0)
                 .map(() => dummyNoImageArticle)
                 .map((article, index) => (
-                  <ArticleCard key={index} {...article} />
+                  <ArticleCard key={index} id={article.title} {...article} />
                 ))}
             </div>
           </LabelSection>
@@ -70,7 +70,7 @@ export const Detail: FC<Props> = ({ article }) => {
               .fill(0)
               .map(() => dummyNoImageArticle)
               .map((article, index) => (
-                <ArticleCard key={index} {...article} />
+                <ArticleCard key={index} id={article.title} {...article} />
               ))}
           </div>
         </LabelSection>

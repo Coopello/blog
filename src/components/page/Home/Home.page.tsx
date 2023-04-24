@@ -1,56 +1,60 @@
-"use client";
-
 import type { FC } from "react";
 import { ArticleCard } from "src/components/domain/article/ArticleCard";
 import { ArticleLargeCard } from "src/components/domain/article/ArticleLargeCard";
 import { Button } from "src/components/ui/Button";
 import { LabelSection } from "src/components/ui/LabelSection";
+import type { Article } from "src/models/article";
 
-const dummyLargeArticle = {
-  title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
-  imageUrl: "/static/dummy_thumbnail.png",
-  color: "#00b8d2" as const,
-  tags: ["Front-end", "React"],
-  name: "akito-10",
-  description: "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男",
+type Props = {
+  articles: {
+    popular: Article[];
+    recent: {
+      contents: Article[];
+      totalCount: number;
+    };
+  };
 };
 
-const dummyArticle = {
-  title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
-  imageUrl: "/static/dummy_icon.png",
-  color: "#00b8d2" as const,
-  tags: ["Front-end", "React"],
-  name: "akito-10",
-  description: "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男",
-};
+const DISPLAY_RECENT_ARTICLE_CARD_MAX_COUNT = 6;
 
 /**
  * @package
  */
-export const Home: FC = () => {
+export const Home: FC<Props> = ({ articles }) => {
   return (
     <div className="mx-auto mt-12 flex w-[90%] max-w-[952px] flex-col items-center gap-12 pb-12">
       <LabelSection label={"人気の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
-          {Array(4)
-            .fill(0)
-            .map(() => dummyLargeArticle)
-            .map((article, index) => (
-              <ArticleLargeCard key={index} {...article} />
-            ))}
+          {articles.popular.map((article) => (
+            <ArticleLargeCard
+              key={article.id}
+              description={article.description}
+              imageUrl={article.thumbnail.url}
+              tags={article.tags.map((tag) => tag.name)}
+              color={"#5AC8D8"}
+              id={article.id}
+            />
+          ))}
         </div>
       </LabelSection>
       <LabelSection label={"最近の記事"}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {Array(10)
-            .fill(0)
-            .map(() => dummyArticle)
-            .map((article, index) => (
-              <ArticleCard key={index} {...article} />
-            ))}
+          {articles.recent.contents.map((article) => (
+            <ArticleCard
+              key={article.id}
+              title={article.title}
+              description={article.description}
+              imageUrl={article.thumbnail.url}
+              tags={article.tags.map((tag) => tag.name)}
+              color={"#5AC8D8"}
+              id={article.id}
+            />
+          ))}
         </div>
       </LabelSection>
-      <Button>もっと読む</Button>
+      {articles.recent.totalCount > DISPLAY_RECENT_ARTICLE_CARD_MAX_COUNT ? (
+        <Button>もっと読む</Button>
+      ) : null}
     </div>
   );
 };

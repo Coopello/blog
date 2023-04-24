@@ -10,6 +10,7 @@ const getBlogData = async (blogId: string) => {
       "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
     },
     cache: "force-cache",
+    next: { revalidate: 10 },
   });
 
   if (res.status === 404) {

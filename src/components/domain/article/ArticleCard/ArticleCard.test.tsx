@@ -7,11 +7,11 @@ describe("domain/article/ArticleCard", () => {
     const component = renderer.create(
       <ArticleCard
         imageUrl="https://placehold.jp/120x120.png"
-        name="名前"
-        description="XXX Developer"
+        description="Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！"
         color="#00b8d2"
         tags={["Front-end", "React"]}
         title="タイトル"
+        id={"hogehoge"}
       />
     );
     const tree = component.toJSON();
@@ -20,11 +20,11 @@ describe("domain/article/ArticleCard", () => {
   it("Snap Shot ArticleCard without imageUrl", () => {
     const component = renderer.create(
       <ArticleCard
-        name="名前"
-        description="XXX Developer"
+        description="Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！"
         color="#00b8d2"
         tags={["Front-end", "React"]}
         title="タイトル"
+        id={"hogehoge"}
       />
     );
     const tree = component.toJSON();

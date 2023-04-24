@@ -3,6 +3,7 @@
 exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
 <button
   className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
+  onClick={[Function]}
 >
   <div
     className="relative h-[250px] w-full max-w-[416px]"
@@ -83,7 +84,8 @@ exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
   <p
     className="text-base text-custom-gray description"
   >
-    XXX Developer
+    Firestore は〇〇です。
+ガチ完成なのでぜひ読んでくださいね！
   </p>
 </button>
 `;
