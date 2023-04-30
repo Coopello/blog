@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`domain/article/RecentArticleArea Snap Shot 1`] = `
+<section
+  className="flex w-full flex-col gap-4"
+>
+  <h2
+    className="border-l-8 border-custom-sky px-4 py-2 text-2xl text-custom-black"
+  >
+    最近の記事
+  </h2>
+  <div
+    className="grid grid-cols-1 gap-6 md:grid-cols-2"
+  >
+    <button
+      className="flex max-w-full flex-1 cursor-pointer gap-4 rounded bg-custom-white p-4 text-left hover:opacity-60"
+      onClick={[Function]}
+    >
+      <img
+        alt="記事のイメージ画像"
+        className="hidden rounded object-contain sm:inline-block md:hidden lg:inline-block"
+        data-nimg="1"
+        decoding="async"
+        height={120}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=256&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=256&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={120}
+      />
+      <div
+        className="flex flex-1 flex-col gap-1 overflow-x-hidden"
+      >
+        <h2
+          className="border-b pb-1 text-xl"
+        >
+          タイトル
+        </h2>
+        <ul
+          className="hidden-scrollbar flex w-full overflow-y-clip overflow-x-scroll"
+        >
+          <li
+            className="whitespace-nowrap"
+          >
+            <span
+              className="rounded-sm py-1 text-sm"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                {
+                  "backgroundColor": "transparent",
+                  "color": "#5AC8D8",
+                  "paddingLeft": 0,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              #
+              タグ1
+            </span>
+          </li>
+          <li
+            className="whitespace-nowrap"
+          >
+            <span
+              className="rounded-sm py-1 text-sm"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                {
+                  "backgroundColor": "transparent",
+                  "color": "#5AC8D8",
+                  "paddingLeft": 0,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              #
+              タグ2
+            </span>
+          </li>
+          <li
+            className="whitespace-nowrap"
+          >
+            <span
+              className="rounded-sm py-1 text-sm"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                {
+                  "backgroundColor": "transparent",
+                  "color": "#5AC8D8",
+                  "paddingLeft": 0,
+                  "paddingRight": 8,
+                }
+              }
+            >
+              #
+              タグ3
+            </span>
+          </li>
+        </ul>
+        <p
+          className="w-full description text-sm text-custom-gray"
+        >
+          記事の説明
+        </p>
+      </div>
+    </button>
+  </div>
+</section>
+`;

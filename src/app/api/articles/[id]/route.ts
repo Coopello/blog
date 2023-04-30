@@ -1,12 +1,12 @@
 import * as cheerio from "cheerio";
 import hljs from "highlight.js";
 import { NextResponse } from "next/server";
-import { microCMSApiServer } from "src/libs/apiClient";
+import { microCmsApiFetcher } from "src/libs/apiClient";
 
 export async function GET(_: Request, { params }: { params: { id: string } }) {
   const id = params.id;
 
-  const { data } = await microCMSApiServer.get(`/blogs/${id}`);
+  const { data } = await microCmsApiFetcher(`/blogs/${id}`);
 
   const $ = cheerio.load(data.content, null, false);
   $("pre code").each((_, elm) => {
