@@ -1,1 +1,1 @@
-export { microCMSApiServer } from "./microCMSApiServer";
+export { microCmsApiFetcher } from "./microCmsApiFetcher";

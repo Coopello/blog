@@ -3,6 +3,7 @@ import "src/styles/globals.css";
 import "src/styles/theme.css";
 
 import type { ReactNode } from "react";
+import { Providers } from "src/app/providers";
 import { Header } from "src/components/ui/Header";
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="min-h-screen bg-custom-lightGray">
         <Header />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
