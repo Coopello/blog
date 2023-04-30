@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { Home } from "src/components/page/Home";
 import type { Article } from "src/models/article";
+import { DISPLAY_ARTICLE_CARD_PER_PAGE } from "src/utils/constants";
 
 type Response = {
   contents: Article[];
@@ -8,21 +9,24 @@ type Response = {
 };
 
 const getPopularArticles = async () => {
-  const res = await fetch(`${process.env.MICRO_CMS_API_URL}/blogs?orders=-pv`, {
-    headers: {
-      "Content-Type": "application/json",
-      "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
-    },
-    next: { revalidate: 10 },
-    cache: "force-cache",
-  });
+  const res = await fetch(
+    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-pv&limit=4`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
+      },
+      next: { revalidate: 10 },
+      cache: "force-cache",
+    }
+  );
 
   return await res.json();
 };
 
 const getRecentArticles = async () => {
   const res = await fetch(
-    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-publishedAt`,
+    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-publishedAt&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`,
     {
       next: { revalidate: 10 },
       headers: {
