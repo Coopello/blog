@@ -5,6 +5,31 @@ exports[`ui/ContentArea Snap Shot 1`] = `
   className="prose prose-sm box-border w-full max-w-none rounded bg-white p-4 lg:prose-base sm:p-8"
   id="test"
 >
+  <ul
+    className="flex list-none flex-row gap-2 p-0"
+  >
+    <li>
+      <a
+        className="text-custom-sky underline hover:opacity-60"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        ホーム
+      </a>
+    </li>
+    <li>
+      <span>
+        ＞
+      </span>
+    </li>
+    <li
+      className="text-custom-black"
+    >
+      test
+    </li>
+  </ul>
   <h1
     className="mb-4 border-b-[3px] pb-4 text-[28px] leading-9 sm:text-[32px] sm:leading-10"
   >

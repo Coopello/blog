@@ -2,6 +2,7 @@
 
 import parse from "html-react-parser";
 import type { FC } from "react";
+import { ArticleBreadcrumbs } from "src/components/domain/article/ArticleBreadcrumbs";
 import { Tag } from "src/components/ui/Tag";
 import type { Article } from "src/models/article";
 
@@ -22,6 +23,17 @@ export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
       id={id}
       className="prose prose-sm box-border w-full max-w-none rounded bg-white p-4 lg:prose-base sm:p-8"
     >
+      <ArticleBreadcrumbs
+        items={[
+          {
+            label: "ホーム",
+            href: "/",
+          },
+          {
+            label: title,
+          },
+        ]}
+      />
       <h1 className="mb-4 border-b-[3px] pb-4 text-[28px] leading-9 sm:text-[32px] sm:leading-10">
         {title}
       </h1>

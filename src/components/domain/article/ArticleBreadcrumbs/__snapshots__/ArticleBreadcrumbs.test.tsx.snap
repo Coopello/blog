@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`domain/article/ArticleBreadcrumbs Snap Shot 1`] = `
+<ul
+  className="flex list-none flex-row gap-2 p-0"
+>
+  <li>
+    <a
+      className="text-custom-sky underline hover:opacity-60"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      test
+    </a>
+  </li>
+  <li>
+    <span>
+      ＞
+    </span>
+  </li>
+  <li
+    className="text-custom-black"
+  >
+    test
+  </li>
+</ul>
+`;

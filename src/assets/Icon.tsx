@@ -47,10 +47,8 @@ export const Icon: FC<IconProps> = ({
       }
     : {};
 
-  const url = href ? new URL(href) : undefined;
-
-  return url ? (
-    <Link href={url} {...blankProps}>
+  return href ? (
+    <Link href={href} {...blankProps}>
       <i className={rootClasses} onClick={onClick}>
         <IconComponent />
       </i>

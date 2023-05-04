@@ -4,7 +4,6 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     appDir: true,
-    typedRoutes: true,
   },
   images: {
     domains: ["placehold.jp", "images.microcms-assets.io"],
