@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { FC } from "react";
-import { Icon } from "src/assets";
+import { Icon } from "src/components/ui/Icon";
 
 type Props = {
   description: string;
