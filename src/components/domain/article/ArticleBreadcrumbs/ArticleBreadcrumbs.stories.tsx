@@ -11,8 +11,5 @@ export const Initial: ComponentStory<typeof ArticleBreadcrumbs> = (args) => (
 );
 
 Initial.args = {
-  items: [
-    { label: "トップ", href: "/" },
-    { label: "test", href: "/" },
-  ],
+  items: [{ label: "トップ", href: "/" }, { label: "test" }],
 };

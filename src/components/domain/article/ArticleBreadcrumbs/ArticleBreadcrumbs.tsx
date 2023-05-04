@@ -1,9 +1,8 @@
-import type { Route } from "next";
 import Link from "next/link";
 import type { FC } from "react";
 
 type Props = {
-  items: { label: string; href: Route }[];
+  items: { label: string; href?: string }[];
 };
 
 /**
@@ -11,19 +10,29 @@ type Props = {
  */
 export const ArticleBreadcrumbs: FC<Props> = ({ items }) => {
   return (
-    <ul>
-      {items.map((item, index) => {
-        return (
+    <ul className="flex list-none flex-row gap-2 p-0">
+      {items.map((item) => {
+        const { href, label } = item;
+        const isCurrentPage = !href;
+
+        return !isCurrentPage ? (
           <>
-            <li key={item.href}>
-              <Link href={item.href}>{item.label}</Link>
+            <li key={href}>
+              <Link
+                href={href}
+                className="text-custom-sky underline hover:opacity-60"
+              >
+                {label}
+              </Link>
             </li>
-            {index !== items.length - 1 ? (
-              <li>
-                <span>＞</span>
-              </li>
-            ) : null}
+            <li>
+              <span>＞</span>
+            </li>
           </>
+        ) : (
+          <li key={item.href} className="text-custom-black">
+            {item.label}
+          </li>
         );
       })}
     </ul>
