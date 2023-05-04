@@ -23,7 +23,11 @@ Initial.args = {
           height: 200,
           width: 300,
         },
-        tags: [{ name: "タグ1" }, { name: "タグ2" }, { name: "タグ3" }],
+        tags: [
+          { id: "hoge", name: "タグ1" },
+          { id: "fuga", name: "タグ2" },
+          { id: "piyo", name: "タグ3" },
+        ],
         author: {
           id: "1",
           createdAt: "2022-01-01T00:00:00.000Z",
