@@ -11,7 +11,6 @@ export type Article = {
   description: string;
   content: string;
   thumbnail: Thumbnail;
-  categories: string[];
   tags: Tag[];
   author: Author;
 };

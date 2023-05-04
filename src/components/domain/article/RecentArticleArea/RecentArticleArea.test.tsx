@@ -13,7 +13,6 @@ const dummyNoImageArticle: Article = {
     height: 200,
     width: 300,
   },
-  categories: ["カテゴリ1", "カテゴリ2"],
   tags: [{ name: "タグ1" }, { name: "タグ2" }, { name: "タグ3" }],
   author: {
     id: "1",
