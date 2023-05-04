@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Detail } from "src/components/page/Detail";
 import type { Article } from "src/models/article";
 
-const getBlogData = async (blogId: string) => {
+const getArticleDetail = async (blogId: string) => {
   const res = await fetch(`${process.env.MICRO_CMS_API_URL}/blogs/${blogId}`, {
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default async function DetailPage({
 }: {
   params: { id: string };
 }) {
-  const article: Article = await getBlogData(params.id);
+  const article: Article = await getArticleDetail(params.id);
 
   return <Detail article={article} />;
 }
