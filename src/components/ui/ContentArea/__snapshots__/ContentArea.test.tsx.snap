@@ -12,7 +12,7 @@ exports[`ui/ContentArea Snap Shot 1`] = `
       className="m-0 p-0"
     >
       <a
-        className="text-custom-sky underline hover:opacity-60"
+        className="text-custom-primary underline hover:opacity-60"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}

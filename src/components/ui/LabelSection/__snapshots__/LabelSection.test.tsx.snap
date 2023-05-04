@@ -2,10 +2,22 @@
 
 exports[`ui/LabelSection Snap Shot 1`] = `
 <section
-  className="flex w-full flex-col gap-4"
+  className="flex w-full flex-col"
+  style={
+    {
+      "gap": "1rem",
+    }
+  }
 >
   <h2
-    className="border-l-8 border-custom-sky px-4 py-2 text-2xl text-custom-black"
+    className="border-custom-primary px-4 py-2 text-custom-black"
+    style={
+      {
+        "borderLeftWidth": 8,
+        "fontSize": "1.5rem",
+        "lineHeight": "2rem",
+      }
+    }
   >
     記事を書いた人
   </h2>
