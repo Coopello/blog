@@ -20,7 +20,7 @@ export const ExceptionContent: FC<Props> = ({ buttonComponent, message }) => {
           width={256}
           height={256}
         />
-        <h2 className="text-2xl text-custom-sky">{message}</h2>
+        <h2 className="text-2xl text-custom-primary">{message}</h2>
       </div>
       {buttonComponent}
     </div>

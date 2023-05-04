@@ -20,7 +20,7 @@ export const ArticleBreadcrumbs: FC<Props> = ({ items }) => {
             <li key={href} className="m-0 p-0">
               <Link
                 href={href}
-                className="text-custom-sky underline hover:opacity-60"
+                className="text-custom-primary underline hover:opacity-60"
               >
                 {label}
               </Link>
