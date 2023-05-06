@@ -1,3 +1,6 @@
+import { render, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { useRouter } from "next/navigation";
 import renderer from "react-test-renderer";
 
 import { ArticleLargeCard } from "./";
@@ -17,5 +20,33 @@ describe("domain/article/ArticleLargeCard", () => {
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+  it("クリックすると、該当する記事の詳細ページに遷移する", async () => {
+    const mockRouterPush = jest.fn();
+    const mockRouterPrefetch = jest.fn();
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    useRouter.mockImplementation(() => ({
+      push: mockRouterPush,
+      prefetch: mockRouterPrefetch,
+    }));
+
+    const { getByRole } = render(
+      <ArticleLargeCard
+        imageUrl="https://placehold.jp/120x120.png"
+        description="Firestore は〇〇です。\nガチ完成なのでぜひ読んでくださいね！"
+        color="#00b8d2"
+        tags={["Front-end", "React"]}
+        id={"hogehoge"}
+      />
+    );
+
+    const articleButton = getByRole("button");
+    userEvent.click(articleButton);
+    await waitFor(() => {
+      expect(mockRouterPrefetch).toBeCalledTimes(1);
+      expect(mockRouterPush).toBeCalledTimes(1);
+    });
   });
 });
