@@ -1,91 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`domain/article/ArticleLargeCard Snap Shot 1`] = `
-<button
-  className="flex max-w-full flex-1 cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
-  onClick={[Function]}
+<article
+  className="flex-1"
 >
-  <div
-    className="relative h-[250px] w-full max-w-[416px]"
+  <button
+    className="flex h-full w-full cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
+    onClick={[Function]}
   >
-    <img
-      alt="記事のサムネイル画像"
-      className="object-contain"
-      data-nimg="fill"
-      decoding="async"
-      loading="lazy"
-      onError={[Function]}
-      onLoad={[Function]}
-      sizes="100vw"
-      src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=3840&q=75"
-      srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=3840&q=75 3840w"
-      style={
-        {
-          "bottom": 0,
-          "color": "transparent",
-          "height": "100%",
-          "left": 0,
-          "objectFit": undefined,
-          "objectPosition": undefined,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <ul
-    className="hidden-scrollbar flex w-full gap-2 overflow-y-clip overflow-x-scroll"
-  >
-    <li
-      className="whitespace-nowrap"
+    <div
+      className="relative h-[250px] w-full max-w-[416px]"
     >
-      <span
-        className="rounded-sm py-1 text-sm"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <img
+        alt="記事のサムネイル画像"
+        className="object-contain"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=3840&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fplacehold.jp%2F512x512.png&w=3840&q=75 3840w"
         style={
           {
-            "backgroundColor": "#00b8d2",
-            "color": "white",
-            "opacity": 1,
-            "paddingLeft": 12,
-            "paddingRight": 12,
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
           }
         }
-      >
-        #
-        Front-end
-      </span>
-    </li>
-    <li
-      className="whitespace-nowrap"
+      />
+    </div>
+    <ul
+      className="hidden-scrollbar flex w-full gap-2 overflow-y-clip overflow-x-scroll"
     >
-      <span
-        className="rounded-sm py-1 text-sm"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          {
-            "backgroundColor": "#00b8d2",
-            "color": "white",
-            "opacity": 1,
-            "paddingLeft": 12,
-            "paddingRight": 12,
-          }
-        }
+      <li
+        className="whitespace-nowrap"
       >
-        #
-        React
-      </span>
-    </li>
-  </ul>
-  <p
-    className="text-base text-custom-gray description"
-  >
-    Firestore は〇〇です。
+        <span
+          className="rounded-sm py-1 text-sm"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            {
+              "backgroundColor": "#00b8d2",
+              "color": "white",
+              "opacity": 1,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+            }
+          }
+        >
+          #
+          Front-end
+        </span>
+      </li>
+      <li
+        className="whitespace-nowrap"
+      >
+        <span
+          className="rounded-sm py-1 text-sm"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            {
+              "backgroundColor": "#00b8d2",
+              "color": "white",
+              "opacity": 1,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+            }
+          }
+        >
+          #
+          React
+        </span>
+      </li>
+    </ul>
+    <p
+      className="text-base text-custom-gray description"
+    >
+      Firestore は〇〇です。
 ガチ完成なのでぜひ読んでくださいね！
-  </p>
-</button>
+    </p>
+  </button>
+</article>
 `;
