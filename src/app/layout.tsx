@@ -7,7 +7,7 @@ import { Providers } from "src/app/providers";
 import { Header } from "src/components/ui/Header";
 
 export const metadata = {
-  title: "Coope Blog",
+  title: "Coopello Blog",
   description:
     "みんながよく知る企業をめざしたいエンジニア必見！有名企業エンジニアによる「未経験からでも悩まない」ノウハウがここに。",
 };
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/static/favicon.ico" />
       </head>
       <body className="min-h-screen bg-custom-lightGray">
         <Header />
