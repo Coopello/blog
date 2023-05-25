@@ -31,7 +31,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
         <aside className="w-[90%] sm:w-full">
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
-              imageUrl={"https://placehold.jp/150x150.png"}
+              imageUrl={article.author.icon.url}
               myLinks={{
                 twitter: article.author.twitter,
                 github: article.author.github,

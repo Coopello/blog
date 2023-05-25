@@ -1,3 +1,5 @@
+import type { Icon } from "src/models/article/Icon";
+
 /**
  * @package
  */
@@ -12,5 +14,5 @@ export type Author = {
   description: string;
   github?: string;
   twitter?: string;
-  icon?: string;
+  icon: Icon;
 };
