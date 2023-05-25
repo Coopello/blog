@@ -39,8 +39,8 @@ exports[`domain/article/RecentArticleArea Snap Shot 1`] = `
             loading="lazy"
             onError={[Function]}
             onLoad={[Function]}
-            src="/_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=256&q=75"
-            srcSet="/_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fthumbnail.jpg&w=256&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fexample.com%2Feyecatch.jpg&w=256&q=75"
+            srcSet="/_next/image?url=https%3A%2F%2Fexample.com%2Feyecatch.jpg&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Feyecatch.jpg&w=256&q=75 2x"
             style={
               {
                 "color": "transparent",

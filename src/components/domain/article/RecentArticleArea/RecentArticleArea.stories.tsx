@@ -18,8 +18,8 @@ Initial.args = {
         title: "タイトル",
         description: "記事の説明",
         content: "記事の本文",
-        thumbnail: {
-          url: "https://example.com/thumbnail.jpg",
+        eyecatch: {
+          url: "https://example.com/eyecatch.jpg",
           height: 200,
           width: 300,
         },
