@@ -27,7 +27,10 @@ export const Home: FC<Props> = ({ articles }) => {
             <ArticleLargeCard
               key={article.id}
               description={article.description}
-              imageUrl={article.eyecatch.url}
+              // TODO: eyecatch を non-null にする
+              imageUrl={
+                article.eyecatch?.url || "public/static/dummy_eyecatch.png"
+              }
               tags={article.tags.map((tag) => tag.name)}
               color={"#5AC8D8"}
               id={article.id}
