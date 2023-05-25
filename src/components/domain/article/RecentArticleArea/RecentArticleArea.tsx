@@ -24,7 +24,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
   const [currentArticles, setCurrentArticles] = useState<Article[]>(
     articles.contents
   );
-  const { data } = useSWR<{
+  const { data, mutate } = useSWR<{
     data: {
       contents: Article[];
       totalCount: number;
@@ -47,24 +47,30 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
 
       return [...prev, ...data.data.contents];
     });
+
+    return () => {
+      mutate(undefined);
+    };
   }, [data]);
 
   return (
     <>
       <LabelSection label={"最近の記事"}>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-6">
           {currentArticles.map((article) => (
-            <ArticleCard
-              key={article.id}
-              title={article.title}
-              description={article.description}
-              imageUrl={article.thumbnail.url}
-              tags={article.tags.map((tag) => tag.name)}
-              color={"#5AC8D8"}
-              id={article.id}
-            />
+            <li key={article.id}>
+              <ArticleCard
+                key={article.id}
+                title={article.title}
+                description={article.description}
+                imageUrl={article.thumbnail.url}
+                tags={article.tags.map((tag) => tag.name)}
+                color={"#5AC8D8"}
+                id={article.id}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </LabelSection>
       {articles.totalCount > DISPLAY_ARTICLE_CARD_PER_PAGE * (page + 1) ? (
         <Button onClick={() => setPage((prev) => prev + 1)}>もっと読む</Button>
