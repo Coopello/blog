@@ -24,7 +24,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
   const [currentArticles, setCurrentArticles] = useState<Article[]>(
     articles.contents
   );
-  const { data } = useSWR<{
+  const { data, mutate } = useSWR<{
     data: {
       contents: Article[];
       totalCount: number;
@@ -47,6 +47,10 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
 
       return [...prev, ...data.data.contents];
     });
+
+    return () => {
+      mutate(undefined);
+    };
   }, [data]);
 
   return (
