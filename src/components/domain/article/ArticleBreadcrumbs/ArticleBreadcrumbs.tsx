@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { FC } from "react";
 
+import styles from "./ArticleBreadcrumbs.module.css";
+
 type Props = {
   items: { label: string; href?: string }[];
 };
@@ -30,7 +32,10 @@ export const ArticleBreadcrumbs: FC<Props> = ({ items }) => {
             </li>
           </>
         ) : (
-          <li key={item.href} className="m-0 p-0 text-custom-black">
+          <li
+            key={item.href}
+            className={`m-0 p-0 text-custom-black ${styles.current} flex-1`}
+          >
             {item.label}
           </li>
         );

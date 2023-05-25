@@ -20,8 +20,8 @@ const styles: {
       gap: "1rem",
     },
     heading: {
-      // fontSize: "1.5rem",
-      // lineHeight: "2rem",
+      fontSize: "1.5rem",
+      lineHeight: "2rem",
       borderLeftWidth: 8,
     },
   },
@@ -31,8 +31,8 @@ const styles: {
       gap: "1rem",
     },
     heading: {
-      // fontSize: "1.5rem",
-      // lineHeight: "2rem",
+      fontSize: "1.5rem",
+      lineHeight: "2rem",
       borderLeftWidth: 8,
     },
   },
