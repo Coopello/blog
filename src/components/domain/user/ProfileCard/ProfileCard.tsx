@@ -38,15 +38,15 @@ export const ProfileCard: FC<Props> = ({
       <div className="flex flex-1 flex-col gap-2">
         <div className="flex items-center gap-4">
           <div className="flex flex-col">
-            <p className="text-lg sm:text-2xl">{name}</p>
-            <p className="text-xs text-custom-gray sm:text-base">{job}</p>
+            <p className="text-lg sm:text-xl md:text-2xl">{name}</p>
+            <p className="text-sm text-custom-gray sm:text-base">{job}</p>
           </div>
           <div className="flex">
             {twitter ? <Icon icon="twitter" href={twitter} isBlank /> : null}
             {github ? <Icon icon="github" href={github} isBlank /> : null}
           </div>
         </div>
-        <p className="text-xs sm:text-base">{description}</p>
+        <p className="text-sm sm:text-base">{description}</p>
       </div>
     </div>
   );

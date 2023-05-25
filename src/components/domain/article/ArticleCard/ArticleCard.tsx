@@ -47,7 +47,7 @@ export const ArticleCard: FC<Props> = ({
         />
       ) : null}
       <div className="flex flex-1 flex-col gap-1 overflow-x-hidden">
-        <h2 className="border-b pb-1 text-xl">{title}</h2>
+        <h2 className="border-b pb-1 text-lg sm:text-xl">{title}</h2>
         <ul className="hidden-scrollbar flex w-full overflow-y-clip overflow-x-scroll">
           {tags.map((tag) => {
             return (
