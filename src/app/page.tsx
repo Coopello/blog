@@ -10,7 +10,7 @@ type Response = {
 
 const getPopularArticles = async () => {
   const res = await fetch(
-    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-pv&limit=4`,
+    `${process.env.MICRO_CMS_API_URL}/articles?orders=-pv&limit=4`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const getPopularArticles = async () => {
 
 const getRecentArticles = async () => {
   const res = await fetch(
-    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-publishedAt&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`,
+    `${process.env.MICRO_CMS_API_URL}/articles?orders=-publishedAt&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`,
     {
       next: { revalidate: 10 },
       headers: {

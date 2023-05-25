@@ -31,7 +31,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
     };
   }>(
     page !== 0
-      ? `/blogs?offset=${
+      ? `/articles?offset=${
           page * DISPLAY_ARTICLE_CARD_PER_PAGE
         }&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`
       : null

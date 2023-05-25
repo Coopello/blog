@@ -10,7 +10,7 @@ type Response = {
 
 const getArticleDetail = async (articleId: string) => {
   const res = await fetch(
-    `${process.env.MICRO_CMS_API_URL}/blogs/${articleId}`,
+    `${process.env.MICRO_CMS_API_URL}/articles/${articleId}`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const getRecommendArticles = async (articleTagIds: string[]) => {
   );
 
   const res = await fetch(
-    `${process.env.MICRO_CMS_API_URL}/blogs?orders=-pv&limit=3&filters=${filtersConditions}`,
+    `${process.env.MICRO_CMS_API_URL}/articles?orders=-pv&limit=3&filters=${filtersConditions}`,
     {
       headers: {
         "Content-Type": "application/json",
