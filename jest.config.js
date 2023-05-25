@@ -15,6 +15,7 @@ module.exports = {
     "!<rootDir>/.next/**",
     "!<rootDir>/*.config.js",
     "!<rootDir>/coverage/**",
+    "!<rootDir>/src/utils/types.ts",
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)

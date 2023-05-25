@@ -8,8 +8,8 @@ const dummyNoImageArticle: Article = {
   title: "タイトル",
   description: "記事の説明",
   content: "記事の本文",
-  thumbnail: {
-    url: "https://example.com/thumbnail.jpg",
+  eyecatch: {
+    url: "https://example.com/eyecatch.jpg",
     height: 200,
     width: 300,
   },
@@ -27,9 +27,13 @@ const dummyNoImageArticle: Article = {
     name: "著者名",
     job: "職業",
     description: "著者の自己紹介",
-    github: "https://github.com/example",
-    twitter: "https://twitter.com/example",
-    icon: "https://example.com/icon.jpg",
+    github: "example",
+    twitter: "example",
+    icon: {
+      url: "https://example.com/icon.jpg",
+      height: 216,
+      width: 216,
+    },
   },
 };
 

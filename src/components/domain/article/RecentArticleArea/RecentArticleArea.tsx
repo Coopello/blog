@@ -63,7 +63,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
                 key={article.id}
                 title={article.title}
                 description={article.description}
-                imageUrl={article.thumbnail.url}
+                imageUrl={article.eyecatch.url}
                 tags={article.tags.map((tag) => tag.name)}
                 color={"#5AC8D8"}
                 id={article.id}
