@@ -42,8 +42,20 @@ export const ProfileCard: FC<Props> = ({
             <p className="text-sm text-custom-gray sm:text-base">{job}</p>
           </div>
           <div className="flex">
-            {twitter ? <Icon icon="twitter" href={twitter} isBlank /> : null}
-            {github ? <Icon icon="github" href={github} isBlank /> : null}
+            {twitter ? (
+              <Icon
+                icon="twitter"
+                href={`https://twitter.com/${twitter}`}
+                isBlank
+              />
+            ) : null}
+            {github ? (
+              <Icon
+                icon="github"
+                href={`https://github.com/${github}`}
+                isBlank
+              />
+            ) : null}
           </div>
         </div>
         <p className="text-sm sm:text-base">{description}</p>

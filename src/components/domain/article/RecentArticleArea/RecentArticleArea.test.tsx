@@ -27,8 +27,8 @@ const dummyNoImageArticle: Article = {
     name: "著者名",
     job: "職業",
     description: "著者の自己紹介",
-    github: "https://github.com/example",
-    twitter: "https://twitter.com/example",
+    github: "example",
+    twitter: "example",
     icon: {
       url: "https://example.com/icon.jpg",
       height: 216,
