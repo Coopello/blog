@@ -23,7 +23,7 @@ exports[`ui/ExceptionContent Snap Shot 1`] = `
       width={256}
     />
     <h2
-      className="text-2xl text-custom-sky"
+      className="text-2xl text-custom-primary"
     >
       テスト
     </h2>

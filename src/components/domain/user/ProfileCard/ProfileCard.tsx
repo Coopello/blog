@@ -26,8 +26,8 @@ export const ProfileCard: FC<Props> = ({
   const { github, twitter } = myLinks;
 
   return (
-    <div className="flex w-full items-center gap-6 rounded bg-white p-8">
-      <div className="relative h-[100px] w-[100px]">
+    <div className="flex w-full items-center gap-6 rounded bg-white p-4 sm:p-8">
+      <div className="relative hidden h-[100px] w-[100px] sm:block">
         <Image
           alt="プロフィールアイコン"
           className="rounded-full object-contain"
@@ -37,14 +37,28 @@ export const ProfileCard: FC<Props> = ({
       </div>
       <div className="flex flex-1 flex-col gap-2">
         <div className="flex items-center gap-4">
-          <p className="text-2xl">{name}</p>
-          <p className="text-custom-gray">{job}</p>
+          <div className="flex flex-col">
+            <p className="text-lg sm:text-xl md:text-2xl">{name}</p>
+            <p className="text-sm text-custom-gray sm:text-base">{job}</p>
+          </div>
           <div className="flex">
-            {twitter ? <Icon icon="twitter" href={twitter} isBlank /> : null}
-            {github ? <Icon icon="github" href={github} isBlank /> : null}
+            {twitter ? (
+              <Icon
+                icon="twitter"
+                href={`https://twitter.com/${twitter}`}
+                isBlank
+              />
+            ) : null}
+            {github ? (
+              <Icon
+                icon="github"
+                href={`https://github.com/${github}`}
+                isBlank
+              />
+            ) : null}
           </div>
         </div>
-        <p>{description}</p>
+        <p className="text-sm sm:text-base">{description}</p>
       </div>
     </div>
   );

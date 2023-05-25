@@ -9,23 +9,15 @@ import type { Article } from "src/models/article";
 
 type Props = {
   article: Article;
-};
-
-const dummyNoImageArticle = {
-  title: "【徹底解剖】JavaScriptはブラウザでどう動くのか",
-  color: "#00b8d2" as const,
-  tags: ["Front-end", "React"],
-  name: "akito-10",
-  description:
-    "独学でWebフロントエンドの開発を学び、ONE PIECE を手に入れた男。好きな hooks は useCallback。",
+  recommendArticles: Article[];
 };
 
 /**
  * @package
  */
-export const Detail: FC<Props> = ({ article }) => {
+export const Detail: FC<Props> = ({ article, recommendArticles }) => {
   return (
-    <div className="mx-auto mt-12 flex w-full max-w-[1484px] gap-12 pb-12 sm:w-[90%]">
+    <div className="mx-auto mt-6 flex w-full max-w-[1484px] gap-12 pb-12 sm:mt-12 sm:w-[90%]">
       <div className="flex w-full flex-col items-center gap-12">
         {article ? (
           <ContentArea
@@ -36,10 +28,10 @@ export const Detail: FC<Props> = ({ article }) => {
             id="content"
           />
         ) : null}
-        <aside className="w-full">
+        <aside className="w-[90%] sm:w-full">
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
-              imageUrl={"https://placehold.jp/150x150.png"}
+              imageUrl={article.author.icon.url}
               myLinks={{
                 twitter: article.author.twitter,
                 github: article.author.github,
@@ -50,15 +42,20 @@ export const Detail: FC<Props> = ({ article }) => {
             />
           </LabelSection>
         </aside>
-        <aside className="block w-full lg:hidden">
+        <aside className="block w-[90%] sm:w-full lg:hidden">
+          {/* TODO: useScreenSize のような custom hooks を実装して、画面幅に応じて size に sm か md を渡す */}
           <LabelSection label={"あなたへのおすすめ"}>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {Array(3)
-                .fill(0)
-                .map(() => dummyNoImageArticle)
-                .map((article, index) => (
-                  <ArticleCard key={index} id={article.title} {...article} />
-                ))}
+              {recommendArticles.map((article) => (
+                <ArticleCard
+                  key={article.id}
+                  description={article.description}
+                  tags={article.tags.map((tag) => tag.name)}
+                  color={"#5AC8D8"}
+                  id={article.id}
+                  title={article.title}
+                />
+              ))}
             </div>
           </LabelSection>
         </aside>
@@ -66,12 +63,16 @@ export const Detail: FC<Props> = ({ article }) => {
       <aside className="hidden lg:block">
         <LabelSection label={"あなたへのおすすめ"}>
           <div className="flex max-w-[400px] flex-col gap-6">
-            {Array(3)
-              .fill(0)
-              .map(() => dummyNoImageArticle)
-              .map((article, index) => (
-                <ArticleCard key={index} id={article.title} {...article} />
-              ))}
+            {recommendArticles.map((article) => (
+              <ArticleCard
+                key={article.id}
+                description={article.description}
+                tags={article.tags.map((tag) => tag.name)}
+                color={"#5AC8D8"}
+                title={article.title}
+                id={article.id}
+              />
+            ))}
           </div>
         </LabelSection>
       </aside>

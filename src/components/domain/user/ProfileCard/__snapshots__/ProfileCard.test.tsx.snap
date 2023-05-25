@@ -2,10 +2,10 @@
 
 exports[`ui/ProfileCard Snap Shot 1`] = `
 <div
-  className="flex w-full items-center gap-6 rounded bg-white p-8"
+  className="flex w-full items-center gap-6 rounded bg-white p-4 sm:p-8"
 >
   <div
-    className="relative h-[100px] w-[100px]"
+    className="relative hidden h-[100px] w-[100px] sm:block"
   >
     <img
       alt="プロフィールアイコン"
@@ -40,16 +40,20 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
     <div
       className="flex items-center gap-4"
     >
-      <p
-        className="text-2xl"
+      <div
+        className="flex flex-col"
       >
-        Akito Fukuda
-      </p>
-      <p
-        className="text-custom-gray"
-      >
-        Web Dev
-      </p>
+        <p
+          className="text-lg sm:text-xl md:text-2xl"
+        >
+          Akito Fukuda
+        </p>
+        <p
+          className="text-sm text-custom-gray sm:text-base"
+        >
+          Web Dev
+        </p>
+      </div>
       <div
         className="flex"
       >
@@ -150,7 +154,9 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
         </a>
       </div>
     </div>
-    <p>
+    <p
+      className="text-sm sm:text-base"
+    >
       大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
 最近のマイブームはメンズメイク。
 綺麗になりたいお年頃。ちなみに今年は年男。
@@ -161,10 +167,10 @@ exports[`ui/ProfileCard Snap Shot 1`] = `
 
 exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
 <div
-  className="flex w-full items-center gap-6 rounded bg-white p-8"
+  className="flex w-full items-center gap-6 rounded bg-white p-4 sm:p-8"
 >
   <div
-    className="relative h-[100px] w-[100px]"
+    className="relative hidden h-[100px] w-[100px] sm:block"
   >
     <img
       alt="プロフィールアイコン"
@@ -199,21 +205,27 @@ exports[`ui/ProfileCard Snap Shot no myLinks links 1`] = `
     <div
       className="flex items-center gap-4"
     >
-      <p
-        className="text-2xl"
+      <div
+        className="flex flex-col"
       >
-        Akito Fukuda
-      </p>
-      <p
-        className="text-custom-gray"
-      >
-        Web Dev
-      </p>
+        <p
+          className="text-lg sm:text-xl md:text-2xl"
+        >
+          Akito Fukuda
+        </p>
+        <p
+          className="text-sm text-custom-gray sm:text-base"
+        >
+          Web Dev
+        </p>
+      </div>
       <div
         className="flex"
       />
     </div>
-    <p>
+    <p
+      className="text-sm sm:text-base"
+    >
       大学2年生でAndroidアプリ開発を始め、ONE PIECEを手に入れた男
 最近のマイブームはメンズメイク。
 綺麗になりたいお年頃。ちなみに今年は年男。

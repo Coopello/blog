@@ -17,8 +17,8 @@ Initial.args = {
     <ProfileCard
       imageUrl="https://placehold.jp/150x150.png"
       myLinks={{
-        twitter: "https://twitter.com/akt_prs10",
-        github: "https://github.com/akito-10",
+        twitter: "akt_prs10",
+        github: "akito-10",
       }}
       name="Akito Fukuda"
       description="Web Dev"
