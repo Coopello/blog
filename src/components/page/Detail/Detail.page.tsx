@@ -16,6 +16,7 @@ type Props = {
  * @package
  */
 export const Detail: FC<Props> = ({ article, recommendArticles }) => {
+  console.log(article);
   return (
     <div className="mx-auto mt-6 flex w-full max-w-[1484px] gap-12 pb-12 sm:mt-12 sm:w-[90%]">
       <div className="flex w-full flex-col items-center gap-12">
