@@ -10,7 +10,7 @@ exports[`domain/article/RecentArticleArea Snap Shot 1`] = `
   }
 >
   <h2
-    className="border-custom-primary px-4 py-2 text-custom-black"
+    className="border-custom-primary px-3 py-1 text-custom-black sm:px-4 sm:py-2"
     style={
       {
         "borderLeftWidth": 8,

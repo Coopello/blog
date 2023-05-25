@@ -39,7 +39,11 @@ Initial.args = {
           description: "著者の自己紹介",
           github: "https://github.com/example",
           twitter: "https://twitter.com/example",
-          icon: "https://example.com/icon.jpg",
+          icon: {
+            url: "https://example.com/icon.jpg",
+            height: 216,
+            width: 216,
+          },
         },
       },
     ],
