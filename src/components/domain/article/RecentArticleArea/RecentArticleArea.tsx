@@ -51,7 +51,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
     return () => {
       mutate(undefined);
     };
-  }, [data]);
+  }, [data, mutate]);
 
   return (
     <>
