@@ -19,6 +19,8 @@ export default async function Image({ params }: { params: { id: string } }) {
       <div
         style={{
           fontSize: 48,
+          width: "100%",
+          height: "100%",
           background: "white",
           display: "flex",
           flexDirection: "column",
@@ -33,8 +35,9 @@ export default async function Image({ params }: { params: { id: string } }) {
           style={{
             flex: 1,
             maxWidth: "80%",
-            display: "grid",
-            placeContent: "center",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           {article.title}
