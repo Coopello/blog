@@ -55,7 +55,7 @@
   "overrides": [
     {
       "files": [
-        "src/app/**/{error,layout,not-found,page}.tsx",
+        "src/app/**/{error,layout,not-found,page,*-image}.tsx",
         "src/pages/**/404.tsx",
         "src/**/*.stories.tsx"
       ],
@@ -68,7 +68,8 @@
     {
       "files": [
         "src/components/domain/**/constant.ts",
-        "src/libs/apiClient/**/*.ts"
+        "src/libs/apiClient/**/*.ts",
+        "src/app/**/requests.ts"
       ],
       "rules": { "@typescript-eslint/naming-convention": "off" }
     }
