@@ -13,6 +13,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
   return {
     title: `${article.title} - Coopello Blog`,
+    description: article.description,
   };
 };
 
