@@ -23,19 +23,5 @@ export default function ArticleDetailLayout({
 }: {
   children: ReactNode;
 }) {
-  return (
-    <>
-      <head>
-        <meta
-          property="og:image"
-          content="https://coopello-blog-git-feat-add-dynamic-metadata-coopello.vercel.app/opengraph-image"
-        />
-        <meta
-          name="twitter:card"
-          content="https://coopello-blog-git-feat-add-dynamic-metadata-coopello.vercel.app/twitter-image"
-        />
-      </head>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
