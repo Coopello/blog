@@ -15,6 +15,16 @@ export const generateMetadata = async ({ params }: PageProps) => {
   return {
     title: `${article.title} - Coopello Blog`,
     description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url: `https://coopello.vercel.app/articles/${params.id}`,
+    },
+    twitter: {
+      title: article.title,
+      card: "summary_large_image",
+      description: article.description,
+    },
   };
 };
 
