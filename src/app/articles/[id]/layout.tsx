@@ -15,6 +15,15 @@ export const generateMetadata = async ({ params }: PageProps) => {
   return {
     title: `${article.title} - Coopello Blog`,
     description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+    },
+    twitter: {
+      title: article.title,
+      card: "summary_large_image",
+      description: article.description,
+    },
   };
 };
 
