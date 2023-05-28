@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/server";
 import { getArticleDetail } from "src/app/articles/[id]/requests";
 
-export const runtime = "edge";
+export const revalidate = "force-cache";
+export const runtime = "nodejs";
 
 export const alt = "Article Detail";
 export const size = {
