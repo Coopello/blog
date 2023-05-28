@@ -68,7 +68,8 @@
     {
       "files": [
         "src/components/domain/**/constant.ts",
-        "src/libs/apiClient/**/*.ts"
+        "src/libs/apiClient/**/*.ts",
+        "src/app/**/requests.ts"
       ],
       "rules": { "@typescript-eslint/naming-convention": "off" }
     }
