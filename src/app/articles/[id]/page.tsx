@@ -8,15 +8,6 @@ type PageProps = {
   params: { id: string };
 };
 
-export const generateMetadata = async ({ params }: PageProps) => {
-  const article = await getArticleDetail(params.id);
-
-  return {
-    title: `${article.title} - Coopello Blog`,
-    description: article.description,
-  };
-};
-
 export default async function DetailPage({ params }: PageProps) {
   const article = await getArticleDetail(params.id);
   const recommendArticlesResponse = await getRecommendArticles(
