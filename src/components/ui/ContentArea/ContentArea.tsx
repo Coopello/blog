@@ -18,8 +18,6 @@ type Props = {
  * @package
  */
 export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
-  console.log(content);
-
   return (
     <article
       id={id}

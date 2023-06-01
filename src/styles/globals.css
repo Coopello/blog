@@ -29,11 +29,15 @@ h6 {
 }
 
 article.prose code:not(.hljs) {
-  @apply text-custom-contentCode rounded border bg-custom-lightGray px-2 py-1 font-thin;
+  @apply rounded border bg-custom-lightGray px-2 py-1 font-thin text-custom-contentCode;
 }
 article.prose code:not(.hljs)::before,
 article.prose code:not(.hljs)::after {
   @apply hidden;
+}
+
+article.prose pre {
+  @apply w-full lg:max-w-[60vw];
 }
 
 article.prose code.hljs {
