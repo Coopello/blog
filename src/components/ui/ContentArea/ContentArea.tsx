@@ -34,7 +34,7 @@ export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
           },
         ]}
       />
-      <h1 className="mb-4 border-b-[3px] pb-4 text-[28px] font-semibold leading-9 sm:text-[32px] sm:leading-10">
+      <h1 className="mb-4 border-b-[3px] pb-4 text-[28px] font-medium leading-9 sm:text-[32px] sm:leading-10">
         {title}
       </h1>
       <ul className="mt-0 flex list-none gap-2 p-0">
