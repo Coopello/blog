@@ -17,6 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ja">
       <head>
         <link rel="icon" href="/static/favicon.ico" />
+        <link rel="canonical" href={"https://coopello.vercel.app/"} />
         <meta
           name="google-site-verification"
           content="vuOKGQOUc53b839WLX7J6p5jJbEdAnnHRS7Y-EHdjdA"
