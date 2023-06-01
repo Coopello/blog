@@ -60,7 +60,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
           </LabelSection>
         </aside>
       </div>
-      <aside className="sticky top-8 hidden lg:block">
+      <aside className="sticky top-8 hidden h-fit lg:block">
         <LabelSection label={"あなたへのおすすめ"}>
           <div className="flex max-w-[400px] flex-col gap-6">
             {recommendArticles.map((article) => (
