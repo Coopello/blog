@@ -17,7 +17,15 @@ article.prose a {
 }
 
 article.prose h1 {
-  @apply text-2xl sm:text-[28px];
+  @apply text-2xl font-bold sm:text-[28px];
+}
+
+article.prose h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
 }
 
 article.prose code:not(.hljs) {
@@ -28,7 +36,7 @@ article.prose code:not(.hljs)::after {
   @apply hidden;
 }
 
-article.prose pre code.hljs {
+article.prose code.hljs {
   @apply text-xs sm:text-sm;
 }
 
