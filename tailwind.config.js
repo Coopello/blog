@@ -24,6 +24,7 @@ module.exports = {
           lightGray: "#F5F5F6",
           gray: "#C9C9C9",
           black: "#222222",
+          contentCode: "#FF357F",
         },
       },
     },
