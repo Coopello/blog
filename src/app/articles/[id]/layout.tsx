@@ -18,7 +18,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
     openGraph: {
       title: article.title,
       description: article.description,
-      url: `https://coopello.vercel.app/articles/${params.id}`,
+      url: `https://https://coopello-blog.vercel.app/articles/${params.id}`,
     },
     twitter: {
       title: article.title,
