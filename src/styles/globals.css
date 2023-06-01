@@ -21,11 +21,15 @@ article.prose h1 {
 }
 
 article.prose code:not(.hljs) {
-  @apply rounded bg-custom-lightGray px-2 py-1 font-thin text-custom-black;
+  @apply rounded border bg-custom-lightGray px-2 py-1 font-thin text-[#FF357F];
 }
 article.prose code:not(.hljs)::before,
 article.prose code:not(.hljs)::after {
   @apply hidden;
+}
+
+article.prose pre code.hljs {
+  @apply text-xs sm:text-sm;
 }
 
 @layer utilities {
