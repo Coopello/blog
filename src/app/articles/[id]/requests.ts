@@ -1,3 +1,5 @@
+import * as cheerio from "cheerio";
+import hljs from "highlight.js";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 
@@ -23,7 +25,16 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     notFound();
   }
 
-  return await res.json();
+  const data = await res.json();
+
+  const $ = cheerio.load(data.content, null, false);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+
+  return { ...data, content: `${$.html()}` };
 };
 
 export const getRecommendArticles = async (

@@ -17,7 +17,31 @@ article.prose a {
 }
 
 article.prose h1 {
-  @apply text-2xl sm:text-[28px];
+  @apply text-2xl font-semibold sm:text-[28px];
+}
+
+article.prose h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+article.prose code:not(.hljs) {
+  @apply rounded border bg-custom-lightGray px-2 py-1 font-thin text-custom-contentCode;
+}
+article.prose code:not(.hljs)::before,
+article.prose code:not(.hljs)::after {
+  @apply hidden;
+}
+
+article.prose pre {
+  @apply w-full lg:max-w-[60vw];
+}
+
+article.prose code.hljs {
+  @apply text-xs sm:text-sm;
 }
 
 @layer utilities {

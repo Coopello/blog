@@ -22,7 +22,7 @@ export const Home: FC<Props> = ({ articles }) => {
   return (
     <div className="mx-auto mt-12 flex w-[90%] max-w-[952px] flex-col items-center gap-12 pb-12">
       <LabelSection label={"人気の記事"}>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 ">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {articles.popular.map((article) => (
             <ArticleLargeCard
               key={article.id}
