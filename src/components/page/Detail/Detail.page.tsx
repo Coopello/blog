@@ -42,7 +42,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
             />
           </LabelSection>
         </aside>
-        <aside className="block w-[90%] sm:w-full lg:hidden">
+        <aside className="block w-[90%] sm:w-full lg:hidden ">
           {/* TODO: useScreenSize のような custom hooks を実装して、画面幅に応じて size に sm か md を渡す */}
           <LabelSection label={"あなたへのおすすめ"}>
             <div className="grid grid-cols-1 gap-6">
@@ -60,7 +60,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
           </LabelSection>
         </aside>
       </div>
-      <aside className="hidden lg:block">
+      <aside className="sticky top-8 hidden h-fit lg:block">
         <LabelSection label={"あなたへのおすすめ"}>
           <div className="flex max-w-[400px] flex-col gap-6">
             {recommendArticles.map((article) => (
