@@ -45,7 +45,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
         <aside className="block w-[90%] sm:w-full lg:hidden">
           {/* TODO: useScreenSize のような custom hooks を実装して、画面幅に応じて size に sm か md を渡す */}
           <LabelSection label={"あなたへのおすすめ"}>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6">
               {recommendArticles.map((article) => (
                 <ArticleCard
                   key={article.id}

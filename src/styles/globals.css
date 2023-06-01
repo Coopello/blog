@@ -20,6 +20,14 @@ article.prose h1 {
   @apply text-2xl sm:text-[28px];
 }
 
+article.prose code:not(.hljs) {
+  @apply rounded bg-custom-lightGray px-2 py-1 font-thin text-custom-black;
+}
+article.prose code:not(.hljs)::before,
+article.prose code:not(.hljs)::after {
+  @apply hidden;
+}
+
 @layer utilities {
   .hidden-scrollbar {
     -ms-overflow-style: none; /* IE, Edge 対応 */
