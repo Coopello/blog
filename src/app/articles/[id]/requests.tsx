@@ -1,5 +1,4 @@
-import * as cheerio from "cheerio";
-import hljs from "highlight.js";
+import parse, { domToReact } from "html-react-parser";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 
@@ -27,14 +26,22 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
 
   const data = await res.json();
 
-  const $ = cheerio.load(data.content, null, false);
-  $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
+  const content = parse(data.content, {
+    replace: (domNode) => {
+      if (
+        "name" in domNode &&
+        domNode.name === "code" &&
+        domNode.parent &&
+        "name" in domNode.parent &&
+        domNode.parent.name === "pre" &&
+        "children" in domNode
+      ) {
+        return <code className="hljs">{domToReact(domNode.children)}</code>;
+      }
+    },
   });
 
-  return { ...data, content: `${$.html()}` };
+  return { ...data, content };
 };
 
 export const getRecommendArticles = async (

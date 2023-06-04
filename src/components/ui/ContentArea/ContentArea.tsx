@@ -1,6 +1,3 @@
-"use client";
-
-import parse from "html-react-parser";
 import type { FC } from "react";
 import { ArticleBreadcrumbs } from "src/components/domain/article/ArticleBreadcrumbs";
 import { Tag } from "src/components/ui/Tag";
@@ -46,7 +43,7 @@ export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
           );
         })}
       </ul>
-      {parse(content)}
+      {content}
     </article>
   );
 };
