@@ -30,8 +30,20 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
 export default function ArticleDetailLayout({
   children,
+  params,
 }: {
   children: ReactNode;
+  params: PageProps["params"];
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <head>
+        <link
+          rel="canonical"
+          href={`https://coopello-blog.vercel.app/articles/${params.id}`}
+        />
+      </head>
+      {children}
+    </>
+  );
 }
