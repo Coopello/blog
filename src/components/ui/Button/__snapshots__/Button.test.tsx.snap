@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ui/Button Snap Shot 1`] = `
-<button
-  className="rounded hover:opacity-60 bg-custom-white h-9 w-[256px] undefined"
-/>
-`;

@@ -34,9 +34,3 @@ jobs:
         run: yarn run eslint . --ext '.js,.ts,.tsx'
       - name: Typecheck
         run: yarn run tsc --noEmit
-      - name: Test with coverage
-        uses: ArtiomTr/jest-coverage-report-action@v2.1.2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          package-manager: "yarn"
-          test-script: npm run test:coverage

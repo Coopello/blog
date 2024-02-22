@@ -9,7 +9,7 @@ import { Header } from "src/components/ui/Header";
 export const metadata = {
   title: "Coopello Blog",
   description:
-    "みんながよく知る企業をめざしたいエンジニア必見！有名企業エンジニアによる「未経験からでも悩まない」ノウハウがここに。",
+    "現役エンジニア2人が運営するCoopello（こぺろ）のテックブログです。技術情報や交流イベントなどの情報を日々発信していきます。",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
