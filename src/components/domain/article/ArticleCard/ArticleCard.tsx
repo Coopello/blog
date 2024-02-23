@@ -39,16 +39,24 @@ export const ArticleCard: FC<Props> = ({
         }}
       >
         {imageUrl ? (
-          <Image
-            className="hidden rounded object-contain sm:inline-block"
-            src={imageUrl}
-            width={120}
-            height={120}
-            alt="記事のイメージ画像"
-          />
+          <div className="relative hidden aspect-video h-[120px] overflow-hidden rounded sm:inline-block">
+            <Image
+              className="object-cover"
+              src={imageUrl}
+              fill
+              alt={`${title}のアイキャッチ`}
+            />
+          </div>
         ) : null}
-        <div className="flex flex-1 flex-col gap-1 overflow-x-hidden">
-          <h2 className="border-b pb-1 text-xl">{title}</h2>
+        <div className="flex min-h-[120px] flex-1 flex-col gap-1 overflow-x-hidden">
+          <h2 className="flex flex-1 items-start border-b pb-1 text-xl">
+            {title}
+          </h2>
+          <p
+            className={`w-full ${styles.description} text-sm text-custom-gray`}
+          >
+            {description}
+          </p>
           <ul className="hidden-scrollbar flex w-full overflow-y-clip overflow-x-scroll">
             {tags.map((tag) => {
               return (
@@ -58,11 +66,6 @@ export const ArticleCard: FC<Props> = ({
               );
             })}
           </ul>
-          <p
-            className={`w-full ${styles.description} text-sm text-custom-gray`}
-          >
-            {description}
-          </p>
         </div>
       </button>
     </article>
