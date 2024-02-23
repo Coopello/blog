@@ -30,7 +30,7 @@ export const ArticleLargeCard: FC<Props> = ({
 
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
-    <article className="flex-1 rounded-md">
+    <article className="flex-1 rounded">
       <button
         className="flex h-full w-full cursor-pointer flex-col gap-2 overflow-x-hidden rounded bg-custom-white p-4 text-left hover:opacity-60"
         onClick={() => {
