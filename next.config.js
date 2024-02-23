@@ -3,7 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["placehold.jp", "images.microcms-assets.io"],
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: "placehold.jp",
+      port: '',
+    },
+      {
+        protocol: 'https',
+        hostname: "images.microcms-assets.io",
+        port: '',
+      }],
   },
   typescript: {
     // Next の fetch が node の fetch と認識されてビルドエラーが起きるため、それを防止する

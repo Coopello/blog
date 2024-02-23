@@ -14,8 +14,7 @@ export const getPopularArticles = async (): Promise<Response> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: 10 },
-      cache: "force-cache",
+      next: { revalidate: 1 * 60 },
     }
   );
 
@@ -26,12 +25,11 @@ export const getRecentArticles = async (): Promise<Response> => {
   const res = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles?orders=-publishedAt&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`,
     {
-      next: { revalidate: 10 },
       headers: {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      cache: "force-cache",
+      next: { revalidate: 1 * 60 },
     }
   );
 
