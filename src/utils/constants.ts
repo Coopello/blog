@@ -1,1 +1,1 @@
-export const DISPLAY_ARTICLE_CARD_PER_PAGE = 4;
+export const DISPLAY_ARTICLE_CARD_PER_PAGE = 6;

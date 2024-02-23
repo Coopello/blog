@@ -8,6 +8,7 @@ import { Tag } from "src/components/ui/Tag";
 import styles from "./ArticleLargeCard.module.css";
 
 type Props = {
+  title: string;
   description: string;
   imageUrl: string;
   color: `#${string}`;
@@ -23,39 +24,43 @@ export const ArticleLargeCard: FC<Props> = ({
   id,
   imageUrl,
   tags,
+  title,
 }) => {
   const router = useRouter();
 
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
-    <article className="flex-1">
+    <article className="flex-1 rounded">
       <button
-        className="flex h-full w-full cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
+        className="flex h-full w-full cursor-pointer flex-col gap-2 overflow-x-hidden rounded bg-custom-white p-4 text-left hover:opacity-60"
         onClick={() => {
           router.prefetch(`/articles/${id}`);
           router.push(`/articles/${id}`);
         }}
       >
-        <div className="relative h-[250px] w-full max-w-[416px]">
+        <div className="relative aspect-video w-full overflow-hidden rounded">
           <Image
-            className="object-contain md:object-cover"
+            className="object-cover"
             src={imageUrl}
             fill
             alt="記事のサムネイル画像"
           />
         </div>
+        <p className="w-full flex-1 border-b pb-2 text-lg line-clamp-2">
+          {title}
+        </p>
+        <p className={`text-sm text-custom-gray ${styles.description}`}>
+          {description}
+        </p>
         <ul className="hidden-scrollbar flex w-full gap-2 overflow-y-clip overflow-x-scroll">
           {tags.map((tag) => {
             return (
               <li key={tag} className="whitespace-nowrap">
-                <Tag color={color} text={tag} filled />
+                <Tag color={color} text={tag} />
               </li>
             );
           })}
         </ul>
-        <p className={`text-base text-custom-gray ${styles.description}`}>
-          {description}
-        </p>
       </button>
     </article>
   );
