@@ -6,7 +6,7 @@ name: CI
 on: push
 
 env:
-  FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
+  FILE_PATTERN: "src/**/*.{ts,tsx,js,jsx}"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
