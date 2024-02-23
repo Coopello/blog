@@ -40,7 +40,7 @@ export const ArticleLargeCard: FC<Props> = ({
       >
         <div className="relative aspect-video w-full overflow-hidden rounded">
           <Image
-            className="object-contain md:object-cover"
+            className="object-cover"
             src={imageUrl}
             fill
             alt="記事のサムネイル画像"
