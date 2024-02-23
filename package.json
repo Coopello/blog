@@ -13,7 +13,6 @@
     "fix:lint": "next lint --fix",
     "fix:prettier": "prettier --write .",
     "prettier": "prettier --check src/**/*.{ts,tsx}",
-    "eslint": "eslint . --ext '.js,.ts,.tsx'",
     "test": "jest",
     "test:coverage": "npm run test -- -u --coverage --silent --testLocationInResults --ci --json --outputFile=\"report.json\"",
     "new:fc": "hygen new fc",
