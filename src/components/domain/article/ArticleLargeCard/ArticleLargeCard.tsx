@@ -30,7 +30,7 @@ export const ArticleLargeCard: FC<Props> = ({
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
     <article className="flex-1">
       <button
-        className="flex h-full w-full cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
+        className="flex size-full cursor-pointer flex-col gap-3 overflow-x-hidden rounded bg-custom-white p-6 text-left hover:opacity-60"
         onClick={() => {
           router.prefetch(`/articles/${id}`);
           router.push(`/articles/${id}`);

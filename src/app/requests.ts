@@ -15,7 +15,7 @@ export const getPopularArticles = async (): Promise<Response> => {
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: 1 * 60 },
-    }
+    },
   );
 
   return await res.json();
@@ -30,7 +30,7 @@ export const getRecentArticles = async (): Promise<Response> => {
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: 1 * 60 },
-    }
+    },
   );
 
   return await res.json();
