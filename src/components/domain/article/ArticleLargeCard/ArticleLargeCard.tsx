@@ -38,7 +38,7 @@ export const ArticleLargeCard: FC<Props> = ({
       >
         <div className="relative h-[250px] w-full max-w-[416px]">
           <Image
-            className="object-contain md:object-cover"
+            className="object-cover"
             src={imageUrl}
             fill
             alt="記事のサムネイル画像"
