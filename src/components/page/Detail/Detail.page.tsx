@@ -28,7 +28,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
             id="content"
           />
         ) : null}
-        <aside>
+        <aside className="w-full">
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
               imageUrl={article.author.icon.url}
@@ -45,7 +45,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
         <aside className="block sm:w-full lg:hidden">
           {/* TODO: useScreenSize のような custom hooks を実装して、画面幅に応じて size に sm か md を渡す */}
           <LabelSection label={"あなたへのおすすめ"}>
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
               {recommendArticles.map((article) => (
                 <ArticleCard
                   key={article.id}
