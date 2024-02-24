@@ -27,7 +27,7 @@ export const ProfileCard: FC<Props> = ({
 
   return (
     <div className="flex w-full items-center gap-6 rounded bg-white p-4 sm:p-8">
-      <div className="relative hidden h-[100px] w-[100px] sm:block">
+      <div className="relative hidden size-[100px] sm:block">
         <Image
           alt="プロフィールアイコン"
           className="rounded-full object-contain"

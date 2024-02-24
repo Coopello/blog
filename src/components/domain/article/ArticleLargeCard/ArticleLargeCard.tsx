@@ -46,7 +46,7 @@ export const ArticleLargeCard: FC<Props> = ({
             alt="記事のサムネイル画像"
           />
         </div>
-        <p className="w-full flex-1 border-b pb-2 text-lg line-clamp-2">
+        <p className="line-clamp-2 w-full flex-1 border-b pb-2 text-lg">
           {title}
         </p>
         <p className={`text-sm text-custom-gray ${styles.description}`}>

@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 import { getArticleDetail } from "src/app/articles/[id]/requests";
 
 export const revalidate = "force-cache";
@@ -49,6 +49,6 @@ export default async function Image({ params }: { params: { id: string } }) {
     ),
     {
       ...size,
-    }
+    },
   );
 }

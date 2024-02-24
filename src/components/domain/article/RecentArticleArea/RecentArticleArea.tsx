@@ -22,7 +22,7 @@ type Props = {
 export const RecentArticleArea: FC<Props> = ({ articles }) => {
   const [page, setPage] = useState(0);
   const [currentArticles, setCurrentArticles] = useState<Article[]>(
-    articles.contents
+    articles.contents,
   );
   const { data, mutate } = useSWR<{
     data: {
@@ -34,7 +34,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
       ? `/articles?offset=${
           page * DISPLAY_ARTICLE_CARD_PER_PAGE
         }&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`
-      : null
+      : null,
   );
 
   useEffect(() => {
