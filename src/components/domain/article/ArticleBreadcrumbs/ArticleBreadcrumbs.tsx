@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type FC,Fragment } from "react";
+import { type FC } from "react";
 
 import styles from "./ArticleBreadcrumbs.module.css";
 
@@ -18,25 +18,21 @@ export const ArticleBreadcrumbs: FC<Props> = ({ items }) => {
         const isCurrentPage = !href;
 
         return !isCurrentPage ? (
-          <Fragment key={href}>
-            <li className="m-0 p-0">
+          <li key={label} className="m-0 flex items-center gap-2 p-0">
               <Link
                 href={href}
-                className="text-custom-primary underline hover:opacity-60"
+                className="m-0 text-custom-primary underline hover:opacity-60"
               >
                 {label}
               </Link>
-            </li>
-            <li className="m-0 p-0 text-custom-black">
-              <span>＞</span>
-            </li>
-          </Fragment>
+            <span className="m-0">＞</span>
+          </li>
         ) : (
           <li
-            key={item.href}
+            key={label}
             className={`m-0 p-0 text-custom-black ${styles.current} flex-1`}
           >
-            {item.label}
+            {label}
           </li>
         );
       })}
