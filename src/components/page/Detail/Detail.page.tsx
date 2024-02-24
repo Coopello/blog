@@ -17,8 +17,8 @@ type Props = {
  */
 export const Detail: FC<Props> = ({ article, recommendArticles }) => {
   return (
-    <div className="mx-auto mt-6 flex w-full max-w-[1484px] gap-12 pb-12 sm:mt-12 sm:w-[90%]">
-      <div className="flex w-full flex-col items-center gap-12">
+    <div className="mt-6 flex w-full gap-8 px-4 pb-12 sm:mt-8 sm:px-8">
+      <div className="flex w-full flex-col items-center gap-6 sm:gap-12">
         {article ? (
           <ContentArea
             title={article.title}
@@ -28,7 +28,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
             id="content"
           />
         ) : null}
-        <aside className="w-[90%] sm:w-full">
+        <aside>
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
               imageUrl={article.author.icon.url}
@@ -42,7 +42,7 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
             />
           </LabelSection>
         </aside>
-        <aside className="block w-[90%] sm:w-full lg:hidden">
+        <aside className="block sm:w-full lg:hidden">
           {/* TODO: useScreenSize のような custom hooks を実装して、画面幅に応じて size に sm か md を渡す */}
           <LabelSection label={"あなたへのおすすめ"}>
             <div className="grid grid-cols-1 gap-6">
