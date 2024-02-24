@@ -1,9 +1,9 @@
 ## ローカル環境立ち上げ
 
 ```bash
-yarn install
+pnpm install
 
-yarn dev
+pnpm dev
 ```
 
 ↓ ローカル環境
