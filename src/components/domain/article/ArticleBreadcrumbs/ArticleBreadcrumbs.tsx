@@ -19,12 +19,12 @@ export const ArticleBreadcrumbs: FC<Props> = ({ items }) => {
 
         return !isCurrentPage ? (
           <li key={label} className="m-0 flex items-center gap-2 p-0">
-              <Link
-                href={href}
-                className="m-0 text-custom-primary underline hover:opacity-60"
-              >
-                {label}
-              </Link>
+            <Link
+              href={href}
+              className="m-0 text-custom-primary underline hover:opacity-60"
+            >
+              {label}
+            </Link>
             <span className="m-0">＞</span>
           </li>
         ) : (
