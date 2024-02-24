@@ -9,7 +9,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   description:
     "現役エンジニア2人が運営するCoopello（こぺろ）のテックブログです。技術情報や交流イベントなどの情報を日々発信していきます。",
     alternates: {
-      canonical: `https://coopello.blog`,
+      canonical: `https://www.coopello.blog`,
     },
   };
 };
