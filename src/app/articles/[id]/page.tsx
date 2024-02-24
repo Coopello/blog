@@ -9,7 +9,9 @@ type PageProps = {
   params: { id: string };
 };
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: PageProps): Promise<Metadata> => {
   const article = await getArticleDetail(params.id);
 
   return {
@@ -37,7 +39,7 @@ export default async function DetailPage({ params }: PageProps) {
   const recommendArticlesResponse = await getRecommendArticles(
     article.tags.map((tag) => {
       return tag.id;
-    }),
+    })
   );
 
   return (

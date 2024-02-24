@@ -6,7 +6,6 @@ import type { ReactNode } from "react";
 import { Providers } from "src/app/providers";
 import { Header } from "src/components/ui/Header";
 
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
