@@ -19,15 +19,13 @@ export const Detail: FC<Props> = ({ article, recommendArticles }) => {
   return (
     <div className="mt-6 flex w-full gap-8 px-4 pb-12 sm:mt-8 sm:px-8">
       <div className="flex w-full flex-col items-center gap-6 sm:gap-12">
-        {article ? (
-          <ContentArea
-            title={article.title}
-            tags={article.tags}
-            content={article.content}
-            color={"#5ac8d8"}
-            id="content"
-          />
-        ) : null}
+        <ContentArea
+          title={article.title}
+          tags={article.tags}
+          content={article.content}
+          color={"#5ac8d8"}
+          id="content"
+        />
         <aside className="w-full">
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
