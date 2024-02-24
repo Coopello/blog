@@ -26,6 +26,7 @@ export const Home: FC<Props> = ({ articles }) => {
           {articles.popular.map((article) => (
             <ArticleLargeCard
               key={article.id}
+              title={article.title}
               description={article.description}
               imageUrl={article.eyecatch.url}
               tags={article.tags.map((tag) => tag.name)}

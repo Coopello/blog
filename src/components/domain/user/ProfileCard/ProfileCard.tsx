@@ -36,7 +36,7 @@ export const ProfileCard: FC<Props> = ({
         />
       </div>
       <div className="flex flex-1 flex-col gap-2">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between gap-4">
           <div className="flex flex-col">
             <p className="text-lg sm:text-xl md:text-2xl">{name}</p>
             <p className="text-sm text-custom-gray sm:text-base">{job}</p>
