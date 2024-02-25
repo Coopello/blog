@@ -21,7 +21,7 @@ export const getRecentArticles = async (): Promise<Response> => {
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: REVALIDATE_TIME },
-    }
+    },
   );
 
   return await res.json();

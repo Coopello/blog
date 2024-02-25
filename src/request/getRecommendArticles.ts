@@ -11,7 +11,7 @@ type Response = {
  * @package
  */
 export const getRecommendArticles = async (
-  articleId: string
+  articleId: string,
 ): Promise<Response> => {
   const articleRes = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles/${articleId}`,
@@ -21,7 +21,7 @@ export const getRecommendArticles = async (
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: REVALIDATE_TIME },
-    }
+    },
   );
 
   if (articleRes.status === 404) {
@@ -41,7 +41,7 @@ export const getRecommendArticles = async (
 
       return filtersConditions + `tags[contains]${currentId}`;
     },
-    ""
+    "",
   );
 
   const recommendArticlesRes = await fetch(
@@ -52,7 +52,7 @@ export const getRecommendArticles = async (
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: REVALIDATE_TIME },
-    }
+    },
   );
 
   if (recommendArticlesRes.status === 404) {

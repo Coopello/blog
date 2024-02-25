@@ -16,7 +16,7 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
       next: { revalidate: REVALIDATE_TIME },
-    }
+    },
   );
 
   if (res.status === 404) {
