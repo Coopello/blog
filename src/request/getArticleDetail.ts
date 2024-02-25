@@ -1,4 +1,4 @@
-import * as cheerio from "cheerio";
+import { load } from "cheerio";
 import hljs from "highlight.js";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
@@ -14,7 +14,7 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-    },
+    }
   );
 
   if (res.status === 404) {
@@ -27,7 +27,7 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     return data;
   }
 
-  const $ = cheerio.load(data.content, null, false);
+  const $ = load(data.content);
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text());
     $(elm).html(result.value);
