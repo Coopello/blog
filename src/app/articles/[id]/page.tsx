@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {
-  getArticleDetail,
-  getRecommendArticles,
-} from "src/app/articles/[id]/requests";
+import { notFound } from "next/navigation";
 import { Detail } from "src/components/page/Detail";
+import type { Article } from "src/models/article";
+import type { RecommendArticlesResponse } from "src/request";
+import { getArticleDetail } from "src/request";
+import { REVALIDATE_TIME } from "src/utils/constants";
 
 type PageProps = {
   params: { id: string };
@@ -34,13 +35,27 @@ export const generateMetadata = async ({
   };
 };
 
+const getArticleDetailData = async (
+  articleId: string,
+): Promise<{
+  article: Article;
+  recommendArticlesResponse: RecommendArticlesResponse;
+}> => {
+  const res = await fetch(`${process.env.BASE_URL}/api/articles/${articleId}`, {
+    next: {
+      revalidate: REVALIDATE_TIME,
+    },
+  });
+  if (res.status === 404) {
+    notFound();
+  }
+
+  return await res.json();
+};
+
 export default async function DetailPage({ params }: PageProps) {
-  const article = await getArticleDetail(params.id);
-  const recommendArticlesResponse = await getRecommendArticles(
-    article.tags.map((tag) => {
-      return tag.id;
-    }),
-  );
+  const data = await getArticleDetailData(params.id);
+  const { article, recommendArticlesResponse } = data;
 
   return (
     <Detail

@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getArticleDetail } from "src/app/articles/[id]/requests";
+import { getArticleDetail } from "src/request";
 
 export const revalidate = "force-cache";
 export const runtime = "nodejs";

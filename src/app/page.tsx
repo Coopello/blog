@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getPopularArticles, getRecentArticles } from "src/app/requests";
 import { Home } from "src/components/page/Home";
+import { getPopularArticles, getRecentArticles } from "src/request";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
