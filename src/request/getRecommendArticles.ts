@@ -1,5 +1,3 @@
-import * as cheerio from "cheerio";
-import hljs from "highlight.js";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 import { REVALIDATE_TIME } from "src/utils/constants";
@@ -9,8 +7,13 @@ type Response = {
   totalCount: number;
 };
 
-export const getArticleDetail = async (articleId: string): Promise<Article> => {
-  const res = await fetch(
+/**
+ * @package
+ */
+export const getRecommendArticles = async (
+  articleId: string
+): Promise<Response> => {
+  const articleRes = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles/${articleId}`,
     {
       headers: {
@@ -21,29 +24,15 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     }
   );
 
-  if (res.status === 404) {
+  if (articleRes.status === 404) {
     notFound();
   }
 
-  const data = await res.json();
-
-  if (typeof data.content !== "string") {
-    return data;
-  }
-
-  const $ = cheerio.load(data.content, null, false);
-  $("pre code").each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text());
-    $(elm).html(result.value);
-    $(elm).addClass("hljs");
+  const article: Article = await articleRes.json();
+  const articleTagIds = article.tags.map((tag) => {
+    return tag.id;
   });
 
-  return { ...data, content: $.html() };
-};
-
-export const getRecommendArticles = async (
-  articleTagIds: string[]
-): Promise<Response> => {
   const filtersConditions = articleTagIds.reduce(
     (filtersConditions, currentId, i) => {
       if (i < articleTagIds.length - 1) {
@@ -55,7 +44,7 @@ export const getRecommendArticles = async (
     ""
   );
 
-  const res = await fetch(
+  const recommendArticlesRes = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles?orders=-pv&limit=3&filters=${filtersConditions}`,
     {
       headers: {
@@ -66,9 +55,9 @@ export const getRecommendArticles = async (
     }
   );
 
-  if (res.status === 404) {
+  if (recommendArticlesRes.status === 404) {
     notFound();
   }
 
-  return await res.json();
+  return await recommendArticlesRes.json();
 };

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import {
-  getArticleDetail,
-  getRecommendArticles,
-} from "src/app/articles/[id]/requests";
 import { Detail } from "src/components/page/Detail";
+import { getArticleDetail, getRecommendArticles } from "src/request";
 
 type PageProps = {
   params: { id: string };
@@ -36,11 +33,7 @@ export const generateMetadata = async ({
 
 export default async function DetailPage({ params }: PageProps) {
   const article = await getArticleDetail(params.id);
-  const recommendArticlesResponse = await getRecommendArticles(
-    article.tags.map((tag) => {
-      return tag.id;
-    })
-  );
+  const recommendArticlesResponse = await getRecommendArticles(params.id);
 
   return (
     <Detail
