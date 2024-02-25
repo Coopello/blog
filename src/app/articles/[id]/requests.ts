@@ -26,6 +26,10 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
 
   const data = await res.json();
 
+  if (typeof data.content !== "string") {
+    return data;
+  }
+
   const $ = cheerio.load(data.content, null, false);
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text());
