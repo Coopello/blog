@@ -1,5 +1,5 @@
 import { load } from "cheerio";
-import hljs from "highlight.js/lib/common";
+import hljs from "highlight.js/lib/core";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 
@@ -14,7 +14,7 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-    },
+    }
   );
 
   if (res.status === 404) {
