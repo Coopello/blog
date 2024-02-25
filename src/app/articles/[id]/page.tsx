@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Detail } from "src/components/page/Detail";
 import { getArticleDetail, getRecommendArticles } from "src/request";
+import { REVALIDATE_TIME } from "src/utils/constants";
 
 type PageProps = {
   params: { id: string };
@@ -30,6 +31,8 @@ export const generateMetadata = async ({
     },
   };
 };
+
+export const revalidate = REVALIDATE_TIME;
 
 export default async function DetailPage({ params }: PageProps) {
   const article = await getArticleDetail(params.id);
