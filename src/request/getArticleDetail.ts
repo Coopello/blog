@@ -1,5 +1,5 @@
 import { load } from "cheerio";
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/common";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 
