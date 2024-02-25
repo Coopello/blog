@@ -2,6 +2,7 @@ import * as cheerio from "cheerio";
 import hljs from "highlight.js";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
+import { REVALIDATE_TIME } from "src/utils/constants";
 
 type Response = {
   contents: Article[];
@@ -16,8 +17,8 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: 1 * 60 },
-    },
+      next: { revalidate: REVALIDATE_TIME },
+    }
   );
 
   if (res.status === 404) {
@@ -37,11 +38,11 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     $(elm).addClass("hljs");
   });
 
-  return { ...data, content: `${$.html()}` };
+  return { ...data, content: $.html() };
 };
 
 export const getRecommendArticles = async (
-  articleTagIds: string[],
+  articleTagIds: string[]
 ): Promise<Response> => {
   const filtersConditions = articleTagIds.reduce(
     (filtersConditions, currentId, i) => {
@@ -51,7 +52,7 @@ export const getRecommendArticles = async (
 
       return filtersConditions + `tags[contains]${currentId}`;
     },
-    "",
+    ""
   );
 
   const res = await fetch(
@@ -61,8 +62,8 @@ export const getRecommendArticles = async (
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: 1 * 60 },
-    },
+      next: { revalidate: REVALIDATE_TIME },
+    }
   );
 
   if (res.status === 404) {

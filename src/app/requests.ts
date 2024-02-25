@@ -1,5 +1,8 @@
 import type { Article } from "src/models/article";
-import { DISPLAY_ARTICLE_CARD_PER_PAGE } from "src/utils/constants";
+import {
+  DISPLAY_ARTICLE_CARD_PER_PAGE,
+  REVALIDATE_TIME,
+} from "src/utils/constants";
 
 type Response = {
   contents: Article[];
@@ -14,8 +17,8 @@ export const getPopularArticles = async (): Promise<Response> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: 1 * 60 },
-    },
+      next: { revalidate: REVALIDATE_TIME },
+    }
   );
 
   return await res.json();
@@ -29,8 +32,8 @@ export const getRecentArticles = async (): Promise<Response> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: 1 * 60 },
-    },
+      next: { revalidate: REVALIDATE_TIME },
+    }
   );
 
   return await res.json();

@@ -39,7 +39,7 @@ export default async function DetailPage({ params }: PageProps) {
   const recommendArticlesResponse = await getRecommendArticles(
     article.tags.map((tag) => {
       return tag.id;
-    }),
+    })
   );
 
   return (
