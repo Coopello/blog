@@ -23,10 +23,6 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
 
   const data = await res.json();
 
-  if (typeof data.content !== "string") {
-    return data;
-  }
-
   const $ = load(data.content);
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text());
@@ -34,5 +30,5 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     $(elm).addClass("hljs");
   });
 
-  return { ...data, content: $.html() };
+  return await { ...data, content: $.html() };
 };
