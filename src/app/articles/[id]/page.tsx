@@ -36,7 +36,7 @@ export const generateMetadata = async ({
 };
 
 const getArticleDetailData = async (
-  articleId: string
+  articleId: string,
 ): Promise<{
   article: Article;
   recommendArticlesResponse: RecommendArticlesResponse;

@@ -3,7 +3,7 @@ import { getArticleDetail, getRecommendArticles } from "src/request";
 
 export async function GET(
   _request: Request,
-  context: { params: { id: string } }
+  context: { params: { id: string } },
 ) {
   const [article, recommendArticlesResponse] = await Promise.all([
     getArticleDetail(context.params.id),
