@@ -4,7 +4,10 @@ import {
   REVALIDATE_TIME,
 } from "src/utils/constants";
 
-type Response = {
+/**
+ * @package
+ */
+export type RecentArticles = {
   contents: Article[];
   totalCount: number;
 };
@@ -12,7 +15,7 @@ type Response = {
 /**
  * @package
  */
-export const getRecentArticles = async (): Promise<Response> => {
+export const getRecentArticles = async (): Promise<RecentArticles> => {
   const res = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles?orders=-publishedAt&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`,
     {

@@ -2,7 +2,6 @@ import * as cheerio from "cheerio";
 import hljs from "highlight.js";
 import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
-import { REVALIDATE_TIME } from "src/utils/constants";
 
 /**
  * @package
@@ -15,7 +14,6 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: REVALIDATE_TIME },
     },
   );
 

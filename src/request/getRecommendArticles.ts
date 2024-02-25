@@ -2,7 +2,10 @@ import { notFound } from "next/navigation";
 import type { Article } from "src/models/article";
 import { REVALIDATE_TIME } from "src/utils/constants";
 
-type Response = {
+/**
+ * @package
+ */
+export type RecommendArticlesResponse = {
   contents: Article[];
   totalCount: number;
 };
@@ -12,7 +15,7 @@ type Response = {
  */
 export const getRecommendArticles = async (
   articleId: string,
-): Promise<Response> => {
+): Promise<RecommendArticlesResponse> => {
   const articleRes = await fetch(
     `${process.env.MICRO_CMS_API_URL}/articles/${articleId}`,
     {
@@ -20,7 +23,6 @@ export const getRecommendArticles = async (
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-      next: { revalidate: REVALIDATE_TIME },
     },
   );
 
