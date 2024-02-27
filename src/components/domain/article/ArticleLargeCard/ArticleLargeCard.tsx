@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
@@ -26,17 +24,12 @@ export const ArticleLargeCard: FC<Props> = ({
   tags,
   title,
 }) => {
-  const router = useRouter();
-
   return (
     // TODO: サムネイルを常に左右中央揃えにする（背景を忘れたので、問題が生じたら修正する）
     <article className="flex-1 rounded">
-      <button
+      <Link
         className="flex size-full cursor-pointer flex-col gap-2 overflow-x-hidden rounded bg-custom-white p-4 text-left hover:opacity-60"
-        onClick={() => {
-          router.prefetch(`/articles/${id}`);
-          router.push(`/articles/${id}`);
-        }}
+        href={`/articles/dev/${id}`}
       >
         <div className="relative aspect-video w-full overflow-hidden rounded">
           <Image
@@ -61,7 +54,7 @@ export const ArticleLargeCard: FC<Props> = ({
             );
           })}
         </ul>
-      </button>
+      </Link>
     </article>
   );
 };

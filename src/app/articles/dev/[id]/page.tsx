@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Detail } from "src/components/page/Detail";
+import { DevDetail } from "src/components/page/DevDetail";
 import type { Article } from "src/models/article";
 import type { RecommendArticlesResponse } from "src/request";
 import { getArticleDetail } from "src/request";
@@ -19,13 +19,13 @@ export const generateMetadata = async ({
     title: `${article.title} - Coopello Blog`,
     description: article.description,
     alternates: {
-      canonical: `/articles/${params.id}`,
+      canonical: `/articles/dev/${params.id}`,
     },
     metadataBase: new URL("https://www.coopello.blog"),
     openGraph: {
       title: article.title,
       description: article.description,
-      url: `/articles/${params.id}`,
+      url: `/articles/dev/${params.id}`,
     },
     twitter: {
       title: article.title,
@@ -36,7 +36,7 @@ export const generateMetadata = async ({
 };
 
 const getArticleDetailData = async (
-  articleId: string,
+  articleId: string
 ): Promise<{
   article: Article;
   recommendArticlesResponse: RecommendArticlesResponse;
@@ -53,12 +53,12 @@ const getArticleDetailData = async (
   return await res.json();
 };
 
-export default async function DetailPage({ params }: PageProps) {
+export default async function DevDetailPage({ params }: PageProps) {
   const data = await getArticleDetailData(params.id);
   const { article, recommendArticlesResponse } = data;
 
   return (
-    <Detail
+    <DevDetail
       article={article}
       recommendArticles={recommendArticlesResponse.contents}
     />

@@ -15,14 +15,17 @@ type Props = {
 /**
  * @package
  */
-export const Detail: FC<Props> = ({ article, recommendArticles }) => {
+export const DevDetail: FC<Props> = ({ article, recommendArticles }) => {
   return (
     <div className="mt-6 flex w-full gap-8 px-4 pb-12 sm:mt-8 sm:px-8">
       <div className="flex w-full flex-col items-center gap-6 sm:gap-12">
         <ContentArea
           title={article.title}
           tags={article.tags}
-          content={article.content}
+          content={
+            // eslint-disable-next-line @typescript-eslint/naming-convention
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          }
           color={"#5ac8d8"}
           id="content"
         />
