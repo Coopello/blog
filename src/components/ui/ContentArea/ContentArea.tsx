@@ -1,6 +1,6 @@
 "use client";
 
-import type { FC } from "react";
+import type { FC, ReactNode } from "react";
 import { ArticleBreadcrumbs } from "src/components/domain/article/ArticleBreadcrumbs";
 import { Tag } from "src/components/ui/Tag";
 import type { Article } from "src/models/article";
@@ -9,7 +9,7 @@ type Props = {
   title: Article["title"];
   color: `#${string}`;
   tags: Article["tags"];
-  content: Article["content"];
+  content: ReactNode;
   id: string;
 };
 
@@ -45,7 +45,7 @@ export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
           );
         })}
       </ul>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      {content}
     </article>
   );
 };
