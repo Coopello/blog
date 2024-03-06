@@ -4,6 +4,6 @@ type PageProps = {
   params: { id: string };
 };
 
-export default async function DevDetailPage({}: PageProps) {
+export default async function SlideDetailPage({}: PageProps) {
   return <SlideDetail />;
 }

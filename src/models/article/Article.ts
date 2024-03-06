@@ -6,9 +6,11 @@ import type { Tag } from "./";
  */
 export type Article = {
   id: string;
+  type: "tech" | "slides" | "events";
   title: string;
   description: string;
-  content: string;
+  content?: string;
+  slideUrl?: string;
   eyecatch: Eyecatch;
   tags: Tag[];
   author: Author;

@@ -22,7 +22,7 @@ type Props = {
 export const RecentArticleArea: FC<Props> = ({ articles }) => {
   const [page, setPage] = useState(0);
   const [currentArticles, setCurrentArticles] = useState<Article[]>(
-    articles.contents,
+    articles.contents
   );
   const { data, mutate } = useSWR<{
     data: {
@@ -34,7 +34,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
       ? `/articles?offset=${
           page * DISPLAY_ARTICLE_CARD_PER_PAGE
         }&limit=${DISPLAY_ARTICLE_CARD_PER_PAGE}`
-      : null,
+      : null
   );
 
   useEffect(() => {
@@ -65,8 +65,7 @@ export const RecentArticleArea: FC<Props> = ({ articles }) => {
                 description={article.description}
                 imageUrl={article.eyecatch.url}
                 tags={article.tags.map((tag) => tag.name)}
-                color={"#5AC8D8"}
-                id={article.id}
+                url={`/${article.type}/${article.id}`}
               />
             </li>
           ))}

@@ -1,22 +1,22 @@
 "use client";
 
-import type { FC, ReactNode } from "react";
+import type { FC } from "react";
 import { ArticleBreadcrumbs } from "src/components/domain/article/ArticleBreadcrumbs";
 import { Tag } from "src/components/ui/Tag";
 import type { Article } from "src/models/article";
 
 type Props = {
   title: Article["title"];
-  color: `#${string}`;
   tags: Article["tags"];
-  content: ReactNode;
+  content: string;
   id: string;
+  type: Article["type"];
 };
 
 /**
  * @package
  */
-export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
+export const ContentArea: FC<Props> = ({ content, id, tags, title, type }) => {
   return (
     <article
       id={id}
@@ -40,12 +40,29 @@ export const ContentArea: FC<Props> = ({ color, content, id, tags, title }) => {
         {tags.map((tag) => {
           return (
             <li key={tag.name} className="m-0 p-0">
-              <Tag color={color} text={tag.name} filled />
+              <Tag color={"#5ac8d8"} text={tag.name} filled />
             </li>
           );
         })}
       </ul>
-      {content}
+      {type === "slides" ? (
+        <div
+          className="aspect-video"
+          dangerouslySetInnerHTML={{
+            __html: `<iframe
+              src="${content}"
+              frameborder="0"
+              width="100%"
+              height="100%"
+              allowfullscreen="true"
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+            ></iframe>`,
+          }}
+        />
+      ) : (
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      )}
     </article>
   );
 };

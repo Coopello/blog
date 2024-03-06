@@ -15,20 +15,19 @@ type Props = {
 /**
  * @package
  */
-export const DevDetail: FC<Props> = ({ article, recommendArticles }) => {
+export const TechDetail: FC<Props> = ({ article, recommendArticles }) => {
   return (
     <div className="mt-6 flex w-full gap-8 px-4 pb-12 sm:mt-8 sm:px-8">
       <div className="flex w-full flex-col items-center gap-6 sm:gap-12">
-        <ContentArea
-          title={article.title}
-          tags={article.tags}
-          content={
-            // eslint-disable-next-line @typescript-eslint/naming-convention
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
-          }
-          color={"#5ac8d8"}
-          id="content"
-        />
+        {article.content ? (
+          <ContentArea
+            title={article.title}
+            tags={article.tags}
+            content={article.content}
+            id="content"
+            type={article.type}
+          />
+        ) : null}
         <aside className="w-full">
           <LabelSection label={"この記事を書いた人"}>
             <ProfileCard
@@ -52,8 +51,7 @@ export const DevDetail: FC<Props> = ({ article, recommendArticles }) => {
                   key={article.id}
                   description={article.description}
                   tags={article.tags.map((tag) => tag.name)}
-                  color={"#5AC8D8"}
-                  id={article.id}
+                  url={`/tech/${article.id}`}
                   title={article.title}
                 />
               ))}
@@ -69,9 +67,8 @@ export const DevDetail: FC<Props> = ({ article, recommendArticles }) => {
                 key={article.id}
                 description={article.description}
                 tags={article.tags.map((tag) => tag.name)}
-                color={"#5AC8D8"}
                 title={article.title}
-                id={article.id}
+                url={`/tech/${article.id}`}
               />
             ))}
           </div>
