@@ -25,8 +25,12 @@ export const ContentArea: FC<Props> = ({ content, id, tags, title, type }) => {
       <ArticleBreadcrumbs
         items={[
           {
-            label: "ホーム",
+            label: "Home",
             href: "/",
+          },
+          {
+            label: `${type.charAt(0).toUpperCase()}${type.slice(1)}の一覧`,
+            href: `/${type}`,
           },
           {
             label: title,

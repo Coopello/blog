@@ -14,7 +14,7 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
         "Content-Type": "application/json",
         "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
       },
-    },
+    }
   );
 
   if (res.status === 404) {
@@ -30,5 +30,5 @@ export const getArticleDetail = async (articleId: string): Promise<Article> => {
     $(elm).addClass("hljs");
   });
 
-  return await { ...data, content: $.html() };
+  return await { ...data, content: $.html(), type: data.type[0] };
 };
