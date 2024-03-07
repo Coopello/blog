@@ -19,7 +19,7 @@ export const generateMetadata = async ({
     title: `${article.title} - Coopello Blog`,
     description: article.description,
     alternates: {
-      canonical: `/articles/tech/${params.id}`,
+      canonical: `/tech/${params.id}`,
     },
     metadataBase: new URL("https://www.coopello.blog"),
     openGraph: {
@@ -41,7 +41,7 @@ const getArticleDetailData = async (
   article: Article;
   recommendArticlesResponse: RecommendArticlesResponse;
 }> => {
-  const res = await fetch(`${process.env.BASE_URL}/api/articles/${articleId}`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/tech/${articleId}`, {
     next: {
       revalidate: REVALIDATE_TIME,
     },
