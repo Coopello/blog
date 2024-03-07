@@ -8,7 +8,7 @@ type PageProps = {
 };
 
 const getArticleDetailData = async (
-  articleId: string
+  articleId: string,
 ): Promise<{
   article: Article;
 }> => {
