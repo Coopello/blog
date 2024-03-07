@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import type { FC } from "react";
 import { Tag } from "src/components/ui/Tag";
 
@@ -11,32 +9,25 @@ type Props = {
   title: string;
   description: string;
   imageUrl?: string;
-  color: `#${string}`;
   tags: string[];
-  id: string;
+  url: string;
 };
 
 /**
  * @package
  */
 export const ArticleCard: FC<Props> = ({
-  color,
   description,
-  id,
   imageUrl,
   tags,
   title,
+  url,
 }) => {
-  const router = useRouter();
-
   return (
     <article>
-      <button
+      <Link
         className="flex w-full items-center gap-4 rounded bg-custom-white p-4 text-left backdrop:cursor-pointer hover:opacity-60"
-        onClick={() => {
-          router.prefetch(`/articles/${id}`);
-          router.push(`/articles/${id}`);
-        }}
+        href={url}
       >
         {imageUrl ? (
           <div className="relative hidden aspect-video h-[120px] overflow-hidden rounded sm:inline-block">
@@ -61,13 +52,13 @@ export const ArticleCard: FC<Props> = ({
             {tags.map((tag) => {
               return (
                 <li key={tag} className="whitespace-nowrap">
-                  <Tag color={color} text={tag} />
+                  <Tag color={"#5AC8D8"} text={tag} />
                 </li>
               );
             })}
           </ul>
         </div>
-      </button>
+      </Link>
     </article>
   );
 };

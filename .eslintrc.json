@@ -68,9 +68,9 @@
     {
       "files": [
         "src/components/domain/**/constant.ts",
-        "src/components/ui/ContentArea/ContentArea.tsx",
         "src/libs/apiClient/**/*.ts",
-        "src/request/**/*.ts"
+        "src/request/**/*.ts",
+        "src/components/ui/ContentArea/ContentArea.tsx"
       ],
       "rules": { "@typescript-eslint/naming-convention": "off" }
     }

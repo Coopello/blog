@@ -15,6 +15,7 @@ Initial.args = {
     contents: [
       {
         id: "1",
+        type: "tech",
         title: "タイトル",
         description: "記事の説明",
         content: "記事の本文",
