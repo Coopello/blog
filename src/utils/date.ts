@@ -47,7 +47,7 @@ const toFormat = (date: DateTime, format: DATE_FORMAT) => {
 export const dateFormat = (
   date: string,
   format: DATE_FORMAT = DATE_FORMAT.DATE_WITH_WEEKDAY,
-  zone = "UTC" // dates coming from DB are in UTC by default
+  zone = "UTC", // dates coming from DB are in UTC by default
 ) => {
   const newDate = DateTime.fromISO(date, { zone }).setLocale("ja");
 
