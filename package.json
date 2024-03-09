@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "fix": "next lint --fix & prettier --write .",
+    "fix": "next lint --fix & prettier --write 'src/**/*.{ts,tsx}'",
     "fix:lint": "next lint --fix",
     "fix:prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "prettier": "prettier --check 'src/**/*.{ts,tsx}'",

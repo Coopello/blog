@@ -19,7 +19,7 @@ export const getArticleDetailSitemapList =
           "Content-Type": "application/json",
           "X-MICROCMS-API-KEY": process.env.MICRO_CMS_API_KEY || "",
         },
-      }
+      },
     );
 
     const data = await res.json();
