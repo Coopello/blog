@@ -2,13 +2,10 @@ import { notFound } from "next/navigation";
 import { SlideDetail } from "src/components/page/SlideDetail";
 import type { Article } from "src/models/article";
 import { REVALIDATE_TIME } from "src/utils/constants";
-
-type PageProps = {
-  params: { id: string };
-};
+import type { DetailPageProps } from "src/utils/types";
 
 const getArticleDetailData = async (
-  articleId: string,
+  articleId: string
 ): Promise<{
   article: Article;
 }> => {
@@ -24,7 +21,7 @@ const getArticleDetailData = async (
   return await res.json();
 };
 
-export default async function SlideDetailPage({ params }: PageProps) {
+export default async function SlideDetailPage({ params }: DetailPageProps) {
   const { article } = await getArticleDetailData(params.id);
 
   return <SlideDetail article={article} />;
