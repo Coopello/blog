@@ -1,39 +1,9 @@
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TechDetail } from "src/components/page/TechDetail";
 import type { Article } from "src/models/article";
 import type { RecommendArticlesResponse } from "src/request";
-import { getArticleDetail } from "src/request";
 import { REVALIDATE_TIME } from "src/utils/constants";
-
-type PageProps = {
-  params: { id: string };
-};
-
-export const generateMetadata = async ({
-  params,
-}: PageProps): Promise<Metadata> => {
-  const article = await getArticleDetail(params.id);
-
-  return {
-    title: `${article.title} - Coopello Blog`,
-    description: article.description,
-    alternates: {
-      canonical: `/tech/${params.id}`,
-    },
-    metadataBase: new URL("https://www.coopello.blog"),
-    openGraph: {
-      title: article.title,
-      description: article.description,
-      url: `/tech/${params.id}`,
-    },
-    twitter: {
-      title: article.title,
-      card: "summary_large_image",
-      description: article.description,
-    },
-  };
-};
+import type { DetailPageProps } from "src/utils/types";
 
 const getArticleDetailData = async (
   articleId: string,
@@ -53,7 +23,7 @@ const getArticleDetailData = async (
   return await res.json();
 };
 
-export default async function TechDetailPage({ params }: PageProps) {
+export default async function TechDetailPage({ params }: DetailPageProps) {
   const data = await getArticleDetailData(params.id);
   const { article, recommendArticlesResponse } = data;
 

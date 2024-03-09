@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Home } from "src/components/page/Home";
 import { getPopularArticles, getRecentArticles } from "src/request";
+import { SITE_URL } from "src/utils/constants";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -8,7 +9,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
     description:
       "現役エンジニア2人が運営するCoopello（こぺろ）のテックブログです。技術情報や交流イベントなどの情報を日々発信していきます。",
     alternates: {
-      canonical: `https://www.coopello.blog`,
+      canonical: SITE_URL,
     },
   };
 };
