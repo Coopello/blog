@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { getArticleDetail } from "src/request";
+import { SITE_URL } from "src/utils/constants";
 import type { DetailPageProps } from "src/utils/types";
 
 export const generateMetadata = async ({
@@ -14,7 +15,7 @@ export const generateMetadata = async ({
     alternates: {
       canonical: `/${article.type}/${params.id}`,
     },
-    metadataBase: new URL("https://www.coopello.blog"),
+    metadataBase: new URL(SITE_URL),
     openGraph: {
       title: article.title,
       description: article.description,
@@ -29,10 +30,5 @@ export const generateMetadata = async ({
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="ja">
-      <head />
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }

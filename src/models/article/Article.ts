@@ -14,4 +14,5 @@ export type Article = {
   eyecatch: Eyecatch;
   tags: Tag[];
   author: Author;
+  updatedAt: string;
 };
