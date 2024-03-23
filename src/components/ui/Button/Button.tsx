@@ -1,16 +1,20 @@
 import type { FC } from "react";
 
 type Props = JSX.IntrinsicElements["button"] & {
-  color?: "white";
-  size?: "md";
+  color?: "primary" | "secondary" | "tertiary";
+  size?: "md" | "lg" | "sm";
 };
 
 const BUTTON_COLORS = {
-  white: "bg-custom-white",
+  primary: "bg-custom-primary text-white",
+  secondary: "bg-custom-black text-white",
+  tertiary: "bg-custom-gray text-white",
 };
 
 const BUTTON_SIZES = {
+  sm: "h-9 w-[128px]",
   md: "h-9 w-[256px]",
+  lg: "h-9 w-[384px]",
 };
 
 /**
@@ -18,7 +22,7 @@ const BUTTON_SIZES = {
  */
 export const Button: FC<Props> = ({
   className,
-  color = "white",
+  color = "primary",
   size = "md",
   ...buttonProps
 }) => {
