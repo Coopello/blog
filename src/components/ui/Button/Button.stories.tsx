@@ -1,22 +1,27 @@
-import type { ComponentMeta, ComponentStory } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "./";
+import { Button } from "./Button";
 
-export default {
+// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
+const meta = {
   title: "ui/Button",
-  argTypes: {
-    color: {
-      options: ["white"],
-      control: { type: "radio" },
-    },
+  component: Button,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    layout: "centered",
   },
-} as ComponentMeta<typeof Button>;
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ["autodocs"],
+} satisfies Meta<typeof Button>;
 
-export const Initial: ComponentStory<typeof Button> = (args) => (
-  <Button {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-Initial.args = {
-  children: "ボタン",
-  color: "white",
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Primary: Story = {
+  args: {
+    color: "primary",
+    size: "md",
+    children: "Button",
+  },
 };
