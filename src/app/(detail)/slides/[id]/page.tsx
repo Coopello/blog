@@ -5,7 +5,7 @@ import { REVALIDATE_TIME } from "src/utils/constants";
 import type { DetailPageProps } from "src/utils/types";
 
 const getArticleDetailData = async (
-  articleId: string
+  articleId: string,
 ): Promise<{
   article: Article;
 }> => {

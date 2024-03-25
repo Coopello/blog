@@ -26,7 +26,7 @@ const getArticlesData = async ({
       next: {
         revalidate: REVALIDATE_TIME,
       },
-    }
+    },
   );
   if (res.status === 404) {
     notFound();
