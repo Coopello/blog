@@ -1,6 +1,8 @@
 export { getArticleDetail } from "./getArticleDetail";
 export type { ArticleDetailSitemapListResponse } from "./getArticleDetailSitemapList";
 export { getArticleDetailSitemapList } from "./getArticleDetailSitemapList";
+export type { ArticlesFromTypeResponse } from "./getArticlesFromType";
+export { getArticlesFromType } from "./getArticlesFromType";
 export type { PopularArticlesResponse } from "./getPopularArticles";
 export { getPopularArticles } from "./getPopularArticles";
 export type { RecentArticles } from "./getRecentArticles";

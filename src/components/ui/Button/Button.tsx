@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 type Props = JSX.IntrinsicElements["button"] & {
-  color?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "tertiary" | "white";
   size?: "md" | "lg" | "sm";
 };
 
@@ -9,6 +9,7 @@ const BUTTON_COLORS = {
   primary: "bg-custom-primary text-white",
   secondary: "bg-custom-black text-white",
   tertiary: "bg-custom-gray text-white",
+  white: "bg-white text-custom-black",
 };
 
 const BUTTON_SIZES = {
